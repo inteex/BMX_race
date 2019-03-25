@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="209c54e3-553a-47c3-84c0-0e0c307d3af6" name="Default Changelist" comment="" />
+    <list default="true" id="209c54e3-553a-47c3-84c0-0e0c307d3af6" name="Default Changelist" comment="first">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,7 +13,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/bmx_race$dataCute__1_.coverage" NAME="dataCute (1) Coverage Results" MODIFIED="1553161535702" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bmx_race$data_MR__1_.coverage" NAME="data MR (1) Coverage Results" MODIFIED="1553159384146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MR/trial1" />
-    <SUITE FILE_PATH="coverage/bmx_race$ConcatenatreTraitementTravail.coverage" NAME="ConcatenatreTraitementTravail Coverage Results" MODIFIED="1553269435466" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmx_race$ConcatenatreTraitementTravail.coverage" NAME="ConcatenatreTraitementTravail Coverage Results" MODIFIED="1553505910438" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bmx_race$dataCute.coverage" NAME="dataCute Coverage Results" MODIFIED="1553161157136" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bmx_race$matToCsv.coverage" NAME="matToCsv Coverage Results" MODIFIED="1552927603127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bmx_race$data_MR.coverage" NAME="data MR Coverage Results" MODIFIED="1553159405764" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MR/trial1" />
@@ -56,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/dataCuteV2.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="14">
-              <caret line="2" column="9" lean-forward="true" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+              <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -97,6 +99,9 @@
       <find>bra</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -126,11 +131,12 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="731" />
-    <option name="y" value="84" />
+    <option name="x" value="292" />
+    <option name="y" value="53" />
     <option name="width" value="1400" />
     <option name="height" value="971" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -142,60 +148,6 @@
             <path>
               <item name="bmx_race" type="b2602c69:ProjectViewProjectNode" />
               <item name="bmx_race" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bmx_race" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bmx_race" type="462c0819:PsiDirectoryNode" />
-              <item name="MR" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bmx_race" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bmx_race" type="462c0819:PsiDirectoryNode" />
-              <item name="MR" type="462c0819:PsiDirectoryNode" />
-              <item name="trial4" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bmx_race" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bmx_race" type="462c0819:PsiDirectoryNode" />
-              <item name="RM" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bmx_race" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bmx_race" type="462c0819:PsiDirectoryNode" />
-              <item name="RM" type="462c0819:PsiDirectoryNode" />
-              <item name="trial1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bmx_race" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bmx_race" type="462c0819:PsiDirectoryNode" />
-              <item name="RR" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bmx_race" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bmx_race" type="462c0819:PsiDirectoryNode" />
-              <item name="RR" type="462c0819:PsiDirectoryNode" />
-              <item name="trial1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bmx_race" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bmx_race" type="462c0819:PsiDirectoryNode" />
-              <item name="SD" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bmx_race" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bmx_race" type="462c0819:PsiDirectoryNode" />
-              <item name="SD" type="462c0819:PsiDirectoryNode" />
-              <item name="trial1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bmx_race" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bmx_race" type="462c0819:PsiDirectoryNode" />
-              <item name="SD" type="462c0819:PsiDirectoryNode" />
-              <item name="trial4" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bmx_race" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -369,20 +321,20 @@
       <updated>1552905666881</updated>
       <workItem from="1552905671840" duration="34866000" />
       <workItem from="1553158504870" duration="24547000" />
-      <workItem from="1553501796824" duration="2709000" />
+      <workItem from="1553501796824" duration="4273000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62122000" />
+    <option name="totallyTimeSpent" value="63686000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16204691" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16204691" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" weight="0.32936078" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.29035753" />
@@ -394,7 +346,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -737,7 +689,7 @@
     <entry file="file://$PROJECT_DIR$/dataCuteV2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="14">
-          <caret line="2" column="9" lean-forward="true" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
