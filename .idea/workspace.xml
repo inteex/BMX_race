@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="209c54e3-553a-47c3-84c0-0e0c307d3af6" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/bmx_race$dataCute__1_.coverage" NAME="dataCute (1) Coverage Results" MODIFIED="1553161535702" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmx_race$data_MR__1_.coverage" NAME="data MR (1) Coverage Results" MODIFIED="1553159384146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MR/trial1" />
+    <SUITE FILE_PATH="coverage/bmx_race$ConcatenatreTraitementTravail.coverage" NAME="ConcatenatreTraitementTravail Coverage Results" MODIFIED="1553269435466" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmx_race$dataCute.coverage" NAME="dataCute Coverage Results" MODIFIED="1553161157136" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmx_race$matToCsv.coverage" NAME="matToCsv Coverage Results" MODIFIED="1552927603127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmx_race$data_MR.coverage" NAME="data MR Coverage Results" MODIFIED="1553159405764" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MR/trial1" />
+    <SUITE FILE_PATH="coverage/bmx_race$concatCSV.coverage" NAME="concatCSV Coverage Results" MODIFIED="1553245942302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SD/trial6" />
+    <SUITE FILE_PATH="coverage/bmx_race$concatCSV__1_.coverage" NAME="concatCSV (1) Coverage Results" MODIFIED="1553161553367" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MR/trial7" />
+    <SUITE FILE_PATH="coverage/bmx_race$concatCSV__2_.coverage" NAME="concatCSV (2) Coverage Results" MODIFIED="1553161172867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MR/trial4" />
+    <SUITE FILE_PATH="coverage/bmx_race$concatCSV__3_.coverage" NAME="concatCSV (3) Coverage Results" MODIFIED="1553161328104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MR/trial5" />
+    <SUITE FILE_PATH="coverage/bmx_race$reindexe.coverage" NAME="reindexe Coverage Results" MODIFIED="1553249769260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmx_race$dataCuteV2.coverage" NAME="dataCuteV2 Coverage Results" MODIFIED="1553269418490" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmx_race$sdData.coverage" NAME="sdData Coverage Results" MODIFIED="1553245968967" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SD/trial6" />
+    <SUITE FILE_PATH="coverage/bmx_race$concatCSV__4_.coverage" NAME="concatCSV (4) Coverage Results" MODIFIED="1553269279840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MR/trial1/framesMathisRagot1.csv">
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+          </provider>
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state>
+              <caret column="59" selection-start-column="52" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dataCuteV2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="14">
+              <caret line="2" column="9" lean-forward="true" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>masse</find>
+      <find>taille</find>
+      <find>tpsp</find>
+      <find>tpspa</find>
+      <find>forc</find>
+      <find>tps</find>
+      <find>177</find>
+      <find>manivelle</find>
+      <find>manive</find>
+      <find>manivel</find>
+      <find>bip</find>
+      <find>10</find>
+      <find>find</find>
+      <find>fi</find>
+      <find>basdebu</find>
+      <find>tile</find>
+      <find>4</find>
+      <find>fin</find>
+      <find>Bip</find>
+      <find>bra</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/cc.csv" />
+        <option value="$PROJECT_DIR$/SD/sdData.py" />
+        <option value="$PROJECT_DIR$/convert.py" />
+        <option value="$PROJECT_DIR$/dataCUte.py" />
+        <option value="$PROJECT_DIR$/matToCsv.py" />
+        <option value="$PROJECT_DIR$/MR/concatCSV.py" />
+        <option value="$PROJECT_DIR$/MR/data MR.py" />
+        <option value="$PROJECT_DIR$/MR/trial2/concatCSV.py" />
+        <option value="$PROJECT_DIR$/MR/trial3/concatCSV.py" />
+        <option value="$PROJECT_DIR$/MR/trial4/concatCSV.py" />
+        <option value="$PROJECT_DIR$/MR/trial5/concatCSV.py" />
+        <option value="$PROJECT_DIR$/MR/trial6/concatCSV.py" />
+        <option value="$PROJECT_DIR$/MR/trial7/concatCSV.py" />
+        <option value="$PROJECT_DIR$/SD/trial6/concatCSV.py" />
+        <option value="$PROJECT_DIR$/SD/trial6/sdData.py" />
+        <option value="$PROJECT_DIR$/dataCute.py" />
+        <option value="$PROJECT_DIR$/reindexe.py" />
+        <option value="$PROJECT_DIR$/MR/trial1/concatCSV.py" />
+        <option value="$PROJECT_DIR$/concatCSV.py" />
+        <option value="$PROJECT_DIR$/dataCuteV2.py" />
+        <option value="$PROJECT_DIR$/ConcatenatreTraitementTravail.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="731" />
+    <option name="y" value="84" />
+    <option name="width" value="1400" />
+    <option name="height" value="971" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="bmx_race" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bmx_race" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bmx_race" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bmx_race" type="462c0819:PsiDirectoryNode" />
+              <item name="MR" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bmx_race" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bmx_race" type="462c0819:PsiDirectoryNode" />
+              <item name="MR" type="462c0819:PsiDirectoryNode" />
+              <item name="trial4" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bmx_race" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bmx_race" type="462c0819:PsiDirectoryNode" />
+              <item name="RM" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bmx_race" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bmx_race" type="462c0819:PsiDirectoryNode" />
+              <item name="RM" type="462c0819:PsiDirectoryNode" />
+              <item name="trial1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bmx_race" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bmx_race" type="462c0819:PsiDirectoryNode" />
+              <item name="RR" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bmx_race" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bmx_race" type="462c0819:PsiDirectoryNode" />
+              <item name="RR" type="462c0819:PsiDirectoryNode" />
+              <item name="trial1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bmx_race" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bmx_race" type="462c0819:PsiDirectoryNode" />
+              <item name="SD" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bmx_race" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bmx_race" type="462c0819:PsiDirectoryNode" />
+              <item name="SD" type="462c0819:PsiDirectoryNode" />
+              <item name="trial1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bmx_race" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bmx_race" type="462c0819:PsiDirectoryNode" />
+              <item name="SD" type="462c0819:PsiDirectoryNode" />
+              <item name="trial4" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bmx_race" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mekhezzr\PycharmProjects\bmx_race\SD\trial1" />
+      <recent name="C:\Users\mekhezzr\PycharmProjects\bmx_race\SD\trial6" />
+      <recent name="C:\Users\mekhezzr\PycharmProjects\bmx_race\MR\trial7" />
+      <recent name="C:\Users\mekhezzr\PycharmProjects\bmx_race\MR\trial6" />
+      <recent name="C:\Users\mekhezzr\PycharmProjects\bmx_race\MR\trial5" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mekhezzr\PycharmProjects\bmx_race\MR\trial7" />
+      <recent name="C:\Users\mekhezzr\PycharmProjects\bmx_race" />
+      <recent name="C:\Users\mekhezzr\PycharmProjects\bmx_race\MR\trial6" />
+      <recent name="C:\Users\mekhezzr\PycharmProjects\bmx_race\MR\trial5" />
+      <recent name="C:\Users\mekhezzr\PycharmProjects\bmx_race\MR\trial4" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.ConcatenatreTraitementTravail">
+    <configuration name="ConcatenatreTraitementTravail" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="bmx_race" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ConcatenatreTraitementTravail.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="concatCSV (4)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="bmx_race" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/concatCSV.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="dataCuteV2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="bmx_race" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dataCuteV2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="reindexe" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="bmx_race" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/reindexe.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sdData" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="bmx_race" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SD/trial6" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SD/trial6/sdData.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.ConcatenatreTraitementTravail" />
+        <item itemvalue="Python.dataCuteV2" />
+        <item itemvalue="Python.concatCSV (4)" />
+        <item itemvalue="Python.reindexe" />
+        <item itemvalue="Python.sdData" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="209c54e3-553a-47c3-84c0-0e0c307d3af6" name="Default Changelist" comment="" />
+      <created>1552905666881</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1552905666881</updated>
+      <workItem from="1552905671840" duration="34866000" />
+      <workItem from="1553158504870" duration="24547000" />
+      <workItem from="1553501796824" duration="2709000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="62122000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16204691" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29035753" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.24733475" />
+      <window_info anchor="right" x="0" y="0" width="300" height="771" id="Documentation" order="4" side_tool="true" weight="0.32910448" />
+      <window_info anchor="right" id="Database" order="5" weight="0.32995737" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/venv/travailMathisRagot1.csv" />
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/pandas/io/common.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="423" selection-start-line="423" selection-end-line="423" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/pandas/io/formats/csvs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="156" selection-start-line="156" selection-end-line="156" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MR/trial2/TraitementMathisRagot2.csv" />
+    <entry file="file://$PROJECT_DIR$/MR/trial2/framesMathisRagot2.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/travailMathisRagot1.csv" />
+    <entry file="file://$PROJECT_DIR$/MR/trial2/concatCSV.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MR/trial3/travailMathisRagot3.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MR/trial3/concatCSV.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MR/trial4/concatCSV.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="50" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MR/trial5/travailMathisRagot5.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MR/trial5/concatCSV.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MR/trial6/travailMathisRagot6.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MR/trial6/MathisRagot6.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MR/trial7/travailMathisRagot7.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MR/trial6/concatCSV.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="4" column="50" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SD/trial6/concatCSV.py" />
+    <entry file="file://$PROJECT_DIR$/SD/trial6/sdData.py" />
+    <entry file="file://$PROJECT_DIR$/SD/trial6/TravailSimbaDarnand6.csv" />
+    <entry file="file://$PROJECT_DIR$/MR/trial7/concatCSV.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reindexe.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SD/trial6/traitementSimbaDarnand6.csv" />
+    <entry file="file://$PROJECT_DIR$/SD/traitementSimbaDarnar1.csv" />
+    <entry file="file://$PROJECT_DIR$/SD/trial1/DonetraitementSimbaDarnar1.csv" />
+    <entry file="file://$PROJECT_DIR$/SD/trial1/travailSimbaDarnar1.csv" />
+    <entry file="file://$PROJECT_DIR$/SD/trial1/traitementSimbaDarnar1.csv" />
+    <entry file="file://$PROJECT_DIR$/SD/trial1/framesSimbaDarnar1.csv" />
+    <entry file="file://$PROJECT_DIR$/SD/trial1/Donetraitement1.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/matToCsv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="13" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RM/trial3/ConcatenatedtraitementRomainMayet6.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RM/trial3/DonetraitementRomainMayet6.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-10917" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RM/trial6/DonetraitementRomainMayet9.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-10812" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataCute.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ConcatenatreTraitementTravail.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RR/trial4/ConcatenatedtraitementRomainRacin4.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-48108" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RR/trial2/ConcatenatedtraitementRomainRacin2.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-36571" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RR/trial3/ConcatenatedtraitementRomainRacin3.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-20806" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RR/trial7/ConcatenatedtraitementRomainRacin7.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-27026" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RR/trial6/ConcatenatedtraitementRomainRacin6.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="628">
+          <caret line="575" column="40" selection-start-line="575" selection-start-column="40" selection-end-line="575" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concatCSV.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="64" column="40" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MR/trial1/data MR.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MR/trial1/concatCSV.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="23" lean-forward="true" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RM/trial1/travailRomainMayet1.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-47621" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RR/trial1/travailRomainRacin1.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-37953" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SD/trial1/travail1.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-11013" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SD/trial4/travail4.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-2138" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MR/trial4/travailMathisRagot4.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-10509" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RM/trial1/ConcatenatedtraitementRomainMayet1.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-45084" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RR/trial1/ConcatenatedtraitementRomainRacin1.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-47118" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MR/trial1/framesMathisRagot1.csv">
+      <provider editor-type-id="text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state>
+          <caret column="59" selection-start-column="52" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataCuteV2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14">
+          <caret line="2" column="9" lean-forward="true" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
