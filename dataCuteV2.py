@@ -2,10 +2,13 @@ import pandas as pd
 import glob
 import os
 
-'''lire les fichier csv'''
+'''
+couper le fichier csv traitement de la ligne de depart alant a la ligne fin marker 
+decaler le temps
+'''
 
 
-def dataCute(indir='RR\\', outfile=None):
+def dataCute(indir):
     directoryFiles = glob.glob(indir + '\\*\\')
     os.chdir(indir)
 
@@ -35,4 +38,4 @@ def dataCute(indir='RR\\', outfile=None):
 
 
 if __name__ == '__main__':
-        dataCute()
+        dataCute('SD\\')

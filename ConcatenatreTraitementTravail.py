@@ -1,7 +1,10 @@
 import os
 import glob
 import pandas as pd
+"""
+concatener fichier travaill et traitement de tous les test par pilote
 
+"""
 def concatenate(indir):
     directoryFiles = glob.glob(indir + '\\*\\')
     os.chdir(indir)
@@ -22,4 +25,4 @@ def concatenate(indir):
             dfList = []
 
 if __name__ == '__main__':
-    concatenate(indir='RR')
+    concatenate(indir='data\\RR')

@@ -2,6 +2,11 @@ import os
 import glob
 import pandas
 
+"""
+ concatener tous les fichier csv prensent dans un dossier en colonne
+  sous 3 fichiers csv dans les nom sont frames,traitement ou travail selon la taile
+"""
+
 def concatenate(indir):
     os.chdir(indir)
     fileList = glob.glob("*.csv")
@@ -16,30 +21,33 @@ def concatenate(indir):
 
 
     for filename in fileList:
-        size = os.stat(filename).st_size//1024
+        size = os.stat(filename).st_size//1024 #obtenir la taill en ko
+
         if  size <= 5:
             print(filename)
             print('<<<<<<<<<<<<<<9 ::: ' + str(size))
             df = pandas.read_csv(filename,header=None)
-            for col in range(len(df.columns)):
-                colnamesframe.append(filename[:-4])
-            dfListframes.append(df)
-        if (size <= 49) & (size > 5):
+            for col in range(len(df.columns)): #pour les fichier csv qui on plus d' une colonnes
+                colnamesframe.append(filename[:-4])#affecter le meme nom de colonne pour tous les colonne de ce fichier
+            dfListframes.append(df) #ajouter le fichier de taille < 5 ko  dans la list dfListframes
+
+        if (size <= 15) & (size > 5):
             print('>9  ::: ' + str(size))
             df = pandas.read_csv(filename, header=None)
             for col in range(len(df.columns)):
                 colnamestravail.append(filename[:-4])
             dfListtrvail.append(df)
-        if size > 49:
+
+        if size > 15:
             print('>15  ::: ' + str(size))
             df = pandas.read_csv(filename, header=None)
             for col in range(len(df.columns)):
                 colnamestraitement.append(filename[:-4])
             dfListtraitement.append(df)
 
-    concatframes = pandas.concat(dfListframes, axis=1)
-    concatframes.columns = colnamesframe
-    concatframes.to_csv('dir/frames'+piloteName+'.csv', index=None)
+    concatframes = pandas.concat(dfListframes, axis=1) #concatener les fichier qui figure dans dfListframes
+    concatframes.columns = colnamesframe #renommer toute les colonne par les nom obtenu en haut dans la var colnamesframe
+    concatframes.to_csv('dir/frames'+piloteName+'.csv', index=None) #sauvgarder les fichier sous le nom de frames + nom du pilote+ numero de test
 
     concattravail = pandas.concat(dfListtrvail, axis=1)
     concattravail.columns = colnamestravail
@@ -60,8 +68,8 @@ def concatenate(indir):
 
 if __name__ == '__main__':
 
-    directoryFiles = glob.glob("C:\\Users\\mekhezzr\\Desktop\\donnees\\RR\\RomainRacin7")
-    os.mkdir('C:\\Users\\mekhezzr\\Desktop\\donnees\\RR\\RomainRacin7\\dir')
+    directoryFiles = glob.glob("C:\\Users\\mekhezzr\\Desktop\\donnees\\SA\\SylvainAndre9")
+    os.mkdir('C:\\Users\\mekhezzr\\Desktop\\donnees\\SA\\SylvainAndre9\\dir')
     for directoryFile in directoryFiles:
         print(directoryFile)
         concatenate(indir=directoryFile)
