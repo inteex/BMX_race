@@ -33,4 +33,4 @@ def dataCute(indir):
 
 
 if __name__ == '__main__':
-        dataCute('.')
+        dataCute('..\\SD')

@@ -25,4 +25,4 @@ def concatenate(indir):
             dfList = []
 
 if __name__ == '__main__':
-    concatenate(indir='data\\RR')
+    concatenate(indir='data\\TJ')

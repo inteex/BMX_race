@@ -1,20 +1,24 @@
 import pandas as pd
 import glob
 
-# travail = pd.read_csv('MR/travailMathisRagot1.csv')
 #
-# df =travail.reset_index(drop=True)
-#
-# df.to_csv('./TtravailMathisRagot1.csv')
+# size = os.stat(file_path).st_size/1024
+# print('{:2f}'.format(size))
 
-# directoryFiles = glob.glob("C:\\Users\\mekhezzr\\Desktop\\donnees\\SD\\CritereDePerformanceSimbaDarnar5\\*\\")
-# for item in directoryFiles:
-#     print(item.split('\\')[-2])
+pd.set_option('max_rows',5)
+pd.set_option('max_columns',50)
+
+data = pd.read_csv('data\\AP\\trial6\\framesArthurPilard6.csv')
+data1 = pd.read_csv('data\\AP\\trial5\\framesArthurPilard5.csv')
+
+frames = pd.concat([data.iloc[0:1],data1[0:1]],axis=0)
 
 
-file_path = "C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\SD\\trial1\\framesSimbaDarnar1.csv"
 
-import os
+print(data.shape)
+print(data1.shape)
+print(frames.shape)
 
-size = os.stat(file_path).st_size/1024
-print('{:2f}'.format(size))
+print(data.columns)
+print(data1.columns)
+
