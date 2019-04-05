@@ -1,9 +1,10 @@
 from framesConcat import FramesConcate
 import pandas as pd
+from navigate_to_trials import NavigateFiles
 
 class FramesFiller:
     def filleframes(self,indir):
-        frames = FramesConcate().getAllFrames(indir=indir)
+        frames = NavigateFiles().get_all_files_by_num(indir=indir,fileNum=2)
         for frame in frames:
             for f in frame:
                 dataframes =pd.read_csv(f)

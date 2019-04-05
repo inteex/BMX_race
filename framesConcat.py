@@ -2,32 +2,25 @@ import pandas as pd
 import os
 import glob
 import numpy as np
+from navigate_to_trials import NavigateFiles
 
 
 class FramesConcate:
-    def getFrames(self, indir):
-        directoryFiles = glob.glob(indir + '\\*\\')
-        os.chdir(indir)
-        frames= []
 
-        for directoryFile in directoryFiles:
-            fileList = glob.glob((directoryFile.split('\\')[-2] + '\\*.csv'))
-            frame = pd.read_csv(fileList[2])
-            frames.append(indir+fileList[2])
+    def concatenatallframes(self,indir,fileNum = 2):
+        """
+        Concatenate all frames of all pilotes in a single csv file.
 
-        os.chdir('..\\..')
-        return frames
+        Parameters
+        ----------
+            indir : string,
+                Path to data.
 
-    def getAllFrames(self, indir):
-        directoryFiles = glob.glob(indir + '\\*\\')
-        allframes = []
-        for file in directoryFiles:
-            l = self.getFrames(file)
-            allframes.append(l)
-        return allframes
+            fileNum :int,
+                File position in the trial of a pilote.
 
-    def concatenatallframes(self,indir):
-        frames = self.getAllFrames(indir)
+        """
+        frames = NavigateFiles().get_all_files_by_num(indir,fileNum)
         appended_data=[]
         for pilote in frames:
             for f in pilote:
@@ -47,7 +40,6 @@ class FramesConcate:
                 frame['TimeEnd'] = time
                 appended_data.append(frame.iloc[0:1])
         appended_data = pd.concat(appended_data,axis=0)
-        appended_data.fillna
         appended_data.to_csv("data\\AllframesConcatenated.csv",index=0)
 
 
@@ -56,5 +48,5 @@ class FramesConcate:
 
 if __name__ == '__main__':
     frames = FramesConcate()
-    #print(frames.concatenatallframes('.\\data\\'))
-    print(frames.getAllFrames('data\\'))
+    print(frames.concatenatallframes('.\\data\\'))
+    # print(frames.getAllFrames('data\\'))

@@ -2,13 +2,18 @@ import pandas as pd
 import glob
 import os
 
-'''
-couper le fichier csv traitement de la ligne de depart alant a la ligne fin marker 
-decaler le temps
-'''
-
 
 def dataCute(indir):
+    """""
+    couper le fichier csv traitement de la ligne de depart alant a la ligne fin marker
+    decaler le temps
+
+    Parameters
+    ----------
+        indir : string,
+            Path to data pilote.
+   """
+
     directoryFiles = glob.glob(indir + '\\*\\')
     os.chdir(indir)
 
@@ -34,8 +39,8 @@ def dataCute(indir):
             df['Time'] = time.values
 
             df = df.reset_index(drop=True)
-            df.to_csv(fileList[1].split('\\')[0]+'\\Done'+ fileList[1].split('\\')[1], index=None)
+            df.to_csv(fileList[1].split('\\')[0] + '\\Done' + fileList[1].split('\\')[1], index=None)
 
 
 if __name__ == '__main__':
-        dataCute('.\\data\\TJ\\')
+    dataCute('.\\data\\TJ\\')

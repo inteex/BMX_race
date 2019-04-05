@@ -7,7 +7,6 @@ import pandas
   sous 3 fichiers csv dans les nom sont frames,traitement ou travail selon la taile
 """
 
-
 def concatenate(indir):
     os.chdir(indir)
     fileList = glob.glob("*.csv")
