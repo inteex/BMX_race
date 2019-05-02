@@ -131,8 +131,37 @@ class Tests:
         # print('R^2 Ridge :' + str(r2_score(y_test, y_pr)))
         # print('rmse {} \n\n\n'.format(math.sqrt(mean_squared_error(y_test, y_pr))))
         # print(lm2.coef_)
-        #
 
+    def ap(self, indir='data/AP/trial3/CDonetraitementArthurPilard3.csv'):
+        df = pd.read_csv(indir)
+        moment  = df ['Moment']
+        time  = df ['Time']
+        vitesse = df['VitesseRider']
+        p = df ['Puissance']
+        force = df ['ForcePied']
+        cad = df ['VitessePedalier']
+        # plt.scatter(vitesse,moment)
+        # plt.legend(['V','Moment'])
+        # plt.show()
+
+        plt.scatter(cad,p,marker='+')
+        plt.axhline(y=p.mean(), color='red', linestyle='--')
+        plt.axhline(y=p.max())
+        plt.show()
+        print(p.describe())
+
+    def correlation_heatmap(self):
+        import seaborn as sns
+
+        train = pd.read_csv("./MathisRagot1.csv")
+        correlations = train.corr()[train.corr().apply(lambda x: abs(x) > 0.5)]
+
+        fig, ax = plt.subplots(figsize=(40, 30))
+        sns.heatmap(correlations, vmax=1.0, center=0, fmt='.2f',
+                    square=True, linewidths=.5, annot=True, cbar_kws={"shrink": .70})
+        # plt.savefig("corelationEntreLesVariables")
+        plt.show()
 if __name__ == '__main__':
     a = Tests()
-    a.regression_traitement()
+    # a.regression_traitement()
+    a.ap()

@@ -1,4 +1,3 @@
-from framesConcat import FramesConcate
 import pandas as pd
 from navigate_to_trials import NavigateFiles
 
@@ -9,7 +8,8 @@ class FramesFiller:
             for f in frame:
                 dataframes =pd.read_csv(f)
                 pilote = f.split('\\')[2]
-                print(pilote)
+                trial = f.split('\\')[3]
+                print(pilote + trial)
                 if pilote == 'AP':
                         dataframes['Braquet']= 2.764705
                 if pilote == 'JR':
@@ -26,7 +26,10 @@ class FramesFiller:
                                      dataframes['Braquet']= 2.7222
                 if pilote == 'SD':
                                      dataframes['Braquet']= 2.8823
-                print( dataframes['Braquet'][0])
+                if pilote == 'TJ':
+                                     dataframes['Braquet']= 2.8823
+                print(dataframes['Braquet'][0])
+
 
 
 if __name__ == '__main__':
