@@ -11,7 +11,6 @@ class PlotBestTestPerPilote:
                 :param data_indir:  Path to data.
                 :param x_axis: array of features to plot in xaxis.
                 :param y_axis:  array of features to plot in the y-axis.
-                :return:
         """
 
         bestTrials = NavigateFiles().get_all_best_trials(data_indir)
@@ -56,14 +55,14 @@ class PlotBestTestPerPilote:
         for xi in x_axis:  # for all x axis variables
             for trial in best_trials:  # for the best trail of the pilot
                 fileList = glob.glob((trial + '\\*.csv'))  # all files of a trial
-                traitement = pd.read_csv(fileList[0])  # first file in the trail
-                frames = pd.read_csv(fileList[2])
+                traitement = pd.read_csv(fileList[1])  # first file in the trail
+                frames = pd.read_csv(fileList[0])
                 pilot_name = trial.split('\\')[-2]
                 x = traitement[xi]
                 coups_de_pedal1 = frames['CoupsDePedal'][0] - frames["Bip"][0]
                 coups_de_pedal2 = frames['CoupsDePedal.1'][0] - frames["Bip"][0]
                 coups_de_pedal3 = frames['CoupsDePedal.2'][0] - frames["Bip"][0]
-                plt.figure(num=None, figsize=(12.8, 7.2), dpi=300, facecolor='w', edgecolor='k')
+                # plt.figure(num=None, figsize=(12.8, 7.2), dpi=300, facecolor='w', edgecolor='k')
 
                 for column in y_axis:  # for all y axis variables
                     col = traitement[column]
@@ -83,23 +82,30 @@ class PlotBestTestPerPilote:
                 plt.axvline(x[coups_de_pedal2], color='red', linestyle='--')
                 plt.axvline(x[coups_de_pedal3], color='red', linestyle='--')
                 plt.grid()
-                # plt.show()
-                str = '_'.join(y_axis)
-                plt.savefig('figures/single/{}_{}_{}TTT.png'.format(pilot_name, str, xi))
+                plt.show()
+                # str = '_'.join(y_axis)
+                # plt.savefig('figures/single/{}_{}_{}TTT.png'.format(pilot_name, str, xi))
 
-    def externDetailsPilote(self, indir):
-
-        bestTrials = NavigateFiles().get_all_best_trials(indir)
+    def externDetailsPilote(self, data_indir, position_frames=0, position_traitements=1):
+        """
+        Extern some distinct information about pilots: Poids, Taille, Braquet,
+        Longueur Manivelle and the time of the best trial.
+            :param data_indir:Path to data indir.
+            :param position_frames: Position of the file frames in a trial by default 0.
+            :param position_traitements:Position of the file taitement in a trial by default 1.
+            :return:txt file.
+        """
+        bestTrials = NavigateFiles().get_all_best_trials(data_indir)
         masseRiders = []
         BraquetRiders = []
         longueurManivelleRiders = []
         tailleRiders = []
-        f = open('DetailsRiders.txt', 'w')
+        f = open('DetailsRiders1.txt', 'w')
         print('-----------------------------', file=f)
         for trial in bestTrials:
             fileList = glob.glob((trial + '\\*.csv'))
-            traitement = pd.read_csv(fileList[0])  # 0 -> first file in list its CDonetraitement.csv
-            frames = pd.read_csv(fileList[2])  # 2 -  > third file in list its frames
+            traitement = pd.read_csv(fileList[position_traitements])  # 0 -> first file in list its CDonetraitement.csv
+            frames = pd.read_csv(fileList[position_frames])  # 2 -  > third file in list its frames
             time = traitement['Time']
             if 'Braquet' in frames.columns:
                 braquet = frames['Braquet'][0]
@@ -119,7 +125,7 @@ class PlotBestTestPerPilote:
                 tailleRider = 0
             print('{} time: {:.3f}s'.format(trial.split('\\')[-2], time.iloc[-2]), file=f)
             print('-----------------------------', file=f)
-            print('Poide: {} '.format(masseRider), file=f)
+            print('Poids: {} '.format(masseRider), file=f)
             print('taille: {} '.format(tailleRider), file=f)
             print('braquet: {}'.format(braquet), file=f)
             print('Longueur Manivelle: {}'.format(longueurManivelle), file=f)
@@ -129,8 +135,19 @@ class PlotBestTestPerPilote:
             BraquetRiders.append(braquet * 10)
             longueurManivelleRiders.append(longueurManivelle)
 
-    def plot_by_pilotes_names_trials_nums(self, data_indir, pilotes_names, trials_nums, x_axis, y_axis):
-        trial_files = NavigateFiles().get_files_by_pilotes_names_trials_nums(data_indir, pilotes_names, trials_nums)
+    def plot_by_pilotes_names_trials_nums_dates(self, data_indir, pilotes_names, trials_nums, dates_trial, x_axis,
+                                                y_axis):
+        """
+
+        :param data_indir:
+        :param pilotes_names:
+        :param trials_nums:
+        :param x_axis:
+        :param y_axis:
+        :return:
+        """
+        trial_files = NavigateFiles().get_files_by_pilotes_names_trials_nums_dates(data_indir, pilotes_names,
+                                                                                   trials_nums, dates_trial)
         legend = []
         for xi in x_axis:
             for column in y_axis:
@@ -141,7 +158,7 @@ class PlotBestTestPerPilote:
                     col = traitement[column]
                     pilot_name = trial[0].split('\\')[-3]
                     trial_and_number = trial[0].split('\\')[-2]
-                    plt.plot(x,col)
+                    plt.plot(x, col)
                     legend.append(
                         '{} {} '.format(pilot_name, trial_and_number))
                 plt.xlabel(xi)
@@ -157,14 +174,16 @@ class PlotBestTestPerPilote:
 
 if __name__ == '__main__':
     obj = PlotBestTestPerPilote()
-    columns = ['VitesseRider']
+    columns = ['Puissance', 'ForceUPiedAv']
     xaxis = ['Time']
-    obj.plot_by_pilotes_names_trials_nums(data_indir='C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2',
-                                              pilotes_names=['ArthurPilard'], trials_nums=[2],
-                                              x_axis=xaxis, y_axis=columns
-                                              )
+    obj.plot_by_pilotes_names_trials_nums_dates(data_indir='C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2',
+                                                pilotes_names=['ThomasJouve', 'ArthurPilard'], trials_nums=[7, 8],
+                                                dates_trial=['2018-06-20', '2018-06-21'], x_axis=xaxis, y_axis=columns
+                                                )
 
-    # obj.plot_best_pilots_trial_together(data_indir='C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2', x_axis=xaxis, y_axis=columns)
-    # obj.plot_best_pilot_trial_single(data_indir='C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data', x_axis=xaxis, y_axis=columns)
+    # obj.plot_best_pilots_trial_together(data_indir='C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2',
+    #                                     x_axis=xaxis, y_axis=columns)
+    # obj.plot_best_pilot_trial_single(data_indir='C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2',
+    #                                  x_axis=xaxis, y_axis=columns)
     # obj.externDetailsPilote(indir='.\\data\\')
     # obj.plot_best_pilot_trial_single(indir='.\\data\\', xaxis=xaxis, columnsToPlot=columns)

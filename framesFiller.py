@@ -3,7 +3,7 @@ from navigate_to_trials import NavigateFiles
 
 class FramesFiller:
     def filleframes(self,indir):
-        frames = NavigateFiles().get_all_files_by_num(indir=indir,fileNum=2)
+        frames = NavigateFiles().get_all_files_by_num(data_indir=indir, position_file=2)
         for frame in frames:
             for f in frame:
                 dataframes =pd.read_csv(f)

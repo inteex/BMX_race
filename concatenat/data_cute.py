@@ -8,16 +8,8 @@ class DataCute:
         """
         couper le fichier csv traitement de la ligne de depart alant a la ligne fin marker
         decaler le temps
-
-        Example path
-
-            ../data/AP/
-        ---------
-
-
-        :param pilote_indir: string,
-                Path to data pilote.
-        :return:
+        :param pilote_indir: Path to pilot data.
+        :return:Csv File.
         """
 
         directoryFiles = glob.glob(pilote_indir + '\\*\\')
@@ -48,8 +40,8 @@ class DataCute:
         """
         couper le fichier csv traitement de la ligne de depart alant a la ligne fin marker
         decaler le temps
-        :param pilote_indir:
-        :return:
+        :param pilote_indir:Path to pilot data.
+        :return:Csv file.
         """
         directoryFiles = glob.glob(pilote_indir + '\\*\\')
         os.chdir(pilote_indir)

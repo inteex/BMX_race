@@ -6,10 +6,14 @@ from navigate_to_trials import NavigateFiles
 
 class ConcatCsv:
     def concat_to_frames_traitement_travail(self, csv_files_indir,
-                                            dir_to_savefile='C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2'):
+                                            dir_to_savefile='C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data'):
         """
-         concatener tous les fichier csv prensent dans un dossier en colonne
-          sous 3 fichiers csv dans les nom sont frames,traitement ou travail selon la taile
+        concatenat csv files that have same range of size onto 3 concatenated csv files
+        frames,traitement and travail.
+
+            :param csv_files_indir: Path to csv files.
+            :param dir_to_savefile: Path to save the new data base.
+
         """
         os.chdir(csv_files_indir)
         fileList = glob.glob("*.csv")
@@ -25,7 +29,6 @@ class ConcatCsv:
         date_passage = 'yyyy-mm-dd'
 
         for filename in fileList:
-            print(filename)
             size = os.stat(filename).st_size // 1024  # obtenir la taill en ko
 
             if size <= 5:
@@ -93,6 +96,12 @@ class ConcatCsv:
                                     index=None)
 
     def concat_all_csv_in_one_file(self, csv_files_indir, name_output_file="concatenated.csv"):
+        """
+        Concatenat csv files onto 1 concatenated csv file
+
+            :param csv_files_indir: Path to csv files.
+            :param name_output_file: Name of the concatenated csv.
+        """
         os.chdir(csv_files_indir)
         fileList = glob.glob("*.csv")
         colnamesframe = []
@@ -107,43 +116,39 @@ class ConcatCsv:
         concatframes.columns = colnamesframe
         concatframes.to_csv(name_output_file, index=None)
 
-    def concat_all_traitement(self, data_indir, position_traitement):
+    def concat_all_traitement(self, data_indir, position_traitement=1):
+        """
+        Concatenat all csv traitement files onto 1 concatenated csv file
+
+            :param data_indir: Path to data file.
+            :param position_traitement: Position of the file taitement in a trial by default 1.
+        """
         files = NavigateFiles().get_all_files_by_num(data_indir, position_traitement)
         appended_data = []
         for pilote in files:
             for file in pilote:  # the file in th trial
-
-                trials = "\\".join(file.split('\\')[1:4])  # get Trial path
                 traitemnt = pd.read_csv(file)
-
                 appended_data.append(traitemnt)
         appended_data = pd.concat(appended_data, axis=0)
         current_directory = os.path.dirname(os.path.realpath(__file__))
         appended_data.to_csv("{}\\AlltraitementConcatenated.csv".format(current_directory), index=0)
 
-    def concat_all_frames(self, data_indir, position_frames=2):
+    def concat_all_frames(self, data_indir, position_frames=0):
         """
-        Concatenate all frames of all pilotes in a single csv file.
+        Concatenat all csv frame files onto 1 concatenated csv file
 
-        Parameters
-        ----------
-            data_indir : string,
-                Path to data.
-
-            position_frames :int,
-                File position in the trial of a pilote.
+            :param data_indir: Path to data.
+            :param position_frames: Position of the file frames in a trial by default 0.
 
         """
+
         frames = NavigateFiles().get_all_files_by_num(data_indir, position_frames)
-        print(frames)
-        exit(1)
         appended_data = []
         for pilote in frames:
             for f in pilote:
                 trials = "\\".join(f.split('\\')[0:-1])
-                print(trials)
-                fileList = glob.glob((trials + '\\*.csv'))
-                traits = pd.read_csv(fileList[0])
+                traitements = glob.glob((trials + '\\traitement_*.csv'))
+                traits = pd.read_csv(traitements[0])
                 time = traits['Time'][len(traits) - 2]
                 frames = pd.read_csv(f)
                 frame = frames[['TailleRider', 'longueurManivelle']]
@@ -158,42 +163,42 @@ class ConcatCsv:
 
         appended_data = pd.concat(appended_data, axis=0)
         current_directory = os.path.dirname(os.path.realpath(__file__))
+        print(current_directory)
         appended_data.to_csv("{}\\AllframesConcatenated.csv".format(current_directory), index=0)
 
     def concat_traitement_travail(self, pilote_indir, position_travail, position_traitement):
         """
-        concatener fichier travaill et traitement de tous les test par pilote
+         concatenat travaill files and traitement onto 1 concatenated csv file in each trial
 
-        resultat un fichier csv contenant le traitemnt et le traivail
-
-        Parameters
-        ----------
-            pilote_indir : string,
-                Path to data pilote.
-
+            :param pilote_indir: Path to data pilote.
+            :param position_travail: Position of the file traivail in a trial.
+            :param position_traitement: Position of the file traivail in a trial.
+            :return:Csv file.
         """
-        trials = glob.glob(pilote_indir + '\\*\\')
-        os.chdir(pilote_indir)
-        dfList = []
-
-        for trial in trials:
-            fileList = glob.glob((trial.split('\\')[-2] + '\\*.csv'))
-            if fileList:
-                traitment = pd.read_csv(fileList[position_traitement])
-                travail = pd.read_csv(fileList[position_travail])
-                dfList.append(traitment)
-                dfList.append(travail)
-                outfile = trial.split('\\')[-2] + '\\Concatenated' + fileList[2].split('\\')[1]
-                concatDf = pd.concat(dfList, axis=1)
-                concatDf.to_csv(outfile, index=None)
-                dfList = []
+        # To Do ...
+        # trials = glob.glob(pilote_indir + '\\*\\')
+        # os.chdir(pilote_indir)
+        # dfList = []
+        #
+        # for trial in trials:
+        #     fileList = glob.glob((trial.split('\\')[-2] + '\\*.csv'))
+        #     if fileList:
+        #         traitment = pd.read_csv(fileList[position_traitement])
+        #         travail = pd.read_csv(fileList[position_travail])
+        #         dfList.append(traitment)
+        #         dfList.append(travail)
+        #         outfile = trial.split('\\')[-2] + '\\Concatenated' + fileList[2].split('\\')[1]
+        #         concatDf = pd.concat(dfList, axis=1)
+        #         concatDf.to_csv(outfile, index=None)
+        #         dfList = []
 
 
 if __name__ == '__main__':
     concat_csv = ConcatCsv()
     # concat_csv.concat_all_frames(data_indir="C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2",position_frames=0)
-    directoryFiles = glob.glob("C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2\\TJ\\*\\")
-    for directoryFile in directoryFiles:
-        concat_csv.concat_to_frames_traitement_travail(csv_files_indir=directoryFile,
-                                                       dir_to_savefile="C:\\Users\\mekhezzr\\Desktop\\e")
-
+    # directoryFiles = glob.glob("C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2\\TJ\\*\\")
+    # for directoryFile in directoryFiles:
+    #     concat_csv.concat_to_frames_traitement_travail(csv_files_indir=directoryFile,
+    #                                                    dir_to_savefile="C:\\Users\\mekhezzr\\Desktop\\e")
+    concat_csv.concat_all_traitement(data_indir='C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2\\',
+                                     position_traitement=1)

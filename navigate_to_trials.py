@@ -7,9 +7,9 @@ class NavigateFiles:
 
     def get_best_trial(self, pilote_indir):
         """
-
-        :param pilote_indir: Path to pilot directory.
-        :return: Path to the best trial.
+            get the best trial for the specified pilot
+                :param pilote_indir: Path to pilot directory.
+                :return: Path to the best trial.
         """
         directoryFiles = glob.glob(pilote_indir + '\\*\\')
         current_directory = os.path.dirname(os.path.realpath(__file__))
@@ -40,9 +40,9 @@ class NavigateFiles:
 
     def get_all_best_trials(self, data_indir):
         """
-
-        :param data_indir: Path to data.
-        :return: List of paths of best trial for each pilot.
+            Get the best trial for every pilot in the data base.
+                :param data_indir: Path to data.
+                :return: List of paths of best trial for each pilot.
         """
         directoryFiles = glob.glob(data_indir + '\\*\\')
         bestTrials = []
@@ -51,93 +51,90 @@ class NavigateFiles:
             bestTrials.append(l)
         return bestTrials
 
-    def get_files_by_num(self, indir, fileNum):
-        """Get a the specified file from each trial.
-
-        Parameters
-        ----------
-            indir : string,
-                Path to data.
-
-            fileNum : int,
-                Position of file in trial.
-
-        Returns
-        -------
-            files : array,
-                Array of the specified file from all the pilote's trials.
-
+    def get_files_by_num(self, pilot_indir, position_file):
         """
-        directory_files = glob.glob(indir + '\\*\\')
-        os.chdir(indir)
+            Get the file at this position from each trial of this pilot.
+
+                :param pilot_indir: Path to pilot data.
+                :param position_file:Position of file in trial.
+                :return: Array of the specified file from all the pilote's trials.
+        """
+
+        directory_files = glob.glob(pilot_indir + '\\*\\')
+        os.chdir(pilot_indir)
         files = []
 
         for directoryFile in directory_files:
             fileList = glob.glob((directoryFile.split('\\')[-2] + '\\*.csv'))
-            files.append(indir + fileList[fileNum])
+            files.append(pilot_indir + fileList[position_file])
 
         os.chdir('..\\..')
         return files
 
-    def get_all_files_by_num(self, indir, fileNum):
-        """Get all the specified file from each trial of each pilote.
-
-        Parameters
-        ----------
-        indir : string,
-            Path to data.
-        fileNum : int,
-            Position of file in trial.
-        Returns
-        -------
-            files : array,
-                Array of arrays of all specified file of all pilotes
-
-        Example
-        -------
-        it returns this type of structure:
-            [
-            ['./data/AP/trial2/framesArthurPilard2.csv', ... ],
-            [... ,'./data/TJ/trial7/framesThomasJouve7.csv']
-            ]
+    def get_all_files_by_num(self, data_indir, position_file):
+        """
+            Get all files at this position from each trial.
+    
+                :param data_indir: Path to data.
+                :param position_file: Position of file in trial.
+                :return: Array of arrays of all specified file of all pilotes
 
         """
-        current_path = os.path.dirname(os.path.realpath(__file__))
-        directory_files = glob.glob('{}\\*\\'.format(indir))
+        directory_files = glob.glob('{}\\*\\'.format(data_indir))
         allfiles = []
         for file in directory_files:
-            l = self.get_files_by_num(file, fileNum)
+            l = self.get_files_by_num(file, position_file)
             allfiles.append(l)
         return allfiles
 
-    def get_files_by_pilote_name_trial_num(self, data_indir, pilote_name, trial_num):
+    def get_files_by_pilote_name_trial_num_date(self, data_indir, pilote_name, trial_num, date_trial):
+        """
 
+            :param data_indir:
+            :param pilote_name:
+            :param trial_num:
+            :return:
+        """
         directory_files = glob.glob(data_indir + '\\*')
         current_path = os.path.dirname(os.path.realpath(__file__))
         os.chdir(data_indir)
         files = []
         for directoryFile in directory_files:
-            l = glob.glob(('{}\\trial{}\\*_{}*_*.csv'.format(directoryFile, trial_num, pilote_name)))
+            l = glob.glob(('{}\\trial{}\\*_{}*_{}.csv'.format(directoryFile, trial_num, pilote_name, date_trial)))
             if l:
                 files.append(l)
         os.chdir(current_path)
-        return files[0]
+        if files:
+            return files[0]
 
-    def get_files_by_pilotes_names_trials_nums(self, data_indir, pilote_names, trial_nums):
 
+    def get_files_by_pilotes_names_trials_nums_dates(self, data_indir, pilote_names, trial_nums, dates_trial):
+        """
+
+            :param data_indir:
+            :param pilote_names:
+            :param trial_nums:
+            :return:
+        """
         current_path = os.path.dirname(os.path.realpath(__file__))
         os.chdir(data_indir)
         files = []
-        for pilote_name,trial_num in zip(pilote_names,trial_nums):
-            files.append(self.get_files_by_pilote_name_trial_num(data_indir, pilote_name, trial_num))
+        for pilote_name, trial_num, date_trial in zip(pilote_names, trial_nums, dates_trial):
+            f = self.get_files_by_pilote_name_trial_num_date(data_indir, pilote_name, trial_num, date_trial)
+            if f:
+                files.append(f)
+            else:
+                print('no trial found')
         os.chdir(current_path)
         return files
 
 
 if __name__ == '__main__':
     nf = NavigateFiles()
-    # print(nf.get_all_files_by_num('C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2', fileNum=0))
+    data = 'C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2'
     print(
-        nf.get_files_by_pilotes_names_trials_nums(data_indir='C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2',
-                                                  pilote_names=['ArthurPilard', 'JeremyRencurel','SylvainAndre'], trial_nums=[2, 1, 5]))
-    # print(nf.get_all_best_trials('.\\data'))
+        nf.get_files_by_pilotes_names_trials_nums_dates(
+            data_indir='C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2',
+            pilote_names=['ArthurPilard', 'Jeremy'], trial_nums=[2, 5],
+            dates_trial=['2018-06-21', '2018-12-12']))
+    # print(nf.get_all_files_by_num(data, position_file=0))

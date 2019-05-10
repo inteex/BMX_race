@@ -67,12 +67,12 @@ class AnalyseFrame:
             print("-" * 50)
             print(model)
             print("=" * 50)
-            for d in range(1, 11):
-                X = frames.drop(['TimeEnd', 'MasseBike', 'TailleRider'], axis=1)
+            for degree in range(1, 11):
+                X = frames.drop(['TimeEnd'], axis=1)
                 X = X.fillna(frames.mean())
                 y = frames['TimeEnd']
 
-                polynomial_features = PolynomialFeatures(degree=d)
+                polynomial_features = PolynomialFeatures(degree=degree)
                 X = polynomial_features.fit_transform(X)
 
                 # test set
@@ -87,8 +87,11 @@ class AnalyseFrame:
 
                 y_pred_val = lm.predict(X_val)
 
-                print('test_R2 {}, degree: {}, val_R2 {}'.format(str(r2_score(y_test, y_pred)), d,
-                                                                 str(r2_score(y_val, y_pred_val))))
+                r2_score_test = r2_score(y_test, y_pred)
+                r2_score_val = r2_score(y_val, y_pred_val)
+                if r2_score_test > 0.70 and r2_score_val > 0.70:
+                    print('degree: {}, test_R2 {}, val_R2 {}'.format(degree, str(r2_score_test),
+                                                                     str(r2_score_val)))
                 # print('val_R2 {}, degree: {}'.format(str(r2_score(y_test, y_pred)),d))
 
 
