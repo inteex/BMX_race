@@ -16,6 +16,7 @@ import matplotlib.pyplot as plt
 from sklearn.feature_selection import f_regression, mutual_info_regression
 from scipy import stats
 
+
 # pd.set_option('max_rows', 50)
 # pd.set_option('max_columns', 50)
 
@@ -31,10 +32,13 @@ class AnalyseTraitement:
                                     'ForceGuidon', 'ForceGuidon.1', 'ForceGuidon.2',
                                     'ForceGuidon_R0', 'ForceGuidon_R0.1', 'ForceGuidon_R0.2',
                                     'ForcePedaleD_R0', 'ForcePedaleD_R0.1', 'ForcePedaleD_R0.2',
-                                    'ForcePedaleG_R0', 'ForcePedaleG_R0.1', 'ForcePedaleG_R0.2','ForcePiedAv.2',
-                                    'ForcePiedAv.1','TravailPAr','ThetaMrv','ThetaMrDeg','ThetaM','ThetaMDeg','Impulsion',
-                                    'ThetaMr','IndiceEfficacitePiedAv','IndiceEfficaciteTotal','ForcePiedAr.2','ForcePiedAv',
-                                    'ForcePiedAr','ForcePied','PuissancePAr','Moment','MomentPAr','MomentPAv','DeplacementRider'],
+                                    'ForcePedaleG_R0', 'ForcePedaleG_R0.1', 'ForcePedaleG_R0.2', 'ForcePiedAv.2',
+                                    'ForcePiedAv.1', 'TravailPAr', 'ThetaMrv', 'ThetaMrDeg', 'ThetaM', 'ThetaMDeg',
+                                    'Impulsion',
+                                    'ThetaMr', 'IndiceEfficacitePiedAv', 'IndiceEfficaciteTotal', 'ForcePiedAr.2',
+                                    'ForcePiedAv',
+                                    'ForcePiedAr', 'ForcePied', 'PuissancePAr', 'Moment', 'MomentPAr', 'MomentPAv',
+                                    'DeplacementRider'],
                                    axis=1)
 
         traitemnt = traitemnt.dropna(axis=0)
@@ -42,7 +46,6 @@ class AnalyseTraitement:
         return traitemnt
 
     def regression_traitement(self):
-
         X = self.preprocessing_data()
         # Get column names first
         # X= X[['Moment','MomentPAr','MomentPAv','ForceUPiedAv']]
@@ -53,7 +56,6 @@ class AnalyseTraitement:
         scaled_df = scaler.fit_transform(X)
         X = pd.DataFrame(scaled_df, columns=names)
 
-
         y = X['ForceUPiedAv']
         X = X.drop('ForceUPiedAv', axis=1)
 
@@ -63,8 +65,8 @@ class AnalyseTraitement:
         lm.fit(X_train, y_train)
 
         # save the model to disk
-        # filename = 'Ridge_traitement.sav'
-        # pickle.dump(lm, open(filename, 'wb'))
+        filename = 'Ridge_traitement.sav'
+        pickle.dump(lm, open(filename, 'wb'))
 
         predictions = lm.predict(X_test)
 
@@ -118,8 +120,6 @@ class AnalyseTraitement:
         print('R2 linearReg :' + str(r2_score(y, y_pred)))
         print(loaded_model.coef_)
         print('rmse {} \n\n\n'.format(math.sqrt(mean_squared_error(y, y_pred))))
-
-
 
 
 if __name__ == '__main__':

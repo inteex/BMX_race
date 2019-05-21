@@ -1,6 +1,7 @@
 import warnings
 
 import pandas as pd
+import numpy as np
 from sklearn import preprocessing
 from sklearn.metrics import r2_score, mean_squared_error
 from sklearn.linear_model import LinearRegression, Ridge, Lasso, LassoLars, ElasticNet
@@ -58,7 +59,7 @@ class AnalyseFrame:
         # y_pred = lm.predict(X_test)
 
     def model_selection(self):
-        frames = pd.read_csv("data\\AllframesConcatenated.csv")
+        frames = pd.read_csv("C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\concatenat\\AllframesConcatenated.csv")
         frames = frames.reset_index(drop=True)
 
         models = [LinearRegression(), Ridge(alpha=.5), Lasso(alpha=.5), ElasticNet(alpha=.5)]
@@ -67,7 +68,7 @@ class AnalyseFrame:
             print("-" * 50)
             print(model)
             print("=" * 50)
-            for degree in range(1, 11):
+            for degree in range(1, 6):
                 X = frames.drop(['TimeEnd'], axis=1)
                 X = X.fillna(frames.mean())
                 y = frames['TimeEnd']
@@ -89,14 +90,44 @@ class AnalyseFrame:
 
                 r2_score_test = r2_score(y_test, y_pred)
                 r2_score_val = r2_score(y_val, y_pred_val)
-                if r2_score_test > 0.70 and r2_score_val > 0.70:
+                if r2_score_test > 0.78 and r2_score_val > 0.8:
                     print('degree: {}, test_R2 {}, val_R2 {}'.format(degree, str(r2_score_test),
                                                                      str(r2_score_val)))
                 # print('val_R2 {}, degree: {}'.format(str(r2_score(y_test, y_pred)),d))
+
+    def test_model_frames(self):
+        frames = pd.read_csv("C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\concatenat\\AllframesConcatenated.csv")
+        frames = frames.reset_index(drop=True)
+
+        X = frames.drop(['TimeEnd'], axis=1)
+        X = X.fillna(frames.mean())
+        y = frames['TimeEnd']
+
+        polynomial_features = PolynomialFeatures(degree=2)
+        X = polynomial_features.fit_transform(X)
+
+        # test set
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=13)
+
+        lm = Ridge(alpha=0.5)
+        lm.fit(X_train, y_train)
+        y_pred = lm.predict(X_test)
+
+        r2_score_test = r2_score(y_test, y_pred)
+
+        print('test_R2 {}'.format(str(r2_score_test)))
+
+        erreur = []
+        for y_p, y_t in zip(y_pred, np.array(y_test)):
+            print('pred: {:.3f}, test: {:.3f}, Erreur: {:.3f}, percent: {:.3f}%'.format(y_p, y_t, abs(y_p - y_t),
+                                                                                        100 * abs(y_p - y_t) / y_t))
+            erreur.append(abs(y_p - y_t))
+        print('max: {:.3f}, min: {:.3f}, moyenne: {:.3f}'.format(np.max(erreur), np.min(erreur), np.mean(erreur)))
 
 
 if __name__ == '__main__':
     frame = AnalyseFrame()
     # frame.regression_on_frames()
     warnings.filterwarnings("ignore")  # ignore warnings
-    frame.model_selection()
+    # frame.model_selection()
+    frame.test_model_frames()

@@ -177,8 +177,8 @@ if __name__ == '__main__':
     columns = ['Puissance', 'ForceUPiedAv']
     xaxis = ['Time']
     obj.plot_by_pilotes_names_trials_nums_dates(data_indir='C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2',
-                                                pilotes_names=['ThomasJouve', 'ArthurPilard'], trials_nums=[7, 8],
-                                                dates_trial=['2018-06-20', '2018-06-21'], x_axis=xaxis, y_axis=columns
+                                                pilotes_names=['ThomasJouve', 'ThomasJouve'], trials_nums=[7, 8],
+                                                dates_trial=['2018-06-20', '2018-06-20'], x_axis=xaxis, y_axis=columns
                                                 )
 
     # obj.plot_best_pilots_trial_together(data_indir='C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2',
@@ -186,4 +186,3 @@ if __name__ == '__main__':
     # obj.plot_best_pilot_trial_single(data_indir='C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2',
     #                                  x_axis=xaxis, y_axis=columns)
     # obj.externDetailsPilote(indir='.\\data\\')
-    # obj.plot_best_pilot_trial_single(indir='.\\data\\', xaxis=xaxis, columnsToPlot=columns)

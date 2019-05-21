@@ -134,17 +134,17 @@ class Tests:
 
     def ap(self, indir='data/AP/trial3/CDonetraitementArthurPilard3.csv'):
         df = pd.read_csv(indir)
-        moment  = df ['Moment']
-        time  = df ['Time']
+        moment = df['Moment']
+        time = df['Time']
         vitesse = df['VitesseRider']
-        p = df ['Puissance']
-        force = df ['ForcePied']
-        cad = df ['VitessePedalier']
+        p = df['Puissance']
+        force = df['ForcePied']
+        cad = df['VitessePedalier']
         # plt.scatter(vitesse,moment)
         # plt.legend(['V','Moment'])
         # plt.show()
 
-        plt.scatter(cad,p,marker='+')
+        plt.scatter(cad, p, marker='+')
         plt.axhline(y=p.mean(), color='red', linestyle='--')
         plt.axhline(y=p.max())
         plt.show()
@@ -161,7 +161,14 @@ class Tests:
                     square=True, linewidths=.5, annot=True, cbar_kws={"shrink": .70})
         # plt.savefig("corelationEntreLesVariables")
         plt.show()
+
+    def start1csv(self):
+        start = pd.read_csv("Start1_IK.csv", delimiter=";")
+        print(start.time)
+        print(start.describe())
+
+
 if __name__ == '__main__':
     a = Tests()
     # a.regression_traitement()
-    a.ap()
+    a.start1csv()

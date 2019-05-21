@@ -6,7 +6,7 @@ from navigate_to_trials import NavigateFiles
 
 class ConcatCsv:
     def concat_to_frames_traitement_travail(self, csv_files_indir,
-                                            dir_to_savefile='C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data'):
+                                            dir_to_savefile='C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v3'):
         """
         concatenat csv files that have same range of size onto 3 concatenated csv files
         frames,traitement and travail.
@@ -48,34 +48,36 @@ class ConcatCsv:
                     colnamesframe.append(filename[:-4])  # affecter le meme nom de colonne pour tous les colonnes
                 dfListframes.append(df)  # ajouter le fichier de taille < 5 ko  dans la list dfListframes
 
-            if (size <= 53) & (size > 5):
-                """
-                 # size depend on files we want to groupe 
-                 # 53 and 5, because travail files are in this interval
-                """
-
-                try:
-                    # read your files
-                    df = pd.read_csv(filename, header=None)
-                except pd.errors.EmptyDataError:
-                    pass
-                for col in range(len(df.columns)):
-                    colnamestravail.append(filename[:-4])
-                dfListtrvail.append(df)
-
-            if size > 53:
-                """
+            else:
+                if filename == 'ImpulsionPAr.csv' or filename == 'Impulsion.csv' or \
+                        filename == 'ImpulsionPAv.csv' or filename == 'TravailPAv.csv' or \
+                        filename == 'Travail.csv' or filename == 'TravailPAr.csv':
+                    """
                      # size depend on files we want to groupe 
-                     # > 5 because traitement files are in this interval
-                """
-                try:
-                    # read your files
-                    df = pd.read_csv(filename, header=None)
-                except pd.errors.EmptyDataError:
-                    pass
-                for col in range(len(df.columns)):
-                    colnamestraitement.append(filename[:-4])
-                dfListtraitement.append(df)
+                     # 53 and 5, because travail files are in this interval
+                    """
+
+                    try:
+                        # read your files
+                        df = pd.read_csv(filename, header=None)
+                    except pd.errors.EmptyDataError:
+                        pass
+                    for col in range(len(df.columns)):
+                        colnamestravail.append(filename[:-4])
+                    dfListtrvail.append(df)
+                else:
+                    """
+                         # size depend on files we want to groupe 
+                         # > 5 because traitement files are in this interval
+                    """
+                    try:
+                        # read your files
+                        df = pd.read_csv(filename, header=None)
+                    except pd.errors.EmptyDataError:
+                        pass
+                    for col in range(len(df.columns)):
+                        colnamestraitement.append(filename[:-4])
+                    dfListtraitement.append(df)
 
         path_files = '{}\\{}\\trial{}\\'.format(dir_to_savefile, surname, trialnumber)
         os.makedirs(path_files)
@@ -166,39 +168,56 @@ class ConcatCsv:
         print(current_directory)
         appended_data.to_csv("{}\\AllframesConcatenated.csv".format(current_directory), index=0)
 
-    def concat_traitement_travail(self, pilote_indir, position_travail, position_traitement):
+    def concat_traitement_travail(self, data_indir,
+                                  dir_to_savefiles='C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v3'):
         """
          concatenat travaill files and traitement onto 1 concatenated csv file in each trial
 
-            :param pilote_indir: Path to data pilote.
-            :param position_travail: Position of the file traivail in a trial.
-            :param position_traitement: Position of the file traivail in a trial.
+            :param data_indir: Path to data pilote.
             :return:Csv file.
         """
-        # To Do ...
-        # trials = glob.glob(pilote_indir + '\\*\\')
-        # os.chdir(pilote_indir)
-        # dfList = []
-        #
-        # for trial in trials:
-        #     fileList = glob.glob((trial.split('\\')[-2] + '\\*.csv'))
-        #     if fileList:
-        #         traitment = pd.read_csv(fileList[position_traitement])
-        #         travail = pd.read_csv(fileList[position_travail])
-        #         dfList.append(traitment)
-        #         dfList.append(travail)
-        #         outfile = trial.split('\\')[-2] + '\\Concatenated' + fileList[2].split('\\')[1]
-        #         concatDf = pd.concat(dfList, axis=1)
-        #         concatDf.to_csv(outfile, index=None)
-        #         dfList = []
+        directory_files = glob.glob('{}\\*\\'.format(data_indir))
+        for pilote_indir in directory_files:
+            print(pilote_indir)
+            trials = glob.glob(pilote_indir + '\\*\\')
+            os.chdir(pilote_indir)
+            dfList = []
+            for trial in trials:
+                traitement_path = glob.glob(('{}\\cuted_fin_dep_traitement_*.csv'.format(trial.split('\\')[-2])))
+                travail_path = glob.glob(('{}\\travail_*.csv'.format(trial.split('\\')[-2])))
+                frames_path = glob.glob(('{}\\frames_*.csv'.format(trial.split('\\')[-2])))
+
+                traitment = pd.read_csv(traitement_path[0])
+                travail = pd.read_csv(travail_path[0])
+                frames = pd.read_csv(frames_path[0])
+
+                # concatenate traitement travail
+                dfList.append(traitment)
+                dfList.append(travail)
+                concatDf = pd.concat(dfList, axis=1)
+
+                try:
+                    # index of first null vitess
+                    finDep = int(concatDf.VitesseRider.index[concatDf.VitesseRider.isnull()][0])
+                except IndexError:
+                    finDep = len(concatDf)
+
+                concatDf = concatDf.loc[0:finDep]
+                concatDf = concatDf.reset_index(drop=True)
+
+                outfile = '.\\{}\\concat_{}'.format(trial.split('\\')[-2],traitement_path[0].split('\\')[-1])
+                concatDf.to_csv(outfile, index=None)
+                dfList = []
 
 
 if __name__ == '__main__':
     concat_csv = ConcatCsv()
     # concat_csv.concat_all_frames(data_indir="C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2",position_frames=0)
-    # directoryFiles = glob.glob("C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2\\TJ\\*\\")
+    # directoryFiles = glob.glob("C:\\Users\\mekhezzr\\Desktop\\data_v2\\RM\\*\\")
     # for directoryFile in directoryFiles:
     #     concat_csv.concat_to_frames_traitement_travail(csv_files_indir=directoryFile,
-    #                                                    dir_to_savefile="C:\\Users\\mekhezzr\\Desktop\\e")
-    concat_csv.concat_all_traitement(data_indir='C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2\\',
-                                     position_traitement=1)
+    #                                                    dir_to_savefile="C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v3")
+    # concat_csv.concat_all_traitement(data_indir='C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2\\',
+    #                                  position_traitement=1)
+
+    concat_csv.concat_traitement_travail(data_indir='C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v3')
