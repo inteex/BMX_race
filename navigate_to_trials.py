@@ -22,7 +22,11 @@ class NavigateFiles:
             frames = pd.read_csv(fileList[0])
 
             if 'FinDplcmt' in frames.columns:
-                finDep = frames.FinDplcmt[0] - frames.Bip[0]
+                """
+                indeccies are shifted by 111 when time starts from 
+                -0.36 instead of 0 so the index of finDep is shifted too.
+                """
+                finDep = frames.FinDplcmt[0] - frames.Bip[0] - 111
             else:
                 finDep = len(traitement) - 1
 
@@ -131,10 +135,10 @@ class NavigateFiles:
 
 if __name__ == '__main__':
     nf = NavigateFiles()
-    data = 'C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2'
-    print(
-        nf.get_files_by_pilotes_names_trials_nums_dates(
-            data_indir='C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2',
-            pilote_names=['ArthurPilard', 'Jeremy'], trial_nums=[2, 5],
-            dates_trial=['2018-06-21', '2018-12-12']))
-    # print(nf.get_all_files_by_num(data, position_file=0))
+    data = 'C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2_old'
+    # print(
+    #     nf.get_files_by_pilotes_names_trials_nums_dates(
+    #         data_indir='C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2_old',
+    #         pilote_names=['ArthurPilard', 'Jeremy'], trial_nums=[2, 5],
+    #         dates_trial=['2018-06-21', '2018-12-12']))
+    print(nf.get_all_files_by_num(data, position_file=1))

@@ -1,7 +1,12 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import glob
+
+from sklearn import preprocessing
+from mpl_toolkits.mplot3d import Axes3D
 from navigate_to_trials import NavigateFiles
+from sklearn.preprocessing import PolynomialFeatures
+
 
 
 class PlotBestTestPerPilote:
@@ -135,7 +140,7 @@ class PlotBestTestPerPilote:
             BraquetRiders.append(braquet * 10)
             longueurManivelleRiders.append(longueurManivelle)
 
-    def plot_by_pilotes_names_trials_nums_dates(self, data_indir, pilotes_names, trials_nums, dates_trial, x_axis,
+    def  plot_by_pilotes_names_trials_nums_dates(self, data_indir, pilotes_names, trials_nums, dates_trial, x_axis,
                                                 y_axis):
         """
 
@@ -170,17 +175,74 @@ class PlotBestTestPerPilote:
                 # plt.figtext(0.5, 0.01, txt, wrap=True, horizontalalignment='center', fontsize=12)
                 # plt.savefig('figures/{}_{}.png'.format(column, xi))
                 plt.show()
+    def correlation_heatmap(self):
+        import seaborn as sns
 
+        train = pd.read_csv("../data_v2/SD/trial1/traitement_SimbaDarnand1_2018-06-21.csv")
+        correlations = train.corr()
+
+        fig, ax = plt.subplots(figsize=(40, 30))
+        sns.heatmap(correlations, vmax=1.0, center=0, fmt='.2f',
+                    square=True, linewidths=.5, annot=True, cbar_kws={"shrink": .70})
+        # plt.savefig("corelationEntreLesVariables")
+        plt.show()
+
+    def plot_frame_concatenated(self, frames_indir):
+        frames = pd.read_csv(frames_indir)
+        frames = frames.fillna(frames.mean())
+        time= frames['TimeEnd']
+        frames = frames.drop(['TimeEnd', 'AlphaGaitDmin', 'DAlignementMin', 'DEpauleMin',
+                         'DistanceRecul', 'Dmin',
+                         'ThetaManivelleDepart', 'TpsReaction',
+                         'moyennePuissance1', 'moyennePuissance2', 'moyennePuissance3',
+                         'moyennePuissance4'], axis=1)
+        # polynomial_features = PolynomialFeatures(degree=1)
+        # frames = polynomial_features.fit_transform(frames)
+        # names = frames.columns
+        # # Create the Scaler object
+        # scaler = preprocessing.StandardScaler()
+        # # Fit your data on the scaler object
+        # scaled_df = scaler.fit_transform(frames)
+        # frames = pd.DataFrame(scaled_df, columns=names)
+
+        # fig = plt.figure()
+        # ax = fig.add_subplot(111, projection='3d')
+        # ax.scatter(time, frames['moyennePuissance1'], frames['moyennePuissance2'])
+        # ax.set_xlabel('X time')
+        # ax.set_ylabel('Y moyennePuissance1')
+        # ax.set_zlabel('Z moyennePuissance2')
+
+
+        # exit()
+        # plt.scatter(time, frames['Braquet'])
+        # plt.scatter(time, frames['longueurManivelle'])
+        # plt.scatter(time, frames['MasseBike'])
+        # plt.scatter(time, frames['MasseRider'])
+        # plt.scatter(time, frames['TailleRider'])
+        # plt.scatter(time, frames['moyennePuissance2'])
+        # plt.scatter(time, frames['moyennePuissance4'])
+        # plt.scatter(time, frames['moyennePuissance3'])
+        # plt.scatter(time, frames['moyennePuissance1'])
+        leg=[]
+        for col in range(0,frames.shape[1]):
+            # plt.scatter(time, frames[:,col])
+            # plt.scatter(time, frames[:,col])
+
+            leg.append(col)
+        # plt.legend(leg)
+        plt.show()
 
 if __name__ == '__main__':
     obj = PlotBestTestPerPilote()
-    columns = ['Puissance', 'ForceUPiedAv']
+    obj.plot_frame_concatenated(frames_indir='C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\concatenat\\AllframesConcatenated.csv')
+    exit()
+    columns = ['Puissance']
     xaxis = ['Time']
-    obj.plot_by_pilotes_names_trials_nums_dates(data_indir='C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2',
-                                                pilotes_names=['ThomasJouve', 'ThomasJouve'], trials_nums=[7, 8],
-                                                dates_trial=['2018-06-20', '2018-06-20'], x_axis=xaxis, y_axis=columns
-                                                )
-
+    # obj.plot_by_pilotes_names_trials_nums_dates(data_indir='C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2',
+    #                                             pilotes_names=['ThomasJouve', 'Arthur'], trials_nums=[7, 3],
+    #                                             dates_trial=['2018-06-20', '2018-06-21'], x_axis=xaxis, y_axis=columns
+    #                                             )
+    #
     # obj.plot_best_pilots_trial_together(data_indir='C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2',
     #                                     x_axis=xaxis, y_axis=columns)
     # obj.plot_best_pilot_trial_single(data_indir='C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2',

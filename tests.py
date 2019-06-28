@@ -132,24 +132,29 @@ class Tests:
         # print('rmse {} \n\n\n'.format(math.sqrt(mean_squared_error(y_test, y_pr))))
         # print(lm2.coef_)
 
-    def ap(self, indir='data/AP/trial3/CDonetraitementArthurPilard3.csv'):
-        df = pd.read_csv(indir)
-        moment = df['Moment']
-        time = df['Time']
-        vitesse = df['VitesseRider']
-        p = df['Puissance']
-        force = df['ForcePied']
-        cad = df['VitessePedalier']
-        # plt.scatter(vitesse,moment)
-        # plt.legend(['V','Moment'])
-        # plt.show()
+    def ap(self):
+        traitement = 'data_v2_old/RR/trial2/traitement_RomainRacine2_2018-06-22.csv'
+        frame = 'data_v2_old/RR/trial2/frames_RomainRacine2_2018-06-22.csv'
+        traitement = pd.read_csv(traitement)
+        frame = pd.read_csv(frame)
+        print(frame.columns)
+        exit()
+        bip = int(frame.Bip[0])  # debut : le moment du Bip
+        if 'FinMarkerVisible' in frame.columns:
+            finDep = int(frame.FinMarkerVisible[0])
+        else:
+            finDep = int(frame.FinDplcmt[0])
 
-        plt.scatter(cad, p, marker='+')
-        plt.axhline(y=p.mean(), color='red', linestyle='--')
-        plt.axhline(y=p.max())
-        plt.show()
-        print(p.describe())
-
+        time = traitement.Time
+        time_before_reaction = -(time.loc[0:109][::-1])
+        time_before_reaction = time_before_reaction.reset_index(drop=True)
+        time_before_reaction= time_before_reaction.append(pd.Series([0]), ignore_index=True)
+        time = time.loc[0:finDep-bip-111]
+        time_before_reaction = pd.Series(time_before_reaction)
+        time = pd.Series(time)
+        time_before_reaction.append(time, ignore_index=True)
+        print(time_before_reaction.append(time, ignore_index=True))
+        # print(df['Time'].loc[frame['TpsReaction'][0]-frame['Bip'][0]])
     def correlation_heatmap(self):
         import seaborn as sns
 
@@ -171,4 +176,6 @@ class Tests:
 if __name__ == '__main__':
     a = Tests()
     # a.regression_traitement()
-    a.start1csv()
+    # a.start1csv()
+
+    a.ap()

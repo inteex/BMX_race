@@ -20,67 +20,79 @@ pd.set_option('max_columns', 10)
 class AnalyseFrame:
 
     def regression_on_frames(self):
-        frames = pd.read_csv("data\\AllframesConcatenated.csv")
+        frames = pd.read_csv("concatenat/AllframesConcatenated.csv")
         frames = frames.reset_index(drop=True)
-        X = frames.drop(['TimeEnd', 'MasseBike', 'TailleRider'], axis=1)
-        X = X.fillna(frames.mean())
-        # X['dev'] = X['Braquet'] * X['longueurManivelle']
-        #
-        # X['longXmass'] = X['MasseRider'] * X['longueurManivelle']
-        # X['BraqXmass'] = X['Braquet'] * X['MasseRider']
-
+        frames = frames.fillna(frames.mean())
+        X = frames.drop(['TimeEnd', 'AlphaGaitDmin', 'DAlignementMin', 'DEpauleMin',
+                         'DistanceRecul', 'Dmin',
+                         'ThetaManivelleDepart', 'TpsReaction',
+                         'moyennePuissance1', 'moyennePuissance2', 'moyennePuissance3',
+                         'moyennePuissance4'], axis=1)
         y = frames['TimeEnd']
 
         polynomial_features = PolynomialFeatures(degree=2)
         X = polynomial_features.fit_transform(X)
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=10)
 
-        lm = Ridge(alpha=0.0001)
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=13)
+
+        lm = Ridge()
         lm.fit(X_train, y_train)
         predictions = lm.predict(X_test)
-        # y =-2.9150*X['Braquet']+ 0.1468* X['MasseRider']-0.0453* X['longueurManivelle']+0.0219* X['dev']
-        # plt.plot(y)
-        # plt.show()
 
         # save the model to disk
         # filename = '_frames.sav'
         # pickle.dump(lm2, open(filename, 'wb'))
-        print('R2 linearReg :' + str(r2_score(y_test, predictions)))
+        print('R2 Ridge :' + str(r2_score(y_test, predictions)))
         print(lm.coef_)
         print()
 
         # print(y_test.values)
         # print(predictions)
-
-        # result = sm.OLS(y, X).fit()
-
+        # print(frames.columns)
+        # olsmod = sm.OLS(y, X)
+        # result = olsmod.fit()
         # print(result.summary())
+        # yp = olsmod.predict(X)
+        # print(yp)
 
         # y_pred = lm.predict(X_test)
 
     def model_selection(self):
-        frames = pd.read_csv("C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\concatenat\\AllframesConcatenated.csv")
+        frames = pd.read_csv("C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\concatenat\\AllframesConcatenated.csv", delimiter=',')
         frames = frames.reset_index(drop=True)
-
-        models = [LinearRegression(), Ridge(alpha=.5), Lasso(alpha=.5), ElasticNet(alpha=.5)]
+        frames = frames.fillna(frames.mean())
+        models = [Ridge(alpha=0.6)]
 
         for model in models:
             print("-" * 50)
             print(model)
             print("=" * 50)
             for degree in range(1, 6):
-                X = frames.drop(['TimeEnd'], axis=1)
-                X = X.fillna(frames.mean())
+                """"
+                'AlphaGaitDmin', 'Braquet', 'DAlignementMin', 'DEpauleMin',
+                'DistanceRecul', 'Dmin', 'MasseBike', 'MasseRider', 'TailleRider',
+                'ThetaManivelleDepart', 'TpsReaction', 'longueurManivelle',
+                'moyennePuissance1', 'moyennePuissance2', 'moyennePuissance3',
+                'moyennePuissance4'
+                """
+
+                X = frames.drop(['TimeEnd', 'AlphaGaitDmin', 'Braquet', 'DAlignementMin', 'DEpauleMin',
+                'DistanceRecul', 'Dmin', 'MasseBike', 'MasseRider', 'TailleRider',
+                'ThetaManivelleDepart', 'TpsReaction', 'longueurManivelle',
+                'moyennePuissance1', 'moyennePuissance2', 'moyennePuissance3',
+                'moyennePuissance4'], axis=1)
+
                 y = frames['TimeEnd']
+                y = y.fillna(y.mean())
 
                 polynomial_features = PolynomialFeatures(degree=degree)
                 X = polynomial_features.fit_transform(X)
 
                 # test set
-                X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=13)
+                X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15, random_state=13)
 
                 # cross validation set
-                X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.2, random_state=13)
+                X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.15, random_state=13)
 
                 lm = model
                 lm.fit(X_train, y_train)
@@ -90,18 +102,26 @@ class AnalyseFrame:
 
                 r2_score_test = r2_score(y_test, y_pred)
                 r2_score_val = r2_score(y_val, y_pred_val)
-                if r2_score_test > 0.78 and r2_score_val > 0.8:
-                    print('degree: {}, test_R2 {}, val_R2 {}'.format(degree, str(r2_score_test),
-                                                                     str(r2_score_val)))
-                # print('val_R2 {}, degree: {}'.format(str(r2_score(y_test, y_pred)),d))
+                # if r2_score_test > 0.78 and r2_score_val > 0.79:
+                print('degree {}, test_R2 {:.3f}, val_R2 {:.3f}'.format(degree, r2_score_test,
+                                                                        r2_score_val))
+
+        # result = sm.OLS(y, X).fit()
+        #
+        # print(result.summary())
 
     def test_model_frames(self):
         frames = pd.read_csv("C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\concatenat\\AllframesConcatenated.csv")
         frames = frames.reset_index(drop=True)
 
-        X = frames.drop(['TimeEnd'], axis=1)
+        X = frames.drop(['TimeEnd', 'AlphaGaitDmin', 'DAlignementMin', 'DEpauleMin',
+                         'DistanceRecul', 'Dmin',
+                         'ThetaManivelleDepart', 'TpsReaction',
+                         'moyennePuissance1', 'moyennePuissance2', 'moyennePuissance3',
+                         'moyennePuissance4'], axis=1)
         X = X.fillna(frames.mean())
         y = frames['TimeEnd']
+        y = y.fillna(y.mean())
 
         polynomial_features = PolynomialFeatures(degree=2)
         X = polynomial_features.fit_transform(X)
@@ -109,7 +129,8 @@ class AnalyseFrame:
         # test set
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=13)
 
-        lm = Ridge(alpha=0.5)
+        # lm = Ridge(alpha=0.5)
+        lm = pickle.load(open('Ridge_deg2_frames.sav', 'rb'))
         lm.fit(X_train, y_train)
         y_pred = lm.predict(X_test)
 
@@ -119,15 +140,20 @@ class AnalyseFrame:
 
         erreur = []
         for y_p, y_t in zip(y_pred, np.array(y_test)):
-            print('pred: {:.3f}, test: {:.3f}, Erreur: {:.3f}, percent: {:.3f}%'.format(y_p, y_t, abs(y_p - y_t),
-                                                                                        100 * abs(y_p - y_t) / y_t))
+            print('prédiction: {:.3f}, Valeur réelle: {:.3f}, Erreur: {:.3f}, pourcentage: {:.3f}%'.format(y_p, y_t,
+                                                                                                           abs(
+                                                                                                               y_p - y_t),
+                                                                                                           100 * abs(
+                                                                                                               y_p - y_t) / y_t))
             erreur.append(abs(y_p - y_t))
         print('max: {:.3f}, min: {:.3f}, moyenne: {:.3f}'.format(np.max(erreur), np.min(erreur), np.mean(erreur)))
 
 
 if __name__ == '__main__':
     frame = AnalyseFrame()
-    # frame.regression_on_frames()
+
     warnings.filterwarnings("ignore")  # ignore warnings
-    # frame.model_selection()
-    frame.test_model_frames()
+    frame.model_selection()
+    # frame.regression_on_frames()
+    # frame.test_model_frames()
+

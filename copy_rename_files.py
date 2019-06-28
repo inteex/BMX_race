@@ -3,7 +3,7 @@ import shutil
 import glob
 
 class CopyRenameFiles:
-    def dataCute(self,indir,dir_to_savefile):
+    def dataCute(self,indir, dir_to_savefile):
             os.chdir(indir)
             directoryFiles = glob.glob('*.csv')
             trial = indir.split('\\')[-2]
@@ -20,7 +20,7 @@ class CopyRenameFiles:
 
 if __name__ == '__main__' :
     directoryFiles = glob.glob("C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data\\*\\*\\")
-    dir_to_savefile = 'C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2'
+    dir_to_savefile = 'C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2_old'
     cpf = CopyRenameFiles()
 
     for directoryFile in directoryFiles:
