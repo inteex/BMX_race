@@ -58,7 +58,8 @@ class AnalyseFrame:
         # y_pred = lm.predict(X_test)
 
     def model_selection(self):
-        frames = pd.read_csv("C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\concatenat\\AllframesConcatenated.csv", delimiter=',')
+        frames = pd.read_csv("C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\concatenat\\AllframesConcatenated.csv",
+                             delimiter=',')
         frames = frames.reset_index(drop=True)
         frames = frames.fillna(frames.mean())
         models = [Ridge(alpha=0.6)]
@@ -67,7 +68,7 @@ class AnalyseFrame:
             print("-" * 50)
             print(model)
             print("=" * 50)
-            for degree in range(1, 6):
+            for degree in range(1, 10):
                 """"
                 'AlphaGaitDmin', 'Braquet', 'DAlignementMin', 'DEpauleMin',
                 'DistanceRecul', 'Dmin', 'MasseBike', 'MasseRider', 'TailleRider',
@@ -76,11 +77,7 @@ class AnalyseFrame:
                 'moyennePuissance4'
                 """
 
-                X = frames.drop(['TimeEnd', 'AlphaGaitDmin', 'Braquet', 'DAlignementMin', 'DEpauleMin',
-                'DistanceRecul', 'Dmin', 'MasseBike', 'MasseRider', 'TailleRider',
-                'ThetaManivelleDepart', 'TpsReaction', 'longueurManivelle',
-                'moyennePuissance1', 'moyennePuissance2', 'moyennePuissance3',
-                'moyennePuissance4'], axis=1)
+                X = frames.drop(['TimeEnd'], axis=1)
 
                 y = frames['TimeEnd']
                 y = y.fillna(y.mean())
@@ -114,11 +111,7 @@ class AnalyseFrame:
         frames = pd.read_csv("C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\concatenat\\AllframesConcatenated.csv")
         frames = frames.reset_index(drop=True)
 
-        X = frames.drop(['TimeEnd', 'AlphaGaitDmin', 'DAlignementMin', 'DEpauleMin',
-                         'DistanceRecul', 'Dmin',
-                         'ThetaManivelleDepart', 'TpsReaction',
-                         'moyennePuissance1', 'moyennePuissance2', 'moyennePuissance3',
-                         'moyennePuissance4'], axis=1)
+        X = frames.drop(['TimeEnd'], axis=1)
         X = X.fillna(frames.mean())
         y = frames['TimeEnd']
         y = y.fillna(y.mean())
@@ -127,16 +120,16 @@ class AnalyseFrame:
         X = polynomial_features.fit_transform(X)
 
         # test set
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=13)
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=111)
 
-        # lm = Ridge(alpha=0.5)
-        lm = pickle.load(open('Ridge_deg2_frames.sav', 'rb'))
+        lm = Ridge(alpha=0.6)
+        # lm = pickle.load(open('Ridge_deg2_frames.sav', 'rb'))
         lm.fit(X_train, y_train)
         y_pred = lm.predict(X_test)
 
         r2_score_test = r2_score(y_test, y_pred)
 
-        print('test_R2 {}'.format(str(r2_score_test)))
+        # print('test_R2 {}'.format(str(r2_score_test)))
 
         erreur = []
         for y_p, y_t in zip(y_pred, np.array(y_test)):
@@ -155,5 +148,4 @@ if __name__ == '__main__':
     warnings.filterwarnings("ignore")  # ignore warnings
     frame.model_selection()
     # frame.regression_on_frames()
-    # frame.test_model_frames()
-
+    frame.test_model_frames()
