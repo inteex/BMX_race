@@ -135,10 +135,10 @@ class NavigateFiles:
 
 if __name__ == '__main__':
     nf = NavigateFiles()
-    data = 'C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2_old'
+    data = 'C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2'
     # print(
     #     nf.get_files_by_pilotes_names_trials_nums_dates(
     #         data_indir='C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2_old',
     #         pilote_names=['ArthurPilard', 'Jeremy'], trial_nums=[2, 5],
     #         dates_trial=['2018-06-21', '2018-12-12']))
-    print(nf.get_all_files_by_num(data, position_file=1))
+    print(nf.get_all_files_by_num(data, position_file=0))

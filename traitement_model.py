@@ -17,12 +17,12 @@ from sklearn.feature_selection import f_regression, mutual_info_regression
 from scipy import stats
 
 
-# pd.set_option('max_rows', 50)
-# pd.set_option('max_columns', 50)
+pd.set_option('max_rows', 50)
+pd.set_option('max_columns', 50)
 
 
 class AnalyseTraitement:
-    def preprocessing_data(self, indir='C:/Users/mekhezzr/PycharmProjects/bmx_race/data/AlltraitementConcatenated.csv'):
+    def preprocessing_data(self, indir='C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\concatenat\\AlltraitementConcatenated.csv'):
         traitemnt = pd.read_csv(indir)
         traitemnt = traitemnt.drop(['OMOPdRM', 'OMOPdRM.1', 'OMOPdRM.2',
                                     'OMOPgRM', 'OMOPgRM.1', 'OMOPgRM.2', 'Time',
@@ -38,11 +38,16 @@ class AnalyseTraitement:
                                     'ThetaMr', 'IndiceEfficacitePiedAv', 'IndiceEfficaciteTotal', 'ForcePiedAr.2',
                                     'ForcePiedAv',
                                     'ForcePiedAr', 'ForcePied', 'PuissancePAr', 'Moment', 'MomentPAr', 'MomentPAv',
-                                    'DeplacementRider'],
+                                    'DeplacementRider', 'DeplacementRiderRAr', 'DeplacementRider_RoueArriere'],
                                    axis=1)
 
-        traitemnt = traitemnt.dropna(axis=0)
 
+
+        traitemnt = traitemnt.replace('t', np.nan, regex=True)
+        traitemnt = traitemnt.fillna(traitemnt.mean())
+        # traitemnt.to_csv("allconcate.csv", index=0)
+        traitemnt = traitemnt.dropna(axis=0)
+        print(traitemnt.describe())
         return traitemnt
 
     def regression_traitement(self):
@@ -59,9 +64,9 @@ class AnalyseTraitement:
         y = X['ForceUPiedAv']
         X = X.drop('ForceUPiedAv', axis=1)
 
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=101)
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=15)
 
-        lm = Ridge(alpha=0.5)
+        lm = Ridge(alpha=1)
         lm.fit(X_train, y_train)
 
         # save the model to disk
@@ -70,29 +75,12 @@ class AnalyseTraitement:
 
         predictions = lm.predict(X_test)
 
+        print('Coefficients : {} '.format(lm.coef_))
         print('R^2 score :' + str(r2_score(y_test, predictions)))
-        print('rmse {} \n\n\n'.format(math.sqrt(mean_squared_error(y_test, predictions))))
-        print(lm.coef_)
-        print(np.array(y_test[20:30]))
-        print(predictions[20:30])
-        # print("f-test : {}".format(f_regression(X, y, center=True)))
-        # print("t-test : {}".format(stats.ttest_ind(X['AngleBike'], y, axis=0, equal_var=True)))
-        # print("mutual-test : {}".format(mutual_info_regression(X, y)))
 
         result = sm.OLS(y, X).fit()
         print(result.summary())
 
-        # polynomial Regression
-
-        # polynomial_features = PolynomialFeatures(degree=2)
-        # x_poly = polynomial_features.fit_transform(X_train)
-        #
-        # model = LinearRegression()
-        # model.fit(x_poly, y_train)
-        #
-        # y_pred = lm.predict(X_test)
-        # print('R^2 Ridge++++++++++ :' + str(r2_score(y_test, y_pred)))
-        # print('rmse {}++ \n\n\n'.format(math.sqrt(mean_squared_error(y_test, y_pred))))
 
     def test_regression(self):
         traitemnt = pd.read_csv('data/AP/trial8/CDonetraitementArthurPilard8.csv')
@@ -124,7 +112,6 @@ class AnalyseTraitement:
 
 if __name__ == '__main__':
     a = AnalyseTraitement()
-    # a.concat_all_traitement(indir='./data',file_num=0)
     # a.test_regression()
     a.regression_traitement()
     # a.preprocessing_data()

@@ -104,7 +104,7 @@ class PlotBestTestPerPilote:
         BraquetRiders = []
         longueurManivelleRiders = []
         tailleRiders = []
-        f = open('DetailsRiders1.txt', 'w')
+        f = open('Details_riders.txt', 'w')
         print('-----------------------------', file=f)
         for trial in bestTrials:
             fileList = glob.glob((trial + '\\*.csv'))
@@ -191,11 +191,9 @@ class PlotBestTestPerPilote:
         frames = pd.read_csv(frames_indir)
         frames = frames.fillna(frames.mean())
         time = frames['TimeEnd']
-        frames = frames.drop(['TimeEnd', 'AlphaGaitDmin', 'DAlignementMin', 'DEpauleMin',
-                              'DistanceRecul', 'Dmin',
-                              'ThetaManivelleDepart',
-                              'moyennePuissance1', 'moyennePuissance2', 'moyennePuissance3',
-                              'moyennePuissance4'], axis=1)
+        frames = frames.drop(['TimeEnd', 'AlphaGaitDmin',  'DAlignementMin', 'DEpauleMin',
+                'DistanceRecul', 'Dmin',
+                'ThetaManivelleDepart'], axis=1)
 
         # names = frames.columns
         # # Create the Scaler object
@@ -204,24 +202,24 @@ class PlotBestTestPerPilote:
         # scaled_df = scaler.fit_transform(frames)
         # frames = pd.DataFrame(scaled_df, columns=names)
 
-        polynomial_features = PolynomialFeatures(degree=1)
-        frames = polynomial_features.fit_transform(frames)
-
-        for col in range(0, frames.shape[1]):
-            plt.scatter(time, frames[:, col])
-        plt.xlabel('Time')
-        plt.ylabel('Vars discrètes')
-        # plt.show()
-        plt.savefig('../figures/parametres_choisis/var_dsicretes_tpsReact.png')
-
-        # leg=[]
-        # for col in frames.columns:
-        #     plt.scatter(time, frames[col])
-        #     leg.append(col)
-        # plt.legend()
+        # polynomial_features = PolynomialFeatures(degree=1)
+        # frames = polynomial_features.fit_transform(frames)
+        #
+        # for col in range(0, frames.shape[1]):
+        #     plt.scatter(time, frames[:, col])
         # plt.xlabel('Time')
         # plt.ylabel('Vars discrètes')
-        # plt.savefig('../figures/var_dsicretes_deg1.png')
+        # # plt.show()
+        # plt.savefig('../figures/parametres_choisis/var_dsicretes_tpsReact.png')
+
+        leg=[]
+        for col in frames.columns:
+            plt.scatter(time, frames[col])
+            leg.append(col)
+        plt.legend()
+        plt.xlabel('Time')
+        plt.ylabel('Vars discrètes')
+        plt.savefig('../figures/var_dsicretes_moyennePuissance4.png')
         # plt.show()
 
 

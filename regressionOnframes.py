@@ -111,7 +111,9 @@ class AnalyseFrame:
         frames = pd.read_csv("C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\concatenat\\AllframesConcatenated.csv")
         frames = frames.reset_index(drop=True)
 
-        X = frames.drop(['TimeEnd'], axis=1)
+        X = frames.drop(['TimeEnd','AlphaGaitDmin', 'DAlignementMin', 'DEpauleMin',
+                'DistanceRecul', 'Dmin',
+                'ThetaManivelleDepart',], axis=1)
         X = X.fillna(frames.mean())
         y = frames['TimeEnd']
         y = y.fillna(y.mean())
@@ -120,15 +122,13 @@ class AnalyseFrame:
         X = polynomial_features.fit_transform(X)
 
         # test set
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=111)
-
-        lm = Ridge(alpha=0.6)
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=11)
+        lm = Ridge(alpha=1)
         # lm = pickle.load(open('Ridge_deg2_frames.sav', 'rb'))
         lm.fit(X_train, y_train)
         y_pred = lm.predict(X_test)
-
         r2_score_test = r2_score(y_test, y_pred)
-
+        print(" R2: {} ".format( r2_score_test))
         # print('test_R2 {}'.format(str(r2_score_test)))
 
         erreur = []
@@ -146,6 +146,6 @@ if __name__ == '__main__':
     frame = AnalyseFrame()
 
     warnings.filterwarnings("ignore")  # ignore warnings
-    frame.model_selection()
+    # frame.model_selection()
     # frame.regression_on_frames()
     frame.test_model_frames()

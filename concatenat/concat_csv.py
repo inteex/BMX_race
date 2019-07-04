@@ -243,6 +243,7 @@ class ConcatCsv:
                 dfList = []
 
 
+
 if __name__ == '__main__':
     concat_csv = ConcatCsv()
     concat_csv.concat_all_frames(data_indir="C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2",

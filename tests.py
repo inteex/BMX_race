@@ -148,13 +148,14 @@ class Tests:
         time = traitement.Time
         time_before_reaction = -(time.loc[0:109][::-1])
         time_before_reaction = time_before_reaction.reset_index(drop=True)
-        time_before_reaction= time_before_reaction.append(pd.Series([0]), ignore_index=True)
-        time = time.loc[0:finDep-bip-111]
+        time_before_reaction = time_before_reaction.append(pd.Series([0]), ignore_index=True)
+        time = time.loc[0:finDep - bip - 111]
         time_before_reaction = pd.Series(time_before_reaction)
         time = pd.Series(time)
         time_before_reaction.append(time, ignore_index=True)
         print(time_before_reaction.append(time, ignore_index=True))
         # print(df['Time'].loc[frame['TpsReaction'][0]-frame['Bip'][0]])
+
     def correlation_heatmap(self):
         import seaborn as sns
 
@@ -172,10 +173,28 @@ class Tests:
         print(start.time)
         print(start.describe())
 
+    def classifier(self):
+
+        frames = pd.read_csv("C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\concatenat\\AllframesConcatenated.csv")
+        from sklearn import svm
+
+        X = frames.drop(['TimeEnd'], axis=1)
+        y = frames['TimeEnd']
+        y = y.fillna(y.mean())
+        X = X.fillna(X.mean())
+        clf = svm.SVR(C=1.0, cache_size=200, coef0=0.0, degree=3, epsilon=0.1,
+                      gamma='auto_deprecated', kernel='rbf', max_iter=-1, shrinking=True,
+                      tol=0.001, verbose=False)
+
+        # test set
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15, random_state=13)
+
+        clf.fit(X_train, y_train)
+        print(clf.score(X_test, y_test))
+
 
 if __name__ == '__main__':
     a = Tests()
     # a.regression_traitement()
     # a.start1csv()
-
-    a.ap()
+    a.classifier()
