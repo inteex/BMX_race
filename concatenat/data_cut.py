@@ -4,7 +4,7 @@ import os
 from shutil import copyfile
 
 
-class DataCute:
+class DataCut:
     def data_cut(self, data_indir):
         """
         cut traitement csv file from Bip to fin Marker
@@ -113,7 +113,7 @@ class DataCute:
 
 
 if __name__ == '__main__':
-    cut = DataCute()
+    cut = DataCut()
     # cut.data_cut('C:\\Users\\mekhezzr\\Desktop\\data_Lts\\')
     cut.copy_files(data_indir='C:\\Users\\mekhezzr\\Desktop\\data_Lts\\',
                    destination_data_indir='C:\\Users\\mekhezzr\\Desktop\\data_cleaned\\')

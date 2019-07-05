@@ -1,7 +1,7 @@
 import pandas as pd
 import glob
 import os
-from navigate_to_trials import NavigateFiles
+from navigate_files import NavigateFiles
 
 
 class TempRecation:

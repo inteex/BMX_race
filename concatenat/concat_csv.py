@@ -1,7 +1,7 @@
 import os
 import glob
 import pandas as pd
-from navigate_to_trials import NavigateFiles
+from navigate_files import NavigateFiles
 
 
 class ConcatCsv:

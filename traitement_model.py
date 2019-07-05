@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score, mean_squared_error
 import math
 import pickle
-from navigate_to_trials import NavigateFiles
+from navigate_files import NavigateFiles
 from sklearn import preprocessing
 from sklearn.preprocessing import PolynomialFeatures
 import glob

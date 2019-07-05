@@ -7,7 +7,7 @@ from sklearn.metrics import r2_score, mean_squared_error
 import sklearn.feature_extraction as fe
 import math
 import pickle
-from navigate_to_trials import NavigateFiles
+from navigate_files import NavigateFiles
 from sklearn import preprocessing
 from sklearn.preprocessing import PolynomialFeatures
 import glob

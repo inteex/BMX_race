@@ -4,11 +4,11 @@ import glob
 
 from sklearn import preprocessing
 from mpl_toolkits.mplot3d import Axes3D
-from navigate_to_trials import NavigateFiles
+from navigate_files import NavigateFiles
 from sklearn.preprocessing import PolynomialFeatures
 
 
-class PlotBestTestPerPilote:
+class Plots:
     def plot_best_pilots_trial_together(self, data_indir, x_axis, y_axis):
         """
             Plot the best trial of each pilot in one figure.
@@ -139,8 +139,8 @@ class PlotBestTestPerPilote:
             BraquetRiders.append(braquet * 10)
             longueurManivelleRiders.append(longueurManivelle)
 
-    def plot_by_pilotes_names_trials_nums_dates(self, data_indir, pilotes_names, trials_nums, dates_trial, x_axis,
-                                                y_axis):
+    def plot_by_pilotes_names_trials_nums_dates(self, data_indir, pilotes_names, trials_nums,
+                                                dates_trial, x_axis, y_axis):
         """
 
         :param data_indir:
@@ -223,8 +223,10 @@ class PlotBestTestPerPilote:
         # plt.show()
 
 
+
+
 if __name__ == '__main__':
-    obj = PlotBestTestPerPilote()
+    obj = Plots()
     obj.plot_frame_concatenated(
         frames_indir='C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\concatenat\\AllframesConcatenated.csv')
     exit()
