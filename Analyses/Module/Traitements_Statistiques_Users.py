@@ -5,8 +5,8 @@ Created on Thu Jul  4 14:31:22 2019
 @author: 1mduquesnoy
 """
 
-from DataViz import *
-from DataCreationTestR import *
+from Analyses.Module.DataViz import *
+from Analyses.Module.DataCreationTestR import *
 from Analyses.Module.Predictions import *
 
 if __name__ == '__main__':
@@ -33,7 +33,7 @@ if __name__ == '__main__':
     L'utilisateur doit être en connaissance des noms des variables des fichiers Frames et Traitements
     '''
 
-    os.chdir('C:\\Users\\1mduquesnoy\\Downloads\\BMX_race-master\\BMX_race-master\\Analyses\\')
+    os.chdir('C:\\Users\\1mduquesnoy\\Desktop\\Analyses\\')
     d = DataManagement()
     v = DataViz()
     r = DataCreationTestR()
@@ -41,9 +41,9 @@ if __name__ == '__main__':
 
     path = 'C:\\Users\\1mduquesnoy\\Desktop\\data_v2'
 
-    d.Creation_Traitements_Dataset(path)
+    #d.Creation_Traitements_Dataset(path)
     Data = d.Base_de_donnees_Perf(path)
-    os.chdir('C:\\Users\\1mduquesnoy\\Downloads\\BMX_race-master\\BMX_race-master\\Analyses\\')
+    os.chdir('C:\\Users\\1mduquesnoy\\Desktop\\Analyses\\')
 
     ########### Diagramme de Kiviat
 
@@ -61,8 +61,13 @@ if __name__ == '__main__':
     ########### Boxplot pour comparer les meilleurs essais d'un pilote, versus ses moins bons
 
     #v.Comparaison_Trials_Pilot(Data,"Mayet","2018-06-19")
-
+    
+    ########### Correlation Canonique pour déterminer les zones de corrélations
+    
+    #v.Correlation_Canonique(Data,"TpsBasDeButte","Puissance")
+    
     ########### Predictions sur la base de l'explosivité avec des paramètres au "pre-depart".
+    
 
     #XTest = d.Data_New_Predictions(Data,["Mayet_2018-06-19","Racine_2018-06-22"])
     #Out = p.Predictions_Puissance_Explosivite(XTest[0])
@@ -71,4 +76,4 @@ if __name__ == '__main__':
     ########## Création des bases de Test pour le programme sous R, concernant la prédiction de la classe de Puissance
 
     #r.Creation_Test_Power(path,["Mayet_2018-06-19","Racine_2018-06-22"],"Exemple_Tableau_Jeudi.csv")
-    #r.Creation_Test_Feature(path, ["Mayet_2018-06-19", "Racine_2018-06-22"], "ForcePied", "Tableaux2.csv")
+    #r.Creation_Test_Feature(path, ["Mahieu_2018-12-13", "Jouve_2018-06-20"], "ForcePied", "Tableaux2.csv")
