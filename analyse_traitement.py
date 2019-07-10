@@ -21,8 +21,7 @@ pd.set_option('max_columns', 50)
 
 
 class AnalyseTraitement:
-    def preprocessing_data(self,
-                           indir='C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\concatenat\\AlltraitementConcatenated.csv'):
+    def preprocessing_data(self, indir):
         traitemnt = pd.read_csv(indir)
         # droped columns
         #

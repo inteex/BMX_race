@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="209c54e3-553a-47c3-84c0-0e0c307d3af6" name="Default Changelist" comment="first">
-      <change afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/concatenat/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plots/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analyses/Module/DataCreationTestR.py" beforeDir="false" afterPath="$PROJECT_DIR$/Analyses/Module/DataCreationTestR.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analyses/Module/DataManagement.py" beforeDir="false" afterPath="$PROJECT_DIR$/Analyses/Module/DataManagement.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analyses/Module/DataViz.py" beforeDir="false" afterPath="$PROJECT_DIR$/Analyses/Module/DataViz.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analyses/Module/Predictions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Analyses/Module/Predictions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analyses/Module/Traitements_Statistiques_Users.py" beforeDir="false" afterPath="$PROJECT_DIR$/Analyses/Module/Traitements_Statistiques_Users.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analyse_frame.py" beforeDir="false" afterPath="$PROJECT_DIR$/analyse_frame.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analyse_traitement.py" beforeDir="false" afterPath="$PROJECT_DIR$/analyse_traitement.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/concatenat/concat_csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/concatenat/concat_csv.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/pip-selfcheck.json" beforeDir="false" afterPath="$PROJECT_DIR$/venv/pip-selfcheck.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/navigate_files.py" beforeDir="false" afterPath="$PROJECT_DIR$/navigate_files.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,30 +14,30 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/bmx_race$data_MR.coverage" NAME="data MR Coverage Results" MODIFIED="1553590393165" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MR/trial1" />
+    <SUITE FILE_PATH="coverage/bmx_race$concatCSV__1_.coverage" NAME="concatCSV (1) Coverage Results" MODIFIED="1553161553367" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MR/trial7" />
+    <SUITE FILE_PATH="coverage/bmx_race$framesAnalyse.coverage" NAME="framesAnalyse Coverage Results" MODIFIED="1553789865411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmx_race$reindexe.coverage" NAME="reindexe Coverage Results" MODIFIED="1553784115563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmx_race$sdData.coverage" NAME="sdData Coverage Results" MODIFIED="1553245968967" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SD/trial6" />
+    <SUITE FILE_PATH="coverage/bmx_race$dataCuteV2.coverage" NAME="dataCuteV2 Coverage Results" MODIFIED="1553866646443" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmx_race$concatCSV__2_.coverage" NAME="concatCSV (2) Coverage Results" MODIFIED="1553161172867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MR/trial4" />
+    <SUITE FILE_PATH="coverage/bmx_race$matToCsv.coverage" NAME="matToCsv Coverage Results" MODIFIED="1552927603127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmx_race$framesConcat.coverage" NAME="framesConcat Coverage Results" MODIFIED="1553853026917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmx_race$plotBestTestPerPilote.coverage" NAME="plotBestTestPerPilote Coverage Results" MODIFIED="1553866968338" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmx_race$concatCSV__3_.coverage" NAME="concatCSV (3) Coverage Results" MODIFIED="1553161328104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MR/trial5" />
+    <SUITE FILE_PATH="coverage/bmx_race$concatCSV__4_.coverage" NAME="concatCSV (4) Coverage Results" MODIFIED="1553596206727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmx_race$concatCSV.coverage" NAME="concatCSV Coverage Results" MODIFIED="1553866454220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmx_race$ConcatenatreTraitementTravail.coverage" NAME="ConcatenatreTraitementTravail Coverage Results" MODIFIED="1553866703581" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bmx_race$dataCute__1_.coverage" NAME="dataCute (1) Coverage Results" MODIFIED="1553161535702" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bmx_race$cuteRRConcatenatedTraitement__1_.coverage" NAME="cuteRRConcatenatedTraitement (1) Coverage Results" MODIFIED="1553616314413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RM" />
-    <SUITE FILE_PATH="coverage/bmx_race$data_MR__1_.coverage" NAME="data MR (1) Coverage Results" MODIFIED="1553159384146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MR/trial1" />
-    <SUITE FILE_PATH="coverage/bmx_race$cuteRRConcatenatedTraitement.coverage" NAME="cuteRRConcatenatedTraitement Coverage Results" MODIFIED="1553867950810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data/RR" />
     <SUITE FILE_PATH="coverage/bmx_race$cuteRRConcatenatedTraitement__2_.coverage" NAME="cuteRRConcatenatedTraitement (2) Coverage Results" MODIFIED="1553697834978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data/RR" />
-    <SUITE FILE_PATH="coverage/bmx_race$ConcatenatreTraitementTravail.coverage" NAME="ConcatenatreTraitementTravail Coverage Results" MODIFIED="1553866703581" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/bmx_race$framesFiller.coverage" NAME="framesFiller Coverage Results" MODIFIED="1553855282327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/bmx_race$dataCute.coverage" NAME="dataCute Coverage Results" MODIFIED="1553509812332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/bmx_race$matToCsv.coverage" NAME="matToCsv Coverage Results" MODIFIED="1552927603127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/bmx_race$data_MR.coverage" NAME="data MR Coverage Results" MODIFIED="1553590393165" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MR/trial1" />
-    <SUITE FILE_PATH="coverage/bmx_race$concatCSV.coverage" NAME="concatCSV Coverage Results" MODIFIED="1553866454220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/bmx_race$concatCSV__1_.coverage" NAME="concatCSV (1) Coverage Results" MODIFIED="1553161553367" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MR/trial7" />
-    <SUITE FILE_PATH="coverage/bmx_race$concatCSV__2_.coverage" NAME="concatCSV (2) Coverage Results" MODIFIED="1553161172867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MR/trial4" />
-    <SUITE FILE_PATH="coverage/bmx_race$framesAnalyse.coverage" NAME="framesAnalyse Coverage Results" MODIFIED="1553789865411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/bmx_race$plotBestTestPerPilote.coverage" NAME="plotBestTestPerPilote Coverage Results" MODIFIED="1553866968338" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/bmx_race$framesConcat.coverage" NAME="framesConcat Coverage Results" MODIFIED="1553853026917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/bmx_race$concatCSV__3_.coverage" NAME="concatCSV (3) Coverage Results" MODIFIED="1553161328104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MR/trial5" />
-    <SUITE FILE_PATH="coverage/bmx_race$reindexe.coverage" NAME="reindexe Coverage Results" MODIFIED="1553784115563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/bmx_race$dataCuteV2.coverage" NAME="dataCuteV2 Coverage Results" MODIFIED="1553866646443" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/bmx_race$regressionOnframes.coverage" NAME="regressionOnframes Coverage Results" MODIFIED="1554103197783" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/bmx_race$sdData.coverage" NAME="sdData Coverage Results" MODIFIED="1553245968967" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SD/trial6" />
     <SUITE FILE_PATH="coverage/bmx_race$AnalyseTraitement.coverage" NAME="AnalyseTraitement Coverage Results" MODIFIED="1554108003124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/bmx_race$concatCSV__4_.coverage" NAME="concatCSV (4) Coverage Results" MODIFIED="1553596206727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmx_race$regressionOnframes.coverage" NAME="regressionOnframes Coverage Results" MODIFIED="1554103197783" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmx_race$framesFiller.coverage" NAME="framesFiller Coverage Results" MODIFIED="1553855282327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmx_race$cuteRRConcatenatedTraitement.coverage" NAME="cuteRRConcatenatedTraitement Coverage Results" MODIFIED="1553867950810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data/RR" />
     <SUITE FILE_PATH="coverage/bmx_race$RegressionTest.coverage" NAME="RegressionTest Coverage Results" MODIFIED="1553765380680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmx_race$dataCute.coverage" NAME="dataCute Coverage Results" MODIFIED="1553509812332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmx_race$data_MR__1_.coverage" NAME="data MR (1) Coverage Results" MODIFIED="1553159384146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MR/trial1" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -63,62 +56,61 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Analyses/Module/DataManagement.py">
+        <entry file="file://$PROJECT_DIR$/analyse_frame.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="177" column="8" selection-start-line="177" selection-start-column="8" selection-end-line="177" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Analyses/Module/Predictions.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Analyses/Module/DataCreationTestR.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="694">
-              <caret line="35" column="43" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/concatenat/concat_csv.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" column="58" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
+            <state relative-caret-position="348">
+              <caret line="66" column="28" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
-                <element signature="e#5227#5974#0" />
+                <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#605#1940#0" />
+                <element signature="e#4012#5817#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Analyses/Module/Traitements_Statistiques_Users.py">
+        <entry file="file://$PROJECT_DIR$/analyse_traitement.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1408">
-              <caret line="64" column="28" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
+            <state relative-caret-position="306">
+              <caret line="112" selection-start-line="112" selection-end-line="112" />
               <folding>
-                <element signature="e#92#129#0" expanded="true" />
+                <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#895#2543#0" />
+                <element signature="e#897#913#0" />
+                <element signature="e#2575#3690#0" />
+                <element signature="e#3749#4355#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/navigate_files.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="381">
+              <caret line="136" column="27" selection-start-line="136" selection-end-line="137" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#118#1504#0" />
+                <element signature="e#1561#1977#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Analyses/Module/DataViz.py">
+        <entry file="file://$PROJECT_DIR$/concatenat/concat_csv.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-264">
-              <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+            <state relative-caret-position="58">
+              <caret line="144" column="61" selection-start-line="144" selection-start-column="61" selection-end-line="144" selection-end-column="61" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#190#5122#0" />
+                <element signature="e#5228#5975#0" />
+                <element signature="e#6058#6761#0" />
+                <element signature="e#9840#11718#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -176,7 +168,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/data/RM/trial1/ConcatenatedConcatenatedtraitementRomainMayet1.csv" />
         <option value="$PROJECT_DIR$/AnalyseTraitement.py" />
         <option value="$PROJECT_DIR$/ConcatenatreTraitementTravail.py" />
         <option value="$PROJECT_DIR$/dataCuteV2.py" />
@@ -215,9 +206,7 @@
         <option value="$PROJECT_DIR$/allconcate.csv" />
         <option value="$PROJECT_DIR$/concatenat/data_cut.py" />
         <option value="$PROJECT_DIR$/plots/plots.py" />
-        <option value="$PROJECT_DIR$/navigate_files.py" />
         <option value="$PROJECT_DIR$/traitement_model.py" />
-        <option value="$PROJECT_DIR$/analyse_traitement.py" />
         <option value="$PROJECT_DIR$/concatenat/__init__.py" />
         <option value="$PROJECT_DIR$/plots/__init__.py" />
         <option value="$PROJECT_DIR$/__init__.py" />
@@ -225,15 +214,18 @@
         <option value="$PROJECT_DIR$/Analyses/Module/DataCreationTestR.py" />
         <option value="$PROJECT_DIR$/Analyses/Module/Traitements_Statistiques_Users.py" />
         <option value="$PROJECT_DIR$/Analyses/Module/Predictions.py" />
-        <option value="$PROJECT_DIR$/concatenat/concat_csv.py" />
         <option value="$PROJECT_DIR$/Analyses/Module/DataViz.py" />
+        <option value="$PROJECT_DIR$/navigate_files.py" />
+        <option value="$PROJECT_DIR$/analyse_traitement.py" />
+        <option value="$PROJECT_DIR$/analyse_frame.py" />
+        <option value="$PROJECT_DIR$/concatenat/concat_csv.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
+    <option name="x" value="-8" />
+    <option name="width" value="975" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -246,19 +238,13 @@
         <subPane>
           <expand>
             <path>
-              <item name="bmx_race" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bmx_race" type="462c0819:PsiDirectoryNode" />
+              <item name="BMX_race" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BMX_race" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="bmx_race" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bmx_race" type="462c0819:PsiDirectoryNode" />
-              <item name="Analyses" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bmx_race" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bmx_race" type="462c0819:PsiDirectoryNode" />
-              <item name="Analyses" type="462c0819:PsiDirectoryNode" />
-              <item name="Module" type="462c0819:PsiDirectoryNode" />
+              <item name="BMX_race" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BMX_race" type="462c0819:PsiDirectoryNode" />
+              <item name="concatenat" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -303,11 +289,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Traitements_Statistiques_Users">
+  <component name="RunManager" selected="Python.concat_csv">
     <configuration name="DataCreationTestR" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="bmx_race" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Analyses/Module" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -323,29 +312,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="DataManagement" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="bmx_race" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Analyses/Module" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Analyses/Module/DataManagement.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="DataViz" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="bmx_race" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Analyses/Module" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -365,6 +338,9 @@
       <module name="bmx_race" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Analyses/Module" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -402,20 +378,36 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="analyse_traitement" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="concat_csv" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="bmx_race" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/concatenat" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/concatenat/concat_csv.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="navigate_files" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="bmx_race" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/analyse_traitement.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/navigate_files.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -426,11 +418,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.concat_csv" />
+        <item itemvalue="Python.navigate_files" />
         <item itemvalue="Python.Traitements_Statistiques_Users" />
         <item itemvalue="Python.DataCreationTestR" />
         <item itemvalue="Python.DataViz" />
-        <item itemvalue="Python.DataManagement" />
-        <item itemvalue="Python.analyse_traitement" />
       </list>
     </recent_temporary>
   </component>
@@ -477,6 +469,7 @@
       <workItem from="1561965256673" duration="26958000" />
       <workItem from="1562231400409" duration="22622000" />
       <workItem from="1562750943286" duration="6517000" />
+      <workItem from="1562790635889" duration="2025000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1553506204878</created>
@@ -538,7 +531,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="550994000" />
+    <option name="totallyTimeSpent" value="553019000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -550,10 +543,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21481876" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2181208" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -567,9 +560,9 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.16359697" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.28304905" side_tool="true" weight="0.36944744" />
-      <window_info anchor="bottom" id="Python Console" order="11" weight="0.40628386" />
+      <window_info anchor="bottom" id="Python Console" order="11" visible="true" weight="0.40509915" />
       <window_info active="true" anchor="bottom" id="Concurrent Activities Diagram" order="12" visible="true" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="13" sideWeight="0.49946696" visible="true" weight="0.2979415" />
+      <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.49946696" weight="0.29745042" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -634,612 +627,20 @@
     <SUITE FILE_PATH="coverage/bmx_race$traitement_model.coverage" NAME="traitement_model Coverage Results" MODIFIED="1558430065549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data_v2_old/TJ/trial8/concat_cuted_fin_dep_traitement_ThomasJouve8_2018-06-20.csv">
-      <provider selected="true" editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="true" rowLines="3">
-          <column index="0" width="100" />
-          <column index="1" width="100" />
-          <column index="2" width="100" />
-          <column index="3" width="100" />
-          <column index="4" width="100" />
-          <column index="5" width="100" />
-          <column index="6" width="100" />
-          <column index="7" width="100" />
-          <column index="8" width="100" />
-          <column index="9" width="100" />
-          <column index="10" width="100" />
-          <column index="11" width="100" />
-          <column index="12" width="100" />
-          <column index="13" width="100" />
-          <column index="14" width="100" />
-          <column index="15" width="100" />
-          <column index="16" width="100" />
-          <column index="17" width="100" />
-          <column index="18" width="100" />
-          <column index="19" width="100" />
-          <column index="20" width="100" />
-          <column index="21" width="100" />
-          <column index="22" width="100" />
-          <column index="23" width="100" />
-          <column index="24" width="100" />
-          <column index="25" width="100" />
-          <column index="26" width="100" />
-          <column index="27" width="100" />
-          <column index="28" width="100" />
-          <column index="29" width="100" />
-          <column index="30" width="100" />
-          <column index="31" width="100" />
-          <column index="32" width="100" />
-          <column index="33" width="100" />
-          <column index="34" width="100" />
-          <column index="35" width="100" />
-          <column index="36" width="100" />
-          <column index="37" width="100" />
-          <column index="38" width="100" />
-          <column index="39" width="100" />
-          <column index="40" width="100" />
-          <column index="41" width="100" />
-          <column index="42" width="100" />
-          <column index="43" width="100" />
-          <column index="44" width="100" />
-          <column index="45" width="100" />
-          <column index="46" width="100" />
-          <column index="47" width="100" />
-          <column index="48" width="100" />
-          <column index="49" width="100" />
-          <column index="50" width="100" />
-          <column index="51" width="100" />
-          <column index="52" width="100" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_v2/JR/trial1/frames_JeremyRencurel1_2018-12-12.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state>
-          <caret column="579" selection-start-column="569" selection-end-column="579" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_v2/SD/trial1/frames_SimbaDarnand1_2018-06-21.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state>
-          <caret column="581" selection-start-column="571" selection-end-column="581" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_v2_old/AP/trial2/traitement_ArthurPilard2_2018-06-21.csv">
-      <provider selected="true" editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="true" rowLines="3">
-          <column index="0" width="100" />
-          <column index="1" width="100" />
-          <column index="2" width="100" />
-          <column index="3" width="100" />
-          <column index="4" width="100" />
-          <column index="5" width="100" />
-          <column index="6" width="100" />
-          <column index="7" width="100" />
-          <column index="8" width="100" />
-          <column index="9" width="100" />
-          <column index="10" width="100" />
-          <column index="11" width="100" />
-          <column index="12" width="100" />
-          <column index="13" width="100" />
-          <column index="14" width="100" />
-          <column index="15" width="100" />
-          <column index="16" width="100" />
-          <column index="17" width="100" />
-          <column index="18" width="100" />
-          <column index="19" width="100" />
-          <column index="20" width="100" />
-          <column index="21" width="100" />
-          <column index="22" width="100" />
-          <column index="23" width="100" />
-          <column index="24" width="100" />
-          <column index="25" width="100" />
-          <column index="26" width="100" />
-          <column index="27" width="100" />
-          <column index="28" width="100" />
-          <column index="29" width="100" />
-          <column index="30" width="100" />
-          <column index="31" width="100" />
-          <column index="32" width="100" />
-          <column index="33" width="100" />
-          <column index="34" width="100" />
-          <column index="35" width="100" />
-          <column index="36" width="100" />
-          <column index="37" width="100" />
-          <column index="38" width="100" />
-          <column index="39" width="100" />
-          <column index="40" width="100" />
-          <column index="41" width="100" />
-          <column index="42" width="100" />
-          <column index="43" width="100" />
-          <column index="44" width="100" />
-          <column index="45" width="100" />
-          <column index="46" width="100" />
-          <column index="47" width="100" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_v2_old/AP/trial2/concat_cuted_fin_dep_traitement_ArthurPilard2_2018-06-21.csv">
-      <provider selected="true" editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="true" rowLines="3">
-          <column index="0" width="100" />
-          <column index="1" width="100" />
-          <column index="2" width="100" />
-          <column index="3" width="100" />
-          <column index="4" width="100" />
-          <column index="5" width="100" />
-          <column index="6" width="100" />
-          <column index="7" width="100" />
-          <column index="8" width="100" />
-          <column index="9" width="100" />
-          <column index="10" width="100" />
-          <column index="11" width="100" />
-          <column index="12" width="100" />
-          <column index="13" width="100" />
-          <column index="14" width="100" />
-          <column index="15" width="100" />
-          <column index="16" width="100" />
-          <column index="17" width="100" />
-          <column index="18" width="100" />
-          <column index="19" width="100" />
-          <column index="20" width="100" />
-          <column index="21" width="100" />
-          <column index="22" width="100" />
-          <column index="23" width="100" />
-          <column index="24" width="100" />
-          <column index="25" width="100" />
-          <column index="26" width="100" />
-          <column index="27" width="100" />
-          <column index="28" width="100" />
-          <column index="29" width="100" />
-          <column index="30" width="100" />
-          <column index="31" width="100" />
-          <column index="32" width="100" />
-          <column index="33" width="100" />
-          <column index="34" width="100" />
-          <column index="35" width="100" />
-          <column index="36" width="100" />
-          <column index="37" width="100" />
-          <column index="38" width="100" />
-          <column index="39" width="100" />
-          <column index="40" width="100" />
-          <column index="41" width="100" />
-          <column index="42" width="100" />
-          <column index="43" width="100" />
-          <column index="44" width="100" />
-          <column index="45" width="100" />
-          <column index="46" width="100" />
-          <column index="47" width="100" />
-          <column index="48" width="100" />
-          <column index="49" width="100" />
-          <column index="50" width="100" />
-          <column index="51" width="100" />
-          <column index="52" width="100" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_v2_old/RM/trial1/concat_cuted_fin_dep_traitement_RomainMayet1_2018-06-19.csv">
-      <provider selected="true" editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
-          <column index="0" width="100" />
-          <column index="1" width="100" />
-          <column index="2" width="100" />
-          <column index="3" width="100" />
-          <column index="4" width="100" />
-          <column index="5" width="100" />
-          <column index="6" width="100" />
-          <column index="7" width="100" />
-          <column index="8" width="100" />
-          <column index="9" width="100" />
-          <column index="10" width="100" />
-          <column index="11" width="100" />
-          <column index="12" width="100" />
-          <column index="13" width="100" />
-          <column index="14" width="100" />
-          <column index="15" width="100" />
-          <column index="16" width="100" />
-          <column index="17" width="100" />
-          <column index="18" width="100" />
-          <column index="19" width="100" />
-          <column index="20" width="100" />
-          <column index="21" width="100" />
-          <column index="22" width="100" />
-          <column index="23" width="100" />
-          <column index="24" width="100" />
-          <column index="25" width="100" />
-          <column index="26" width="100" />
-          <column index="27" width="100" />
-          <column index="28" width="100" />
-          <column index="29" width="100" />
-          <column index="30" width="100" />
-          <column index="31" width="100" />
-          <column index="32" width="100" />
-          <column index="33" width="100" />
-          <column index="34" width="100" />
-          <column index="35" width="100" />
-          <column index="36" width="100" />
-          <column index="37" width="100" />
-          <column index="38" width="100" />
-          <column index="39" width="100" />
-          <column index="40" width="100" />
-          <column index="41" width="100" />
-          <column index="42" width="100" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_v2/RR/trial1/traitement_RomainRacine1_2018-06-22.csv">
-      <provider selected="true" editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
-          <column index="0" width="100" />
-          <column index="1" width="100" />
-          <column index="2" width="100" />
-          <column index="3" width="100" />
-          <column index="4" width="100" />
-          <column index="5" width="100" />
-          <column index="6" width="100" />
-          <column index="7" width="100" />
-          <column index="8" width="100" />
-          <column index="9" width="100" />
-          <column index="10" width="100" />
-          <column index="11" width="100" />
-          <column index="12" width="100" />
-          <column index="13" width="100" />
-          <column index="14" width="100" />
-          <column index="15" width="100" />
-          <column index="16" width="100" />
-          <column index="17" width="100" />
-          <column index="18" width="100" />
-          <column index="19" width="100" />
-          <column index="20" width="100" />
-          <column index="21" width="100" />
-          <column index="22" width="100" />
-          <column index="23" width="100" />
-          <column index="24" width="100" />
-          <column index="25" width="100" />
-          <column index="26" width="100" />
-          <column index="27" width="100" />
-          <column index="28" width="100" />
-          <column index="29" width="100" />
-          <column index="30" width="100" />
-          <column index="31" width="100" />
-          <column index="32" width="100" />
-          <column index="33" width="100" />
-          <column index="34" width="100" />
-          <column index="35" width="100" />
-          <column index="36" width="100" />
-          <column index="37" width="100" />
-          <column index="38" width="100" />
-          <column index="39" width="100" />
-          <column index="40" width="100" />
-          <column index="41" width="100" />
-          <column index="42" width="100" />
-          <column index="43" width="100" />
-          <column index="44" width="100" />
-          <column index="45" width="100" />
-          <column index="46" width="100" />
-          <column index="47" width="100" />
-          <column index="48" width="100" />
-          <column index="49" width="100" />
-          <column index="50" width="100" />
-          <column index="51" width="100" />
-          <column index="52" width="100" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_v2/AP/trial2/frames_ArthurPilard2_2018-06-21.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
-          <column index="0" width="100" />
-          <column index="1" width="100" />
-          <column index="2" width="100" />
-          <column index="3" width="100" />
-          <column index="4" width="100" />
-          <column index="5" width="100" />
-          <column index="6" width="100" />
-          <column index="7" width="100" />
-          <column index="8" width="100" />
-          <column index="9" width="100" />
-          <column index="10" width="100" />
-          <column index="11" width="100" />
-          <column index="12" width="100" />
-          <column index="13" width="100" />
-          <column index="14" width="100" />
-          <column index="15" width="100" />
-          <column index="16" width="100" />
-          <column index="17" width="100" />
-          <column index="18" width="100" />
-          <column index="19" width="100" />
-          <column index="20" width="100" />
-          <column index="21" width="100" />
-          <column index="22" width="100" />
-          <column index="23" width="100" />
-          <column index="24" width="100" />
-          <column index="25" width="100" />
-          <column index="26" width="100" />
-          <column index="27" width="100" />
-          <column index="28" width="100" />
-          <column index="29" width="100" />
-          <column index="30" width="100" />
-          <column index="31" width="100" />
-          <column index="32" width="100" />
-          <column index="33" width="100" />
-          <column index="34" width="100" />
-          <column index="35" width="100" />
-          <column index="36" width="100" />
-          <column index="37" width="100" />
-          <column index="38" width="100" />
-          <column index="39" width="100" />
-          <column index="40" width="100" />
-          <column index="41" width="100" />
-          <column index="42" width="100" />
-          <column index="43" width="100" />
-          <column index="44" width="100" />
-          <column index="45" width="100" />
-          <column index="46" width="100" />
-          <column index="47" width="100" />
-          <column index="48" width="100" />
-          <column index="49" width="100" />
-          <column index="50" width="100" />
-          <column index="51" width="100" />
-          <column index="52" width="100" />
-          <column index="53" width="100" />
-          <column index="54" width="100" />
-          <column index="55" width="100" />
-          <column index="56" width="100" />
-          <column index="57" width="100" />
-          <column index="58" width="100" />
-          <column index="59" width="100" />
-          <column index="60" width="100" />
-          <column index="61" width="100" />
-          <column index="62" width="100" />
-          <column index="63" width="100" />
-          <column index="64" width="100" />
-          <column index="65" width="100" />
-          <column index="66" width="100" />
-          <column index="67" width="100" />
-          <column index="68" width="100" />
-          <column index="69" width="100" />
-          <column index="70" width="100" />
-          <column index="71" width="100" />
-          <column index="72" width="100" />
-          <column index="73" width="100" />
-          <column index="74" width="100" />
-          <column index="75" width="100" />
-          <column index="76" width="100" />
-          <column index="77" width="100" />
-          <column index="78" width="100" />
-          <column index="79" width="100" />
-          <column index="80" width="100" />
-          <column index="81" width="100" />
-          <column index="82" width="100" />
-          <column index="83" width="100" />
-          <column index="84" width="100" />
-          <column index="85" width="100" />
-          <column index="86" width="100" />
-          <column index="87" width="100" />
-          <column index="88" width="100" />
-          <column index="89" width="100" />
-          <column index="90" width="100" />
-          <column index="91" width="100" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state>
-          <caret column="113" selection-start-column="101" selection-end-column="113" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_v2/AP/trial6/traitement_ArthurPilard6_2018-06-21.csv">
-      <provider selected="true" editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="true" rowLines="3">
-          <column index="0" width="100" />
-          <column index="1" width="100" />
-          <column index="2" width="100" />
-          <column index="3" width="100" />
-          <column index="4" width="100" />
-          <column index="5" width="100" />
-          <column index="6" width="100" />
-          <column index="7" width="100" />
-          <column index="8" width="100" />
-          <column index="9" width="100" />
-          <column index="10" width="100" />
-          <column index="11" width="100" />
-          <column index="12" width="100" />
-          <column index="13" width="100" />
-          <column index="14" width="100" />
-          <column index="15" width="100" />
-          <column index="16" width="100" />
-          <column index="17" width="100" />
-          <column index="18" width="100" />
-          <column index="19" width="100" />
-          <column index="20" width="100" />
-          <column index="21" width="100" />
-          <column index="22" width="100" />
-          <column index="23" width="100" />
-          <column index="24" width="100" />
-          <column index="25" width="100" />
-          <column index="26" width="100" />
-          <column index="27" width="100" />
-          <column index="28" width="100" />
-          <column index="29" width="100" />
-          <column index="30" width="100" />
-          <column index="31" width="100" />
-          <column index="32" width="100" />
-          <column index="33" width="100" />
-          <column index="34" width="100" />
-          <column index="35" width="100" />
-          <column index="36" width="100" />
-          <column index="37" width="100" />
-          <column index="38" width="100" />
-          <column index="39" width="100" />
-          <column index="40" width="100" />
-          <column index="41" width="100" />
-          <column index="42" width="100" />
-          <column index="43" width="100" />
-          <column index="44" width="100" />
-          <column index="45" width="100" />
-          <column index="46" width="100" />
-          <column index="47" width="100" />
-          <column index="48" width="100" />
-          <column index="49" width="100" />
-          <column index="50" width="100" />
-          <column index="51" width="100" />
-          <column index="52" width="100" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_v2/TJ/trial9/traitement_ThomasJouve9_2018-06-20.csv">
-      <provider selected="true" editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
-          <column index="0" width="100" />
-          <column index="1" width="100" />
-          <column index="2" width="100" />
-          <column index="3" width="100" />
-          <column index="4" width="100" />
-          <column index="5" width="100" />
-          <column index="6" width="100" />
-          <column index="7" width="100" />
-          <column index="8" width="100" />
-          <column index="9" width="100" />
-          <column index="10" width="100" />
-          <column index="11" width="100" />
-          <column index="12" width="100" />
-          <column index="13" width="100" />
-          <column index="14" width="100" />
-          <column index="15" width="100" />
-          <column index="16" width="100" />
-          <column index="17" width="100" />
-          <column index="18" width="100" />
-          <column index="19" width="100" />
-          <column index="20" width="100" />
-          <column index="21" width="100" />
-          <column index="22" width="100" />
-          <column index="23" width="100" />
-          <column index="24" width="100" />
-          <column index="25" width="100" />
-          <column index="26" width="100" />
-          <column index="27" width="100" />
-          <column index="28" width="100" />
-          <column index="29" width="100" />
-          <column index="30" width="100" />
-          <column index="31" width="100" />
-          <column index="32" width="100" />
-          <column index="33" width="100" />
-          <column index="34" width="100" />
-          <column index="35" width="100" />
-          <column index="36" width="100" />
-          <column index="37" width="100" />
-          <column index="38" width="100" />
-          <column index="39" width="100" />
-          <column index="40" width="100" />
-          <column index="41" width="100" />
-          <column index="42" width="100" />
-          <column index="43" width="100" />
-          <column index="44" width="100" />
-          <column index="45" width="100" />
-          <column index="46" width="100" />
-          <column index="47" width="100" />
-          <column index="48" width="100" />
-          <column index="49" width="100" />
-          <column index="50" width="100" />
-          <column index="51" width="100" />
-          <column index="52" width="100" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/statsmodels/regression/linear_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="344" selection-start-line="344" selection-end-line="344" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_v2/AP/trial2/traitement_ArthurPilard2_2018-06-21.csv">
-      <provider selected="true" editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="true" rowLines="3">
-          <column index="0" width="100" />
-          <column index="1" width="100" />
-          <column index="2" width="100" />
-          <column index="3" width="100" />
-          <column index="4" width="100" />
-          <column index="5" width="100" />
-          <column index="6" width="100" />
-          <column index="7" width="100" />
-          <column index="8" width="100" />
-          <column index="9" width="100" />
-          <column index="10" width="100" />
-          <column index="11" width="100" />
-          <column index="12" width="100" />
-          <column index="13" width="100" />
-          <column index="14" width="100" />
-          <column index="15" width="100" />
-          <column index="16" width="100" />
-          <column index="17" width="100" />
-          <column index="18" width="100" />
-          <column index="19" width="100" />
-          <column index="20" width="100" />
-          <column index="21" width="100" />
-          <column index="22" width="100" />
-          <column index="23" width="100" />
-          <column index="24" width="100" />
-          <column index="25" width="100" />
-          <column index="26" width="100" />
-          <column index="27" width="100" />
-          <column index="28" width="100" />
-          <column index="29" width="100" />
-          <column index="30" width="100" />
-          <column index="31" width="100" />
-          <column index="32" width="100" />
-          <column index="33" width="100" />
-          <column index="34" width="100" />
-          <column index="35" width="100" />
-          <column index="36" width="100" />
-          <column index="37" width="100" />
-          <column index="38" width="100" />
-          <column index="39" width="100" />
-          <column index="40" width="100" />
-          <column index="41" width="100" />
-          <column index="42" width="100" />
-          <column index="43" width="100" />
-          <column index="44" width="100" />
-          <column index="45" width="100" />
-          <column index="46" width="100" />
-          <column index="47" width="100" />
-          <column index="48" width="100" />
-          <column index="49" width="100" />
-          <column index="50" width="100" />
-          <column index="51" width="100" />
-          <column index="52" width="100" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/data_v2_old/TJ/trial8/concat_cuted_fin_dep_traitement_ThomasJouve8_2018-06-20.csv" />
+    <entry file="file://$PROJECT_DIR$/data_v2/jr/trial1/frames_JeremyRencurel1_2018-12-12.csv" />
+    <entry file="file://$PROJECT_DIR$/data_v2/SD/trial1/frames_SimbaDarnand1_2018-06-21.csv" />
+    <entry file="file://$PROJECT_DIR$/data_v2_old/AP/trial2/traitement_ArthurPilard2_2018-06-21.csv" />
+    <entry file="file://$PROJECT_DIR$/data_v2_old/AP/trial2/concat_cuted_fin_dep_traitement_ArthurPilard2_2018-06-21.csv" />
+    <entry file="file://$PROJECT_DIR$/data_v2_old/RM/trial1/concat_cuted_fin_dep_traitement_RomainMayet1_2018-06-19.csv" />
+    <entry file="file://$PROJECT_DIR$/data_v2/rr/trial1/traitement_RomainRacine1_2018-06-22.csv" />
+    <entry file="file://$PROJECT_DIR$/data_v2/ap/trial2/frames_ArthurPilard2_2018-06-21.csv" />
+    <entry file="file://$PROJECT_DIR$/data_v2/ap/trial6/traitement_ArthurPilard6_2018-06-21.csv" />
+    <entry file="file://$PROJECT_DIR$/data_v2/tj/trial9/traitement_ThomasJouve9_2018-06-20.csv" />
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/statsmodels/regression/linear_model.py" />
+    <entry file="file://$PROJECT_DIR$/data_v2/ap/trial2/traitement_ArthurPilard2_2018-06-21.csv" />
     <entry file="file://$PROJECT_DIR$/surface3d_demo2.py" />
-    <entry file="file://$PROJECT_DIR$/surface3d_demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-168">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#299#338#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/surface3d_demo.py" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -1250,75 +651,13 @@
     <entry file="file://$PROJECT_DIR$/matlab_scripts/getmyfield.m">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/sklearn/ensemble/forest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5597">
-          <caret line="1734" column="11" selection-start-line="1734" selection-start-column="11" selection-end-line="1734" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/sklearn/utils/multiclass.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="170" selection-start-line="170" selection-end-line="170" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/sklearn/ensemble/forest.py" />
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/sklearn/utils/multiclass.py" />
     <entry file="file://$PROJECT_DIR$/pedal_stroke_traitement.py" />
-    <entry file="file://$PROJECT_DIR$/analyse.ipynb">
-      <provider selected="true" editor-type-id="jupyter-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/analyse.ipynb" />
     <entry file="file://$PROJECT_DIR$/gg.py" />
-    <entry file="file://$PROJECT_DIR$/concatenat/AllframesConcatenated.csv">
-      <provider selected="true" editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="true" rowLines="3">
-          <column index="0" width="100" />
-          <column index="1" width="100" />
-          <column index="2" width="100" />
-          <column index="3" width="100" />
-          <column index="4" width="100" />
-          <column index="5" width="100" />
-          <column index="6" width="100" />
-          <column index="7" width="100" />
-          <column index="8" width="100" />
-          <column index="9" width="100" />
-          <column index="10" width="100" />
-          <column index="11" width="100" />
-          <column index="12" width="100" />
-          <column index="13" width="100" />
-          <column index="14" width="100" />
-          <column index="15" width="100" />
-          <column index="16" width="100" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-data-editor">
-        <state>
-          <format>
-            <csv-format name="Comma-separated (CSV)" id="Comma-separated (CSV)_id">
-              <data>
-                <record-format prefix="" suffix="" nullText="" quotationPolicy="as needed" valueSeparator=";" recordSeparator="&#10;">
-                  <quotation>
-                    <quotes left="&quot;" right="&quot;" leftEscaped="&quot;&quot;" rightEscaped="&quot;&quot;" />
-                    <quotes left="'" right="'" leftEscaped="''" rightEscaped="''" />
-                  </quotation>
-                </record-format>
-              </data>
-            </csv-format>
-          </format>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_v2/JR/trial1/traitement_JeremyRencurel1_2018-12-12.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/concatenat/AllframesConcatenated.csv" />
+    <entry file="file://$PROJECT_DIR$/data_v2/jr/trial1/traitement_JeremyRencurel1_2018-12-12.csv" />
     <entry file="file://$PROJECT_DIR$/allconcate.csv" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
@@ -1394,49 +733,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/concatenat/AlltraitementConcatenated.csv">
-      <provider editor-type-id="csv-data-editor">
-        <state>
-          <format>
-            <csv-format name="Comma-separated (CSV)" id="Comma-separated (CSV)_id">
-              <data>
-                <record-format prefix="" suffix="" nullText="" quotationPolicy="as needed" valueSeparator="," recordSeparator="&#10;">
-                  <quotation>
-                    <quotes left="&quot;" right="&quot;" leftEscaped="&quot;&quot;" rightEscaped="&quot;&quot;" />
-                    <quotes left="'" right="'" leftEscaped="''" rightEscaped="''" />
-                  </quotation>
-                </record-format>
-              </data>
-            </csv-format>
-          </format>
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state>
-          <caret line="12" column="55" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/analyse_frame.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/analyse_traitement.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="45" column="30" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/concatenat/AlltraitementConcatenated.csv" />
     <entry file="file://$PROJECT_DIR$/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -1447,43 +744,36 @@
     <entry file="file://$PROJECT_DIR$/plots/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Analyses/Données/Traitements/trial1">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Analyses/Données/Traitements/trial1" />
     <entry file="file://$PROJECT_DIR$/concatenat/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/navigate_files.py">
+    <entry file="file://$PROJECT_DIR$/Analyses/R/Nouveaute/Tableaux.csv" />
+    <entry file="file://$PROJECT_DIR$/Analyses/Module/DataManagement.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="57" column="56" selection-start-line="57" selection-start-column="56" selection-end-line="57" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#118#1504#0" />
-            <element signature="e#1561#1977#0" />
-            <element signature="e#2044#2645#0" />
-            <element signature="e#2715#3210#0" />
-          </folding>
+        <state relative-caret-position="3784">
+          <caret line="177" column="8" selection-start-line="177" selection-start-column="8" selection-end-line="177" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Analyses/R/Nouveaute/Tableaux.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Analyses/Module/DataCreationTestR.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="694">
+        <state relative-caret-position="770">
           <caret line="35" column="43" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Analyses/Module/DataManagement.py">
+    <entry file="file://$PROJECT_DIR$/Analyses/Module/Traitements_Statistiques_Users.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="177" column="8" selection-start-line="177" selection-start-column="8" selection-end-line="177" selection-end-column="8" />
+        <state relative-caret-position="1364">
+          <caret line="64" column="28" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Analyses/Module/DataViz.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1494,31 +784,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/concatenat/concat_csv.py">
+    <entry file="file://$PROJECT_DIR$/navigate_files.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="58" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
+        <state relative-caret-position="381">
+          <caret line="136" column="27" selection-start-line="136" selection-end-line="137" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#5227#5974#0" />
+            <element signature="e#118#1504#0" />
+            <element signature="e#1561#1977#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Analyses/Module/Traitements_Statistiques_Users.py">
+    <entry file="file://$PROJECT_DIR$/analyse_traitement.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1408">
-          <caret line="64" column="28" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
+        <state relative-caret-position="306">
+          <caret line="112" selection-start-line="112" selection-end-line="112" />
           <folding>
-            <element signature="e#92#129#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#895#2543#0" />
+            <element signature="e#897#913#0" />
+            <element signature="e#2575#3690#0" />
+            <element signature="e#3749#4355#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Analyses/Module/DataViz.py">
+    <entry file="file://$PROJECT_DIR$/analyse_frame.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-264">
-          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+        <state relative-caret-position="348">
+          <caret line="66" column="28" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#605#1940#0" />
+            <element signature="e#4012#5817#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concatenat/concat_csv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="144" column="61" selection-start-line="144" selection-start-column="61" selection-end-line="144" selection-end-column="61" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#190#5122#0" />
+            <element signature="e#5228#5975#0" />
+            <element signature="e#6058#6761#0" />
+            <element signature="e#9840#11718#0" />
+          </folding>
         </state>
       </provider>
     </entry>

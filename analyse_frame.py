@@ -62,7 +62,7 @@ class AnalyseFrame:
                              delimiter=',')
         frames = frames.reset_index(drop=True)
         frames = frames.fillna(frames.mean())
-        models = [Ridge(alpha=0.6)]
+        models = [Ridge(alpha=1), LinearRegression(), Lasso(), ElasticNet()]
 
         for model in models:
             print("-" * 50)

@@ -103,7 +103,8 @@ class ConcatCsv:
                     '{}\\traitement_{}_{}.csv'.format(path_files, piloteName, '-'.join(date_passage)),
                     index=None)
 
-    def concat_all_csv_in_one_file(self, csv_files_indir, name_output_file="concatenated.csv"):
+    def concat_all_csv_in_one_file(self, csv_files_indir,
+                                   name_output_file="concatenated.csv"):
         """
         Concatenat csv files onto 1 concatenated csv file
 
@@ -141,7 +142,7 @@ class ConcatCsv:
         current_directory = os.path.dirname(os.path.realpath(__file__))
         appended_data.to_csv("{}\\AlltraitementConcatenated.csv".format(current_directory), index=0)
 
-    def concat_all_frames(self, data_indir, file_name):
+    def concat_all_frames(self, data_indir, file_name='frames'):
         """
         Concatenat all csv frame files onto 1 concatenated csv file
 
@@ -246,10 +247,11 @@ class ConcatCsv:
 
 if __name__ == '__main__':
     concat_csv = ConcatCsv()
-    # concat_csv.concat_all_frames(data_indir="C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2",
-    #                              file_name=0)
+    data = 'C:\\Program Files\\Git\\BMX_race\\data_v2'
+
+    concat_csv.concat_all_frames(data_indir=data)
 
     # concat_csv.concat_to_frames_traitement_travail(data_indir='C:\\Users\\mekhezzr\\Desktop\\data_v2\\',dir_to_savefile="C:\\Users\\mekhezzr\\Desktop\\data_Lts\\")
-    concat_csv.concat_all_traitement(data_indir='C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2\\')
+    # concat_csv.concat_all_traitement(data_indir=data)
 
     # concat_csv.concat_traitement_travail(data_indir='C:\\Users\\mekhezzr\\Desktop\\data_Lts\\')
