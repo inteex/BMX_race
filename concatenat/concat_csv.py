@@ -99,8 +99,9 @@ class ConcatCsv:
             if dfListtraitement:
                 concattraitement = pd.concat(dfListtraitement, axis=1)
                 concattraitement.columns = colnamestraitement
-                concattraitement.to_csv('{}\\traitement_{}_{}.csv'.format(path_files, piloteName, '-'.join(date_passage)),
-                                        index=None)
+                concattraitement.to_csv(
+                    '{}\\traitement_{}_{}.csv'.format(path_files, piloteName, '-'.join(date_passage)),
+                    index=None)
 
     def concat_all_csv_in_one_file(self, csv_files_indir, name_output_file="concatenated.csv"):
         """
@@ -241,7 +242,6 @@ class ConcatCsv:
                 outfile = '.\\{}\\concat_{}'.format(trial.split('\\')[-2], traitement_path[0].split('\\')[-1])
                 concatDf.to_csv(outfile, index=None)
                 dfList = []
-
 
 
 if __name__ == '__main__':

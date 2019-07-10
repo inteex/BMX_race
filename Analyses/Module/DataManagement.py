@@ -5,17 +5,12 @@ Created on Wed Jul  3 11:27:50 2019
 @author: 1mduquesnoy
 """
 
-import plotly.graph_objs as go
-import plotly
-from plotly.offline import init_notebook_mode
 import numpy as np 
-import pandas as pd # librairie de gestion de bases de données comme des dataframes 
-import matplotlib.pyplot as plt 
-from math import pi
+# librairie de gestion de bases de données comme des dataframes
+import pandas as pd
 import os
 import re
 import glob
-from sklearn.preprocessing import MinMaxScaler
 
 class DataManagement:
     
@@ -80,10 +75,10 @@ class DataManagement:
                 fls_total.append(fls[i][j])
     
         for element in fls_total:
-            
-            elementbis = element.split("\\")[7]
 
-            date = elementbis.split("_")[2]
+            elementbis = element.split("\\")[-1]
+
+            date = elementbis.split("_")[-1]
             r=re.findall('[A-Z0-9][^A-Z0-9]*',elementbis)
     
             X = pd.read_csv(element,sep=",",encoding='Latin')
@@ -132,7 +127,7 @@ class DataManagement:
    
         for element in range(len(lst_total)):
             X = pd.read_csv(lst_total[element],sep=",",encoding='Latin')
-            X.to_csv('Analyses/Données/Traitements/' + lst_total[element].split("\\")[7],sep=",",header=True,index=False)
+            X.to_csv('Analyses/Données/Traitements/' + lst_total[element].split("\\")[-1],sep=",",header=True,index=False)
             
         return("Done")
         
@@ -155,7 +150,7 @@ class DataManagement:
         
         for element in os.listdir('Données\\Traitements\\'):
             
-            date = element.split("_")[2]
+
             r=re.findall('[A-Z0-9][^A-Z0-9]*',element)
             
             if (r[1] == Pilot1):
@@ -211,13 +206,13 @@ class DataManagement:
 
 if __name__ == '__main__':
     
-    os.chdir('C:\\Users\\1mduquesnoy\\Desktop\\Analyses\\') 
-    data = 'C:\\Users\\1mduquesnoy\\Desktop\\data_v2'
+    os.chdir('C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\Analyses\\')
+    data = 'C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2'
     
     d = DataManagement()
     Data = d.Base_de_donnees_Perf(data)
 
-    os.chdir('C:\\Users\\1mduquesnoy\\Desktop\\Analyses\\')
+    os.chdir('C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\Analyses\\')
     YA,YB = d.Data_Two_Pilots("ForcePied","Mayet","Racine","2018-06-19","2018-06-22")
 
     #print(d.Data_New_Predictions(Data,["Mayet_2018-06-19","Racine_2018-06-22"]))

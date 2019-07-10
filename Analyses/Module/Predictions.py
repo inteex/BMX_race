@@ -5,35 +5,9 @@ Created on Wed Jul  3 15:05:55 2019
 @author: 1mduquesnoy
 """
 
-import pandas as pd # librairie de gestion de bases de données comme des dataframes 
-import sklearn # libraire scikit-learn 
-import matplotlib.pyplot as plt 
-import matplotlib
-import numpy as np 
 from sklearn import tree
-from sklearn.tree import DecisionTreeClassifier as CART
-from sklearn.ensemble import GradientBoostingClassifier
-from sklearn import preprocessing
-from sklearn.metrics import roc_curve, auc
-from sklearn.ensemble import AdaBoostClassifier
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import Lasso
 from sklearn.ensemble import GradientBoostingRegressor
-import csv
-#import minepy
-from scipy.stats import spearmanr,pearsonr,wilcoxon,ttest_ind,bartlett
-import os
-import sys
-
-import scipy
-from sklearn.model_selection import train_test_split
-from sklearn import cluster
-from sklearn import metrics
-from sklearn.preprocessing import StandardScaler
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.metrics import f1_score
-from DataManagement import *
-from sklearn.preprocessing import MinMaxScaler
+from Analyses.Module.DataManagement import *
 
 class Predictions:
     
