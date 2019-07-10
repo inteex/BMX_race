@@ -8,6 +8,9 @@ Created on Wed Jul  3 11:45:14 2019
 import matplotlib.pyplot as plt
 from math import pi
 from sklearn.preprocessing import MinMaxScaler
+import numpy as np
+import pandas as pd
+import os
 
 from Analyses.Module.DataManagement import *
 import spm1d
@@ -235,6 +238,62 @@ class DataViz:
         plt.title("Bests and other trials from " + Name)
         plt.legend()
         plt.xticks([r + barWidth1 / 2 for r in range(Pilot1.shape[1])], Pilot1.columns, rotation=20)
+        
+        
+    def Correlation_Canonique(self,Data,Variable1,Variable2):
+        '''
+        Make a Canonical Correlation Analysis in order to show where the correlation between the two features
+        appears
+            :param Data : the dataset used
+            :param Variable1 : a string with the name of the variable from the columns of Data (Frames's variable) 
+            ;param Variable2 : a string with the name of the functional variable, where we will see the 
+                                significant correlation durong time
+        '''
+
+        X = Data[[Variable1]]
+        X = np.array(list(X[Variable1]))
+        
+        Y = []
+        N = Y.copy()
+        
+        for element in os.listdir('Données\\Traitements\\'):
+            
+            Data = pd.read_csv('Données\\Traitements\\'+element,sep=",",encoding='Latin',engine='python')[Variable2]
+            N.append(len(Data))
+         
+
+        N = min(N)
+
+        for element in os.listdir('Données\\Traitements\\'):
+            
+            Data = pd.read_csv('Données\\Traitements\\'+element,sep=",",encoding='Latin',engine='python')[Variable2]
+            Data = Data.fillna(method='pad')
+            Y.append(np.array(Data[0:N]).reshape((N,1)))
+            
+        Y = np.array(Y)
+
+        
+        np.random.seed(0)
+        alpha      = 0.05
+        two_tailed = False
+        snpm       = spm1d.stats.nonparam.cca(Y,X)
+        snpmi      = snpm.inference(alpha, iterations=100)
+        
+        v = []
+        L = np.floor(Y.shape[1])
+        for i in range(5):
+            v.append('x=' + str(round(np.floor(i*L/5)/300,2)))
+        fig = plt.figure(figsize=(12, 8))
+        
+        snpmi.plot()
+        snpmi.plot_p_values()
+        axes = plt.gca()
+        axes.xaxis.set_ticklabels(v)
+        plt.xlabel("Time (s)")
+        plt.title("Influence de " + Variable2 + " sur " + Variable1)
+        plt.show()
+        
+        return('Done')
 
 
 if __name__ == '__main__':
@@ -244,9 +303,10 @@ if __name__ == '__main__':
     d = DataManagement()
     path = 'C:\\Users\\1mduquesnoy\\Desktop\\data_v2'
 
-    Data_Frames = d.Base_de_donnees_Perf(path)
+    #Data_Frames = d.Base_de_donnees_Perf(path)
     os.chdir('C:\\Users\\1mduquesnoy\\Desktop\\Analyses\\')
-    # print(v.Comparaison_Boxplot(path,"DistanceDmin"))
+    
+    #print(v.Comparaison_Boxplot(path,"DistanceDmin"))
     # print(v.Kiviat(Data_Frames,"Pilard","Mahieu",2,2,"2018-06-21","2018-12-13"))
 
     # YA, YB = d.Data_Two_Pilots("ForcePied","Mayet","Racine","2018-06-19","2018-06-22")
