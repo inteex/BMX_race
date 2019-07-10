@@ -6,7 +6,7 @@ from navigate_files import NavigateFiles
 
 class TempRecation:
     def get_tps_reaction_all_pilots(self):
-        files = NavigateFiles().get_all_files_by_num(data_indir='.\\data\\', position_file=2)
+        files = NavigateFiles().get_all_files_by_name(data_indir='.\\data\\', file_name=2)
         for frames in files:
             pilot_name = frames[0].split("\\")[-3]
             f = open('tps_reaction\\{}.csv'.format(pilot_name), 'w')

@@ -99,8 +99,9 @@ class ConcatCsv:
             if dfListtraitement:
                 concattraitement = pd.concat(dfListtraitement, axis=1)
                 concattraitement.columns = colnamestraitement
-                concattraitement.to_csv('{}\\traitement_{}_{}.csv'.format(path_files, piloteName, '-'.join(date_passage)),
-                                        index=None)
+                concattraitement.to_csv(
+                    '{}\\traitement_{}_{}.csv'.format(path_files, piloteName, '-'.join(date_passage)),
+                    index=None)
 
     def concat_all_csv_in_one_file(self, csv_files_indir, name_output_file="concatenated.csv"):
         """
@@ -123,14 +124,14 @@ class ConcatCsv:
         concatframes.columns = colnamesframe
         concatframes.to_csv(name_output_file, index=None)
 
-    def concat_all_traitement(self, data_indir, position_traitement=1):
+    def concat_all_traitement(self, data_indir, file_name='traitement'):
         """
         Concatenat all csv traitement files onto 1 concatenated csv file
 
             :param data_indir: Path to data file.
-            :param position_traitement: Position of the file taitement in a trial by default 1.
+            :param file_name: Prefix of file name.
         """
-        files = NavigateFiles().get_all_files_by_num(data_indir, position_traitement)
+        files = NavigateFiles().get_all_files_by_name(data_indir, file_name)
         appended_data = []
         for pilote in files:
             for file in pilote:  # the file in th trial
@@ -140,16 +141,16 @@ class ConcatCsv:
         current_directory = os.path.dirname(os.path.realpath(__file__))
         appended_data.to_csv("{}\\AlltraitementConcatenated.csv".format(current_directory), index=0)
 
-    def concat_all_frames(self, data_indir, position_frames=0):
+    def concat_all_frames(self, data_indir, file_name):
         """
         Concatenat all csv frame files onto 1 concatenated csv file
 
             :param data_indir: Path to data.
-            :param position_frames: Position of the file frames in a trial by default 0.
+            :param file_name: Prefix of file name.
 
         """
 
-        frames = NavigateFiles().get_all_files_by_num(data_indir, position_frames)
+        frames = NavigateFiles().get_all_files_by_name(data_indir, file_name)
         appended_data = []
         for pilote in frames:
             for f in pilote:
@@ -243,14 +244,12 @@ class ConcatCsv:
                 dfList = []
 
 
-
 if __name__ == '__main__':
     concat_csv = ConcatCsv()
-    concat_csv.concat_all_frames(data_indir="C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2",
-                                 position_frames=0)
+    # concat_csv.concat_all_frames(data_indir="C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2",
+    #                              file_name=0)
 
     # concat_csv.concat_to_frames_traitement_travail(data_indir='C:\\Users\\mekhezzr\\Desktop\\data_v2\\',dir_to_savefile="C:\\Users\\mekhezzr\\Desktop\\data_Lts\\")
-    # concat_csv.concat_all_traitement(data_indir='C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2_old\\',
-    #                                  position_traitement=1)
+    concat_csv.concat_all_traitement(data_indir='C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2\\')
 
     # concat_csv.concat_traitement_travail(data_indir='C:\\Users\\mekhezzr\\Desktop\\data_Lts\\')
