@@ -127,7 +127,9 @@ class DataManagement:
    
         for element in range(len(lst_total)):
             X = pd.read_csv(lst_total[element],sep=",",encoding='Latin')
-            X.to_csv('Analyses/Données/Traitements/' + lst_total[element].split("\\")[-1],sep=",",header=True,index=False)
+            current_directory = os.path.dirname(os.path.realpath(__file__))
+            parent_directory = '\\'.join(current_directory.split('\\')[:-1])
+            X.to_csv(parent_directory + '\\Données\\Traitements\\' + lst_total[element].split("\\")[-1],sep=",",header=True,index=False)
             
         return("Done")
         
@@ -206,14 +208,15 @@ class DataManagement:
 
 if __name__ == '__main__':
     
-    os.chdir('C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\Analyses\\')
-    data = 'C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2'
+    os.chdir('C:\\Users\\1mduquesnoy\\Downloads\\BMX_race-master\\BMX_race-master\\Analyses\\')
+    data = 'C:\\Users\\1mduquesnoy\\Desktop\\data_v2'
     
     d = DataManagement()
-    Data = d.Base_de_donnees_Perf(data)
+    d.Creation_Traitements_Dataset(data)
+    #Data = d.Base_de_donnees_Perf(data)
 
-    os.chdir('C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\Analyses\\')
-    YA,YB = d.Data_Two_Pilots("ForcePied","Mayet","Racine","2018-06-19","2018-06-22")
+    os.chdir('C:\\Users\\1mduquesnoy\\Downloads\\BMX_race-master\\BMX_race-master\\Analyses\\')
+    #YA,YB = d.Data_Two_Pilots("ForcePied","Mayet","Racine","2018-06-19","2018-06-22")
 
     #print(d.Data_New_Predictions(Data,["Mayet_2018-06-19","Racine_2018-06-22"]))
 
