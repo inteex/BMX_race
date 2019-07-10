@@ -4,13 +4,10 @@
     <list default="true" id="209c54e3-553a-47c3-84c0-0e0c307d3af6" name="Default Changelist" comment="first">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/concatenat/concat_csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/concatenat/concat_csv.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/concatenat/data_cute.py" beforeDir="false" afterPath="$PROJECT_DIR$/concatenat/data_cut.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/copy_rename_files.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/navigate_to_trials.py" beforeDir="false" afterPath="$PROJECT_DIR$/navigate_files.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/plotBestTestPerPilote.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots/plots.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/navigate_files.py" beforeDir="false" afterPath="$PROJECT_DIR$/navigate_files.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/regressionOnframes.py" beforeDir="false" afterPath="$PROJECT_DIR$/analyse_frame.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tps_reaction.py" beforeDir="false" afterPath="$PROJECT_DIR$/tps_reaction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traitement_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/traitement_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traitement_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/analyse_traitement.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,109 +58,46 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/concatenat/concat_csv.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="199" column="20" lean-forward="true" selection-start-line="199" selection-start-column="20" selection-end-line="199" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-                <element signature="e#194#5125#0" />
-                <element signature="e#5231#5978#0" />
-                <element signature="e#6060#6817#0" />
-                <element signature="e#6891#9884#0" />
-                <element signature="e#9947#11825#0" />
-              </folding>
+        <entry file="file://$PROJECT_DIR$/concatenat/AlltraitementConcatenated.csv">
+          <provider editor-type-id="csv-data-editor">
+            <state>
+              <format>
+                <csv-format name="Comma-separated (CSV)" id="Comma-separated (CSV)_id">
+                  <data>
+                    <record-format prefix="" suffix="" nullText="" quotationPolicy="as needed" valueSeparator="," recordSeparator="&#10;">
+                      <quotation>
+                        <quotes left="&quot;" right="&quot;" leftEscaped="&quot;&quot;" rightEscaped="&quot;&quot;" />
+                        <quotes left="'" right="'" leftEscaped="''" rightEscaped="''" />
+                      </quotation>
+                    </record-format>
+                  </data>
+                </csv-format>
+              </format>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plots/plots.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="187" column="18" lean-forward="true" selection-start-line="187" selection-start-column="18" selection-end-line="187" selection-end-column="18" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-                <element signature="e#351#2054#0" />
-                <element signature="e#2136#4399#0" />
-                <element signature="e#4499#6822#0" />
-                <element signature="e#7004#8465#0" />
-                <element signature="e#8510#8933#0" />
-                <element signature="e#8996#10267#0" />
-              </folding>
+          <provider selected="true" editor-type-id="LargeFileEditor">
+            <state relative-caret-position="-132">
+              <caret line="12" column="55" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/navigate_files.py">
+        <entry file="file://$PROJECT_DIR$/analyse_traitement.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="154">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/analyse_frame.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="19" column="18" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="18" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
-                <element signature="e#118#1504#0" />
-                <element signature="e#1561#1977#0" />
-                <element signature="e#2047#2686#0" />
-                <element signature="e#2759#3271#0" />
-                <element signature="e#3384#3973#0" />
-                <element signature="e#4095#4705#0" />
-                <element signature="e#4739#5177#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Details_riders.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="51" column="12" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/concatenat/data_cut.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="119" lean-forward="true" selection-start-line="119" selection-end-line="119" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-                <element signature="e#132#2473#0" />
-                <element signature="e#2539#3468#0" />
-                <element signature="e#3540#4886#0" />
-                <element signature="e#4920#5163#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/traitement_model.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tps_reaction.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" column="19" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="186" column="46" selection-start-line="186" selection-start-column="46" selection-end-line="186" selection-end-column="46" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -222,8 +156,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/SD/trial6/sdData.py" />
-        <option value="$PROJECT_DIR$/MR/trial1/concatCSV.py" />
         <option value="$PROJECT_DIR$/dataCute.py" />
         <option value="$PROJECT_DIR$/MR/trial1/data MR.py" />
         <option value="$PROJECT_DIR$/RM/cuteRRConcatenatedTraitement.py" />
@@ -267,18 +199,19 @@
         <option value="$PROJECT_DIR$/plots/plotBestTestPerPilote.py" />
         <option value="$PROJECT_DIR$/gg.py" />
         <option value="$PROJECT_DIR$/navigate_to_trials.py" />
-        <option value="$PROJECT_DIR$/concatenat/concat_csv.py" />
         <option value="$PROJECT_DIR$/regressionOnframes.py" />
         <option value="$PROJECT_DIR$/allconcate.csv" />
-        <option value="$PROJECT_DIR$/traitement_model.py" />
         <option value="$PROJECT_DIR$/concatenat/data_cut.py" />
         <option value="$PROJECT_DIR$/plots/plots.py" />
+        <option value="$PROJECT_DIR$/navigate_files.py" />
+        <option value="$PROJECT_DIR$/concatenat/concat_csv.py" />
+        <option value="$PROJECT_DIR$/traitement_model.py" />
+        <option value="$PROJECT_DIR$/analyse_traitement.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="384" />
-    <option name="y" value="89" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -339,7 +272,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.traitement_model">
+  <component name="RunManager" selected="Python.analyse_traitement">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="bmx_race" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -362,7 +295,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="navigate_to_trials" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="analyse_traitement" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="bmx_race" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -375,7 +308,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\mekhezzr\PycharmProjects\bmx_race\navigate_files.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/analyse_traitement.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -384,7 +317,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="plotBestTestPerPilote" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="concat_csv" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="bmx_race" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -392,12 +325,34 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/plots" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/concatenat" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\mekhezzr\PycharmProjects\bmx_race\plots\plots.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/concatenat/concat_csv.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="navigate_files" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="bmx_race" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/navigate_files.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -419,31 +374,9 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/regressionOnframes.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\mekhezzr\PycharmProjects\bmx_race\analyse_frame.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="tests" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="bmx_race" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
@@ -463,7 +396,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/traitement_model.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\mekhezzr\PycharmProjects\bmx_race\analyse_traitement.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -474,11 +407,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.analyse_traitement" />
         <item itemvalue="Python.traitement_model" />
+        <item itemvalue="Python.concat_csv" />
+        <item itemvalue="Python.navigate_files" />
         <item itemvalue="Python.regressionOnframes" />
-        <item itemvalue="Python.navigate_to_trials" />
-        <item itemvalue="Python.plotBestTestPerPilote" />
-        <item itemvalue="Python.tests" />
       </list>
     </recent_temporary>
   </component>
@@ -523,7 +456,7 @@
       <workItem from="1561382146297" duration="9166000" />
       <workItem from="1561559019843" duration="15764000" />
       <workItem from="1561965256673" duration="26958000" />
-      <workItem from="1562231400409" duration="7349000" />
+      <workItem from="1562231400409" duration="22622000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1553506204878</created>
@@ -585,7 +518,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="529204000" />
+    <option name="totallyTimeSpent" value="544477000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -600,7 +533,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18976545" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.21481876" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -614,23 +547,23 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.16359697" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.28304905" side_tool="true" weight="0.36944744" />
-      <window_info anchor="bottom" id="Python Console" order="11" weight="0.38244852" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="11" visible="true" weight="0.30552545" />
       <window_info active="true" anchor="bottom" id="Concurrent Activities Diagram" order="12" visible="true" weight="0.32936078" />
-      <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.49946696" visible="true" weight="0.3206934" />
+      <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.49946696" weight="0.3206934" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" x="999" y="153" width="802" height="636" id="SciView" order="3" sideWeight="0.4985591" weight="0.4003198" />
-      <window_info anchor="right" x="0" y="0" width="300" height="771" id="Documentation" order="4" sideWeight="0.50144094" side_tool="true" weight="0.43869936" />
+      <window_info anchor="right" x="0" y="0" width="300" height="771" id="Documentation" order="4" sideWeight="0.50144094" side_tool="true" weight="0.39978677" />
       <window_info anchor="right" id="Database" order="5" weight="0.18176973" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16044776" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21481876" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.71695095" weight="0.24702059" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.71695095" weight="0.5709643" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4989339" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -639,15 +572,15 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.16359697" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.28304905" side_tool="true" weight="0.36944744" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49946696" weight="0.26218852" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.4171181" />
-      <window_info active="true" anchor="bottom" id="Concurrent Activities Diagram" order="13" visible="true" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="11" visible="true" weight="0.34669557" />
+      <window_info active="true" anchor="bottom" id="Concurrent Activities Diagram" order="12" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.49946696" weight="0.3206934" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" x="999" y="153" width="802" height="636" id="SciView" order="3" weight="0.36940297" />
-      <window_info anchor="right" x="0" y="0" width="300" height="771" id="Documentation" order="4" side_tool="true" weight="0.19722815" />
-      <window_info anchor="right" id="Database" order="5" weight="0.32995737" />
+      <window_info anchor="right" x="999" y="153" width="802" height="636" id="SciView" order="3" sideWeight="0.4985591" weight="0.4003198" />
+      <window_info anchor="right" x="0" y="0" width="300" height="771" id="Documentation" order="4" sideWeight="0.50144094" side_tool="true" weight="0.39978677" />
+      <window_info anchor="right" id="Database" order="5" weight="0.18176973" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -908,7 +841,7 @@
       </provider>
       <provider editor-type-id="csv-text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_v3_old/AP/trial2/cuted_fin_dep_traitement_ArthurPilard2_2018-06-21.csv">
+    <entry file="file://$PROJECT_DIR$/data_v2_old/AP/trial2/cuted_fin_dep_traitement_ArthurPilard2_2018-06-21.csv">
       <provider selected="true" editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="true" rowLines="3">
           <column index="0" width="100" />
@@ -982,7 +915,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_v3_old/AP/trial3/cuted_fin_dep_traitement_ArthurPilard3_2018-06-21.csv">
+    <entry file="file://$PROJECT_DIR$/data_v2_old/AP/trial3/cuted_fin_dep_traitement_ArthurPilard3_2018-06-21.csv">
       <provider selected="true" editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="true" rowLines="3">
           <column index="0" width="100" />
@@ -1036,7 +969,7 @@
       </provider>
       <provider editor-type-id="csv-text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_v3_old/RMathieu/trial1/cuted_fin_dep_traitement_RomainMahieu1_2018-12-13.csv">
+    <entry file="file://$PROJECT_DIR$/data_v2_old/RMathieu/trial1/cuted_fin_dep_traitement_RomainMahieu1_2018-12-13.csv">
       <provider selected="true" editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
           <column index="0" width="100" />
@@ -1090,7 +1023,7 @@
       </provider>
       <provider editor-type-id="csv-text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_v3_old/TJ/trial8/concat_cuted_fin_dep_traitement_ThomasJouve8_2018-06-20.csv">
+    <entry file="file://$PROJECT_DIR$/data_v2_old/TJ/trial8/concat_cuted_fin_dep_traitement_ThomasJouve8_2018-06-20.csv">
       <provider selected="true" editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="true" rowLines="3">
           <column index="0" width="100" />
@@ -1225,7 +1158,7 @@
       </provider>
       <provider editor-type-id="csv-text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_v3_old/AP/trial2/concat_cuted_fin_dep_traitement_ArthurPilard2_2018-06-21.csv">
+    <entry file="file://$PROJECT_DIR$/data_v2_old/AP/trial2/concat_cuted_fin_dep_traitement_ArthurPilard2_2018-06-21.csv">
       <provider selected="true" editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="true" rowLines="3">
           <column index="0" width="100" />
@@ -1285,7 +1218,7 @@
       </provider>
       <provider editor-type-id="csv-text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_v3_old/RM/trial1/concat_cuted_fin_dep_traitement_RomainMayet1_2018-06-19.csv">
+    <entry file="file://$PROJECT_DIR$/data_v2_old/RM/trial1/concat_cuted_fin_dep_traitement_RomainMayet1_2018-06-19.csv">
       <provider selected="true" editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
           <column index="0" width="100" />
@@ -1794,29 +1727,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/concatenat/AlltraitementConcatenated.csv">
-      <provider editor-type-id="csv-data-editor">
-        <state>
-          <format>
-            <csv-format name="Comma-separated (CSV)" id="Comma-separated (CSV)_id">
-              <data>
-                <record-format prefix="" suffix="" nullText="" quotationPolicy="as needed" valueSeparator="," recordSeparator="&#10;">
-                  <quotation>
-                    <quotes left="&quot;" right="&quot;" leftEscaped="&quot;&quot;" rightEscaped="&quot;&quot;" />
-                    <quotes left="'" right="'" leftEscaped="''" rightEscaped="''" />
-                  </quotation>
-                </record-format>
-              </data>
-            </csv-format>
-          </format>
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="264">
-          <caret line="12" column="55" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1852,16 +1762,6 @@
         <state split_layout="SPLIT">
           <first_editor />
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/regressionOnframes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="766">
-          <caret line="151" selection-start-line="151" selection-end-line="151" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1906,21 +1806,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/concatenat/concat_csv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="199" column="20" lean-forward="true" selection-start-line="199" selection-start-column="20" selection-end-line="199" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#194#5125#0" />
-            <element signature="e#5231#5978#0" />
-            <element signature="e#6060#6817#0" />
-            <element signature="e#6891#9884#0" />
-            <element signature="e#9947#11825#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plots/plots.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="403">
@@ -1937,13 +1822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/traitement_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tps_reaction.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -1953,18 +1831,70 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/navigate_files.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="129">
+          <caret line="57" column="56" selection-start-line="57" selection-start-column="56" selection-end-line="57" selection-end-column="56" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
             <element signature="e#118#1504#0" />
             <element signature="e#1561#1977#0" />
-            <element signature="e#2047#2686#0" />
-            <element signature="e#2759#3271#0" />
-            <element signature="e#3384#3973#0" />
-            <element signature="e#4095#4705#0" />
-            <element signature="e#4739#5177#0" />
+            <element signature="e#2044#2680#0" />
+            <element signature="e#3364#3953#0" />
+            <element signature="e#4074#4684#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concatenat/concat_csv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="125" column="29" selection-start-line="125" selection-start-column="8" selection-end-line="125" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#190#5121#0" />
+            <element signature="e#5227#5974#0" />
+            <element signature="e#6888#9882#0" />
+            <element signature="e#9945#11823#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concatenat/AlltraitementConcatenated.csv">
+      <provider editor-type-id="csv-data-editor">
+        <state>
+          <format>
+            <csv-format name="Comma-separated (CSV)" id="Comma-separated (CSV)_id">
+              <data>
+                <record-format prefix="" suffix="" nullText="" quotationPolicy="as needed" valueSeparator="," recordSeparator="&#10;">
+                  <quotation>
+                    <quotes left="&quot;" right="&quot;" leftEscaped="&quot;&quot;" rightEscaped="&quot;&quot;" />
+                    <quotes left="'" right="'" leftEscaped="''" rightEscaped="''" />
+                  </quotation>
+                </record-format>
+              </data>
+            </csv-format>
+          </format>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="-132">
+          <caret line="12" column="55" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/analyse_frame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="19" column="18" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/analyse_traitement.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>

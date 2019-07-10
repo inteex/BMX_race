@@ -55,12 +55,12 @@ class NavigateFiles:
             bestTrials.append(l)
         return bestTrials
 
-    def get_files_by_num(self, pilot_indir, position_file):
+    def get_files_by_name(self, pilot_indir, file_name):
         """
             Get the file at this position from each trial of this pilot.
 
                 :param pilot_indir: Path to pilot data.
-                :param position_file:Position of file in trial.
+                :param file_name:Prefix of file name .
                 :return: Array of the specified file from all the pilote's trials.
         """
 
@@ -69,25 +69,25 @@ class NavigateFiles:
         files = []
 
         for directoryFile in directory_files:
-            fileList = glob.glob((directoryFile.split('\\')[-2] + '\\*.csv'))
-            files.append(pilot_indir + fileList[position_file])
+            file = glob.glob(('{}\\{}*.csv'.format(directoryFile, file_name)))
+            files.append(file[0])
 
         os.chdir('..\\..')
         return files
 
-    def get_all_files_by_num(self, data_indir, position_file):
+    def get_all_files_by_name(self, data_indir, file_name):
         """
             Get all files at this position from each trial.
-    
+
                 :param data_indir: Path to data.
-                :param position_file: Position of file in trial.
+                :param file_name: prefix of file name.
                 :return: Array of arrays of all specified file of all pilotes
 
         """
         directory_files = glob.glob('{}\\*\\'.format(data_indir))
         allfiles = []
         for file in directory_files:
-            l = self.get_files_by_num(file, position_file)
+            l = self.get_files_by_name(file, file_name)
             allfiles.append(l)
         return allfiles
 
@@ -110,7 +110,6 @@ class NavigateFiles:
         os.chdir(current_path)
         if files:
             return files[0]
-
 
     def get_files_by_pilotes_names_trials_nums_dates(self, data_indir, pilote_names, trial_nums, dates_trial):
         """
@@ -141,4 +140,4 @@ if __name__ == '__main__':
     #         data_indir='C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2_old',
     #         pilote_names=['ArthurPilard', 'Jeremy'], trial_nums=[2, 5],
     #         dates_trial=['2018-06-21', '2018-12-12']))
-    print(nf.get_all_files_by_num(data, position_file=0))
+    print(nf.get_all_files_by_name(data,'traitement'))
