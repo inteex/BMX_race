@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="209c54e3-553a-47c3-84c0-0e0c307d3af6" name="Default Changelist" comment="first">
       <change beforePath="$PROJECT_DIR$/analyse_frame.py" beforeDir="false" afterPath="$PROJECT_DIR$/analyse_frame.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analyse_traitement.py" beforeDir="false" afterPath="$PROJECT_DIR$/analyse_traitement.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/concatenat/concat_csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/concatenat/concat_csv.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navigate_files.py" beforeDir="false" afterPath="$PROJECT_DIR$/navigate_files.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,36 +53,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/analyse_frame.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="66" column="28" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-                <element signature="e#605#1940#0" />
-                <element signature="e#4012#5817#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/analyse_traitement.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="112" selection-start-line="112" selection-end-line="112" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-                <element signature="e#895#2543#0" />
-                <element signature="e#897#913#0" />
-                <element signature="e#2575#3690#0" />
-                <element signature="e#3749#4355#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/navigate_files.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="381">
@@ -99,17 +66,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/concatenat/concat_csv.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="144" column="61" selection-start-line="144" selection-start-column="61" selection-end-line="144" selection-end-column="61" />
+            <state relative-caret-position="204">
+              <caret line="251" column="27" lean-forward="true" selection-start-line="251" selection-start-column="27" selection-end-line="251" selection-end-column="27" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <element signature="e#190#5122#0" />
                 <element signature="e#5228#5975#0" />
                 <element signature="e#6058#6761#0" />
                 <element signature="e#9840#11718#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/analyse_frame.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="794">
+              <caret line="144" column="33" lean-forward="true" selection-start-line="144" selection-start-column="33" selection-end-line="144" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -217,8 +196,8 @@
         <option value="$PROJECT_DIR$/Analyses/Module/DataViz.py" />
         <option value="$PROJECT_DIR$/navigate_files.py" />
         <option value="$PROJECT_DIR$/analyse_traitement.py" />
-        <option value="$PROJECT_DIR$/analyse_frame.py" />
         <option value="$PROJECT_DIR$/concatenat/concat_csv.py" />
+        <option value="$PROJECT_DIR$/analyse_frame.py" />
       </list>
     </option>
   </component>
@@ -289,7 +268,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.concat_csv">
+  <component name="RunManager" selected="Python.analyse_frame">
     <configuration name="DataCreationTestR" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="bmx_race" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -304,28 +283,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Analyses/Module/DataCreationTestR.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="DataViz" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="bmx_race" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Analyses/Module" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Analyses/Module/DataViz.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -378,6 +335,25 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="analyse_frame" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="bmx_race" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/analyse_frame.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="concat_csv" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="bmx_race" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -418,11 +394,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.analyse_frame" />
         <item itemvalue="Python.concat_csv" />
         <item itemvalue="Python.navigate_files" />
         <item itemvalue="Python.Traitements_Statistiques_Users" />
         <item itemvalue="Python.DataCreationTestR" />
-        <item itemvalue="Python.DataViz" />
       </list>
     </recent_temporary>
   </component>
@@ -469,7 +445,7 @@
       <workItem from="1561965256673" duration="26958000" />
       <workItem from="1562231400409" duration="22622000" />
       <workItem from="1562750943286" duration="6517000" />
-      <workItem from="1562790635889" duration="2025000" />
+      <workItem from="1562790635889" duration="4822000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1553506204878</created>
@@ -531,7 +507,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="553019000" />
+    <option name="totallyTimeSpent" value="555816000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -543,8 +519,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2181208" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -560,7 +535,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.16359697" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.28304905" side_tool="true" weight="0.36944744" />
-      <window_info anchor="bottom" id="Python Console" order="11" visible="true" weight="0.40509915" />
+      <window_info anchor="bottom" id="Python Console" order="11" weight="0.4546742" />
       <window_info active="true" anchor="bottom" id="Concurrent Activities Diagram" order="12" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.49946696" weight="0.29745042" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -571,7 +546,7 @@
       <window_info anchor="right" id="Database" order="5" weight="0.18176973" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21481876" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2181208" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -585,14 +560,14 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.16359697" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.28304905" side_tool="true" weight="0.36944744" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="11" visible="true" weight="0.34669557" />
+      <window_info anchor="bottom" id="Python Console" order="11" visible="true" weight="0.4546742" />
       <window_info active="true" anchor="bottom" id="Concurrent Activities Diagram" order="12" visible="true" weight="0.32936078" />
-      <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.49946696" weight="0.3206934" />
+      <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.49946696" weight="0.29745042" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" x="999" y="153" width="802" height="636" id="SciView" order="3" sideWeight="0.4985591" weight="0.4003198" />
-      <window_info anchor="right" x="0" y="0" width="300" height="771" id="Documentation" order="4" sideWeight="0.50144094" side_tool="true" weight="0.39978677" />
+      <window_info anchor="right" x="999" y="153" width="802" height="636" id="SciView" order="3" sideWeight="0.4985591" weight="0.2585288" />
+      <window_info anchor="right" x="0" y="0" width="300" height="771" id="Documentation" order="4" sideWeight="0.50144094" side_tool="true" weight="0.29104477" />
       <window_info anchor="right" id="Database" order="5" weight="0.18176973" />
     </layout-to-restore>
   </component>
@@ -784,6 +759,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/concatenat/concat_csv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="251" column="27" lean-forward="true" selection-start-line="251" selection-start-column="27" selection-end-line="251" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#190#5122#0" />
+            <element signature="e#5228#5975#0" />
+            <element signature="e#6058#6761#0" />
+            <element signature="e#9840#11718#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/analyse_traitement.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="902">
+          <caret line="112" selection-start-line="112" selection-end-line="112" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#895#2543#0" />
+            <element signature="e#897#913#0" />
+            <element signature="e#3749#4355#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/navigate_files.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="381">
@@ -796,42 +798,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/analyse_traitement.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="112" selection-start-line="112" selection-end-line="112" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#895#2543#0" />
-            <element signature="e#897#913#0" />
-            <element signature="e#2575#3690#0" />
-            <element signature="e#3749#4355#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/analyse_frame.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="66" column="28" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
+        <state relative-caret-position="794">
+          <caret line="144" column="33" lean-forward="true" selection-start-line="144" selection-start-column="33" selection-end-line="144" selection-end-column="33" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#605#1940#0" />
-            <element signature="e#4012#5817#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/concatenat/concat_csv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="144" column="61" selection-start-line="144" selection-start-column="61" selection-end-line="144" selection-end-column="61" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#190#5122#0" />
-            <element signature="e#5228#5975#0" />
-            <element signature="e#6058#6761#0" />
-            <element signature="e#9840#11718#0" />
           </folding>
         </state>
       </provider>
