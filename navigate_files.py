@@ -134,7 +134,7 @@ class NavigateFiles:
 
 if __name__ == '__main__':
     nf = NavigateFiles()
-    data = 'C:\\Users\\1mduquesnoy\\Desktop\\data_v2'
+    data = 'C:\\Program Files\\Git\\BMX_race\\data_v2'
     # print(
     #     nf.get_files_by_pilotes_names_trials_nums_dates(
     #         data_indir='C:\\Users\\mekhezzr\\PycharmProjects\\bmx_race\\data_v2_old',
