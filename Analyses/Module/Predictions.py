@@ -7,7 +7,7 @@ Created on Wed Jul  3 15:05:55 2019
 
 from sklearn import tree
 from sklearn.ensemble import GradientBoostingRegressor
-from Analyses.Module.DataManagement import *
+from Analyse.Module.DataManagement import *
 
 class Predictions:
     
@@ -20,10 +20,13 @@ class Predictions:
     
         """
         
-        XTrain = pd.read_csv('\\Module\\XTrain_Puissance_Explosivite.csv',sep=";",encoding='Latin')
-        YTrain_Puissance = pd.read_csv('\\Module\\YTrain_Puissance_Explosivite_Puissance.csv',sep=";",encoding='Latin')
-        YTrain_Y = pd.read_csv('\\Module\\YTrain_Puissance_Explosivite_Y.csv',sep=";",encoding='Latin')
-        
+        current_directory = os.path.dirname(os.path.realpath(__file__))
+        parent_directory = '\\'.join(current_directory.split('\\')[:-1])
+
+        XTrain = pd.read_csv(parent_directory + '\\Module\\XTrain_Puissance_Explosivite.csv',sep=";",encoding='Latin')
+        YTrain_Puissance = pd.read_csv(parent_directory + '\\Module\\YTrain_Puissance_Explosivite_Puissance.csv',sep=";",encoding='Latin')
+        YTrain_Y = pd.read_csv(parent_directory + '\\Module\\YTrain_Puissance_Explosivite_Y.csv',sep=";",encoding='Latin')
+    
         XTrain = XTrain.set_index('ID')
         YTrain_Y = YTrain_Y.set_index('ID')
         YTrain_Puissance = YTrain_Puissance.set_index('ID')
@@ -59,7 +62,10 @@ class Predictions:
             ID.append(list(Index[i])[0])
  
         Output.index = ID
-        Output.to_csv('Sorties_Modeles\\' + Nom,sep=";",header=True)
+        current_directory = os.path.dirname(os.path.realpath(__file__))
+        parent_directory = '\\'.join(current_directory.split('\\')[:-1])
+
+        Output.to_csv(parent_directory +  '\\Sorties_Modeles\\' + Nom,sep=";",header=True)
         
 
         
@@ -77,14 +83,14 @@ if __name__ == '__main__':
     #p.Lecture_XTest("Nouveaute","XTest_Puissance_Explosivite","Tableaux")
     
     path = 'C:\\Users\\1mduquesnoy\\Desktop\\data_v2'
-    Data = d.Base_de_donnees_Perf(path)
-    os.chdir('C:\\Users\\1mduquesnoy\\Desktop\\Analyses\\')  
-    XTest = d.Data_New_Predictions(Data,["Mayet_2018-06-19","Racine_2018-06-22"])
+    #Data = d.Base_de_donnees_Perf(path)
+    #os.chdir('C:\\Users\\1mduquesnoy\\Desktop\\Analyses\\')  
+    XTest = d.Data_New_Predictions(Data,["Valentino_2018-12-14"])
     #print(XTest.shape)
     #XTest.to_csv('sgsg.csv')
     Out = p.Predictions_Puissance_Explosivite(XTest[0])
 
-    p.Lecture_XTest(Out,XTest[1],"Tableaux.csv")
+    p.Lecture_XTest(Out,XTest[1],"Résultats_Valentino.csv")
     
     
     

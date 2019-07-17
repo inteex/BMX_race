@@ -12,7 +12,7 @@ import numpy as np
 import pandas as pd
 import os
 
-from Analyses.Module.DataManagement import *
+from Analyse.Module.DataManagement import *
 import spm1d
 import random
 from collections import Counter
@@ -155,14 +155,17 @@ class DataViz:
             t = spm1d.stats.ttest_paired(YA, YB)
         ti = t.inference(alpha, two_tailed=True, interp=True)
 
+        xx = []
         v = []
         L = np.floor(YA.shape[1])
-        for i in range(5):
-            v.append('x=' + str(round(np.floor(i * L / 5) / 300, 2)))
-
+        for i in range(6):
+            v.append('x=' + str(round(np.float(i*L / 5) / 300, 2)))
+            xx.append(np.float(i*L / 5))
+ 
         fig = plt.figure(figsize=(12, 8))
 
         axes = plt.gca()
+        axes.xaxis.set_ticks(xx)
         axes.xaxis.set_ticklabels(v)
         spm1d.plot.plot_mean_sd(YA)
         spm1d.plot.plot_mean_sd(YB, linecolor='r', facecolor='r')
@@ -177,6 +180,7 @@ class DataViz:
         ti.plot_threshold_label(fontsize=8)
         ti.plot_p_values(size=10, offsets=[(0, 0.3)])
         axes = plt.gca()
+        axes.xaxis.set_ticks(xx)
         axes.xaxis.set_ticklabels(v)
         plt.xlabel('Time (s)')
         plt.show()
@@ -204,7 +208,7 @@ class DataViz:
         Pilot.index = ["Best 1", "Other in mean", "Best 2", "Other in var"]
         Pilot1 = Pilot[['DistanceRecul', 'DAlignementMin',
                         'DEpauleMin', 'DistanceDmin', 'EngagementDmin', 'HauteurFWRecul',
-                        'HauteurFWDmin', 'ThetaManivelleDepart']]
+                        'HauteurFWDmin', 'Intention','ThetaManivelleDepart']]
 
         Pilot2 = Pilot[['RateForceDeveloppement', 'ForceUPiedAvMax', 'ForceUPiedArMax',
                         'MoyennePuissanceButteTotale', 'MoyennePuissancePremCassure',
@@ -279,15 +283,19 @@ class DataViz:
         snpm       = spm1d.stats.nonparam.cca(Y,X)
         snpmi      = snpm.inference(alpha, iterations=100)
         
+        xx = []
         v = []
-        L = np.floor(Y.shape[1])
-        for i in range(5):
-            v.append('x=' + str(round(np.floor(i*L/5)/300,2)))
+        L = np.floor(YA.shape[1])
+        for i in range(6):
+            v.append('x=' + str(round(np.float(i*L / 5) / 300, 2)))
+            xx.append(np.float(i*L / 5))
+            
         fig = plt.figure(figsize=(12, 8))
         
         snpmi.plot()
         snpmi.plot_p_values()
         axes = plt.gca()
+        axes.xaxis.set_ticks(xx)
         axes.xaxis.set_ticklabels(v)
         plt.xlabel("Time (s)")
         plt.title("Influence de " + Variable2 + " sur " + Variable1)
@@ -309,7 +317,21 @@ if __name__ == '__main__':
     #print(v.Comparaison_Boxplot(path,"DistanceDmin"))
     # print(v.Kiviat(Data_Frames,"Pilard","Mahieu",2,2,"2018-06-21","2018-12-13"))
 
-    # YA, YB = d.Data_Two_Pilots("ForcePied","Mayet","Racine","2018-06-19","2018-06-22")
-    # print(v.SPM_Comparaison(len(YA),len(YB),0.05,YA,YB,"Mayet","Racine","ForcePied","independant"))
+    #YA, YB = d.Data_Two_Pilots("Puissance","Racine","Valentino","2018-06-22","2018-12-14")
+    #print(v.SPM_Comparaison(len(YA),len(YB),0.05,YA,YB,"Pilard","Valentino","Puissance","independant"))
 
-    # print(v.Comparaison_Trials_Pilot(Data_Frames,"Mayet","2018-06-19"))
+    #(v.Comparaison_Trials_Pilot(Data_Frames,"Jouve","2018-06-20se"))
+    
+    #YA = pd.read_csv("C:/Users/1mduquesnoy/Desktop/Stage/Base de Données/indiceEfficacite/Manon_3D.csv",sep=";",engine='python',encoding="Latin")
+    #YB = pd.read_csv("C:/Users/1mduquesnoy/Desktop/Stage/Base de Données/indiceEfficacite/Manon_2D.csv",sep=";",engine='python',encoding="Latin")
+    
+    #v.SPM_Comparaison(len(YA),len(YB),0.05,np.array(YA),np.array(YB),"3D","2D","Efficacité","apparie")
+    #YA, YB = d.Data_Two_Pilots("IndiceEfficacitePiedAv","Racine","Valentino","2018-06-22","2018-12-14")
+    #v.SPM_Comparaison(len(YA),len(YB),0.05,YA,YB,"Racine","Valentino","Efficacité","independant")
+
+    #YA = pd.read_csv("C:/Users/1mduquesnoy/Desktop/Stage/Base de Données/indiceEfficacite/Sylvain_3D.csv",sep=";",engine='python',encoding="Latin")
+    #YB = pd.read_csv("C:/Users/1mduquesnoy/Desktop/Stage/Base de Données/indiceEfficacite/Sylvain_2D.csv",sep=";",engine='python',encoding="Latin")
+    
+    #v.SPM_Comparaison(len(YA),len(YB),0.05,np.array(YA),np.array(YB),"3D","2D","Efficacité","apparie")
+    
+    

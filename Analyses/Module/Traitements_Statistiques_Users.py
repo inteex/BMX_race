@@ -5,9 +5,9 @@ Created on Thu Jul  4 14:31:22 2019
 @author: 1mduquesnoy
 """
 
-from Analyses.Module.DataViz import *
-from Analyses.Module.DataCreationTestR import *
-from Analyses.Module.Predictions import *
+from Analyse.Module.DataViz import *
+from Analyse.Module.DataCreationTestR import *
+from Analyse.Module.Predictions import *
 
 if __name__ == '__main__':
     print("Bienvenu sur votre espace d'analyses statistiques")
@@ -23,6 +23,7 @@ if __name__ == '__main__':
         commentaire pour le reste de votre utilisation.
     -Base_de_donnees_Perf(path) va automatiquement effectuer la concaténation des fichiers frames pour l'utilisation
         des fonctions des modules DataViz et Predictions.
+    -La 3ème est dernière ligne permet d'exporter cette concaténation dans le dossier Données/Frames.
     
     Choisissez votre analyse en décommentant l'example associé   
     
@@ -33,7 +34,7 @@ if __name__ == '__main__':
     L'utilisateur doit être en connaissance des noms des variables des fichiers Frames et Traitements
     '''
 
-    os.chdir('C:\\Users\\1mduquesnoy\\Desktop\\Analyses\\')
+    os.chdir('C:\\Users\\1mduquesnoy\\Downloads\\BMX_race\\Analyses')
     d = DataManagement()
     v = DataViz()
     r = DataCreationTestR()
@@ -41,26 +42,27 @@ if __name__ == '__main__':
 
     path = 'C:\\Users\\1mduquesnoy\\Desktop\\data_v2'
 
-    #d.Creation_Traitements_Dataset(path)
+    d.Creation_Traitements_Dataset(path)
     Data = d.Base_de_donnees_Perf(path)
-    os.chdir('C:\\Users\\1mduquesnoy\\Desktop\\Analyses\\')
+    Data.to_csv('C:\\Users\\1mduquesnoy\\Downloads\\BMX_race\\Analyses\\Données\\Frames\\Base_Frames.csv',sep=";",header=True)
+    os.chdir('C:\\Users\\1mduquesnoy\\Downloads\\BMX_race\\Analyses')
 
     ########### Diagramme de Kiviat
 
-    #v.Kiviat(Data,"Pilard","Jouve",4,5,"2018-06-21","2018-06-20")
+    #v.Kiviat(Data,"Valentino","Valentino",6,3,"2018-12-14","2018-12-14")
 
     ########### Comparaison des pilotes pour une variables
 
-    #v.Comparaison_Boxplot(path,"Temps Reaction")
+    #v.Comparaison_Boxplot(path,"ThetaManivelleDepart")
 
     ########### Comparaison en temps, des essais de 2 pilotes, pour une variables temporelle (SPM)
 
-    #YA, YB = d.Data_Two_Pilots("ForcePied","Mayet","Darnand","2018-06-19","2018-06-21")
-    #v.SPM_Comparaison(len(YA),len(YB),0.05,YA,YB,"Mayet","Darnand","ForcePied","independant")
+    #YA, YB = d.Data_Two_Pilots("IndiceEfficacitePiedAv","Rencurel","Valentino","2018-12-12","2018-12-14")
+    #v.SPM_Comparaison(len(YA),len(YB),0.05,YA,YB,"Rencurel","Valentino","Efficacité","independant")
 
     ########### Boxplot pour comparer les meilleurs essais d'un pilote, versus ses moins bons
 
-    #v.Comparaison_Trials_Pilot(Data,"Mayet","2018-06-19")
+    #v.Comparaison_Trials_Pilot(Data,"Valentino","2018-12-14")
     
     ########### Correlation Canonique pour déterminer les zones de corrélations
     
@@ -69,11 +71,11 @@ if __name__ == '__main__':
     ########### Predictions sur la base de l'explosivité avec des paramètres au "pre-depart".
     
 
-    #XTest = d.Data_New_Predictions(Data,["Mayet_2018-06-19","Racine_2018-06-22"])
+    #XTest = d.Data_New_Predictions(Data,["Valentino_2018-12-14"])
     #Out = p.Predictions_Puissance_Explosivite(XTest[0])
-    #p.Lecture_XTest(Out,XTest[1],"Tableaux.csv")
+    #p.Lecture_XTest(Out,XTest[1],"Resultats_Valentino.csv")
 
     ########## Création des bases de Test pour le programme sous R, concernant la prédiction de la classe de Puissance
 
-    #r.Creation_Test_Power(path,["Mayet_2018-06-19","Racine_2018-06-22"],"Exemple_Tableau_Jeudi.csv")
-    #r.Creation_Test_Feature(path, ["Mahieu_2018-12-13", "Jouve_2018-06-20"], "ForcePied", "Tableaux2.csv")
+    #r.Creation_Test_Power(path,["Valentino_2018-12-14"],"Base_Valentino_P.csv")
+    #☺r.Creation_Test_Feature(path, ["Valentino_2018-12-14","Ragot_2018-12-11","Racine_2018-06-22","Pilard_2018-06-21"], "IndiceEfficaciteTotal", "Donnees.csv")

@@ -149,31 +149,34 @@ class DataManagement:
         YA = []
         YB = []
         
-        
-        for element in os.listdir('Données\\Traitements\\'):
+        current_directory = os.path.dirname(os.path.realpath(__file__))
+        parent_directory = '\\'.join(current_directory.split('\\')[:-1])
+            
+        for element in os.listdir(parent_directory + '\\Données\\Traitements\\'):
             
 
             r=re.findall('[A-Z0-9][^A-Z0-9]*',element)
             
             if (r[1] == Pilot1):
-                Data = pd.read_csv('Données\\Traitements\\'+element,sep=",",encoding='Latin',engine='python')[Variable]
+                Data = pd.read_csv(parent_directory + '\\Données\\Traitements\\'+element,sep=",",encoding='Latin',engine='python')[Variable]
                 N1.append(len(Data))
             elif (r[1] == Pilot2):
-                Data = pd.read_csv('Données\\Traitements\\'+element,sep=",",encoding='Latin',engine='python')[Variable]
+                Data = pd.read_csv(parent_directory + '\\Données\\Traitements\\'+element,sep=",",encoding='Latin',engine='python')[Variable]
                 N2.append(len(Data))
+
         N=min(min(N1),min(N2))
         
-        for element in os.listdir('Données\\Traitements\\'):
+        for element in os.listdir(parent_directory + '\\Données\\Traitements\\'):
             
             date = element.split("_")[2]
             r=re.findall('[A-Z0-9][^A-Z0-9]*',element)
             
             if (r[1] == Pilot1):
-                Data = pd.read_csv('Données\\Traitements\\'+element,sep=",",encoding='Latin',engine='python')[Variable]
-                YA.append(Data[0:N])
+                Data = pd.read_csv(parent_directory + '\\Données\\Traitements\\'+element,sep=",",encoding='Latin',engine='python')[Variable]
+                YA.append(Data[1:480])
             elif (r[1] == Pilot2):
-                Data = pd.read_csv('Données\\Traitements\\'+element,sep=",",encoding='Latin',engine='python')[Variable]
-                YB.append(Data[0:N])
+                Data = pd.read_csv(parent_directory + '\\Données\\Traitements\\'+element,sep=",",encoding='Latin',engine='python')[Variable]
+                YB.append(Data[1:480])
         return(np.array(YA),np.array(YB))
         
         
@@ -208,16 +211,17 @@ class DataManagement:
 
 if __name__ == '__main__':
     
-    os.chdir('C:\\Users\\1mduquesnoy\\Downloads\\BMX_race-master\\BMX_race-master\\Analyses\\')
+    os.chdir('C:\\Users\\1mduquesnoy\\Downloads\\BMX_race\\Analyses')
     data = 'C:\\Users\\1mduquesnoy\\Desktop\\data_v2'
     
     d = DataManagement()
-    d.Creation_Traitements_Dataset(data)
+    #d.Creation_Traitements_Dataset(data)
     #Data = d.Base_de_donnees_Perf(data)
 
-    os.chdir('C:\\Users\\1mduquesnoy\\Downloads\\BMX_race-master\\BMX_race-master\\Analyses\\')
-    #YA,YB = d.Data_Two_Pilots("ForcePied","Mayet","Racine","2018-06-19","2018-06-22")
-
+    #os.chdir('C:\\Users\\1mduquesnoy\\Downloads\\BMX_race-master\\BMX_race-master\\Analyses\\')
+    YA, YB = d.Data_Two_Pilots("Puissance","Rencurel","Valentino","2018-12-12","2018-12-14")
     #print(d.Data_New_Predictions(Data,["Mayet_2018-06-19","Racine_2018-06-22"]))
 
+    print(YA.shape)
+    print(YB.shape)
     
