@@ -12,7 +12,7 @@ import numpy as np
 import pandas as pd
 import os
 
-from Analyse.Module.DataManagement import *
+from Analyses.Module.DataManagement import *
 import spm1d
 import random
 from collections import Counter
@@ -37,7 +37,7 @@ class DataViz:
         data = Data
 
         data = data[
-            ["Prenom", "Nom", "Numero", "Date", "TimeToPeak", "TpsBasDeButte", "VitesseBasDeButte", "DistanceRecul",
+            ["Prenom", "Nom", "Numero", "Date", "TimeToPeak", "TpsBasDeButte", "VitesseBasDeButte", "Recul",
              "MoyennePuissancePremCassure"]]
 
         infos = data[["Prenom", "Nom", "Numero", "Date"]]
@@ -57,7 +57,7 @@ class DataViz:
         data = pd.concat([p1, p2], axis=0)
         data = data.drop(["Prenom", "Nom", "Numero", "Date"], axis=1)
 
-        categories = ["TimeToPeak", "TpsBasDeButte", "VitesseBasDeButte", "DistanceRecul",
+        categories = ["TimeToPeak", "TpsBasDeButte", "VitesseBasDeButte", "Recul",
                       "MoyennePuissancePremCassure"]
         N = len(categories)
 
@@ -196,6 +196,7 @@ class DataViz:
 
         Alpha = Alpha[Alpha.Date == Date]
         Alpha = Alpha.sort_values(by='TpsBasDeButte')
+        print(Alpha["Recul"])
         Alpha.index = list(np.arange(0, len(Alpha)))
         Beta = Alpha.drop(index=[0, 1])
         Alpha = Alpha.iloc[[0, 1], :]

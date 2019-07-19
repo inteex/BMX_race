@@ -5,9 +5,9 @@ Created on Thu Jul  4 14:31:22 2019
 @author: 1mduquesnoy
 """
 
-from Analyse.Module.DataViz import *
-from Analyse.Module.DataCreationTestR import *
-from Analyse.Module.Predictions import *
+from DataViz import *
+from Analyses.Module.DataCreationTestR import *
+from Predictions import *
 
 if __name__ == '__main__':
     print("Bienvenu sur votre espace d'analyses statistiques")
@@ -42,40 +42,67 @@ if __name__ == '__main__':
 
     path = 'C:\\Users\\1mduquesnoy\\Desktop\\data_v2'
 
-    d.Creation_Traitements_Dataset(path)
-    Data = d.Base_de_donnees_Perf(path)
-    Data.to_csv('C:\\Users\\1mduquesnoy\\Downloads\\BMX_race\\Analyses\\Données\\Frames\\Base_Frames.csv',sep=";",header=True)
+    #d.Creation_Traitements_Dataset(path)
+    #Data = d.Base_de_donnees_Perf(path)
+    #Data.to_csv('C:\\Users\\1mduquesnoy\\Downloads\\BMX_race\\Analyses\\Données\\Frames\\Base_Frames.csv',sep=";",header=True)
     os.chdir('C:\\Users\\1mduquesnoy\\Downloads\\BMX_race\\Analyses')
 
     ########### Diagramme de Kiviat
 
-    #v.Kiviat(Data,"Valentino","Valentino",6,3,"2018-12-14","2018-12-14")
+    #v.Kiviat(Data,"Ragot","Ragot",6,4,"2018-06-22","2018-12-11")
+
+
+
 
     ########### Comparaison des pilotes pour une variables
 
-    #v.Comparaison_Boxplot(path,"ThetaManivelleDepart")
+    #v.Comparaison_Boxplot(path,"Recul")
+    #v.Comparaison_Boxplot(path,"Explosivite")
+
+
+
+
 
     ########### Comparaison en temps, des essais de 2 pilotes, pour une variables temporelle (SPM)
 
-    #YA, YB = d.Data_Two_Pilots("IndiceEfficacitePiedAv","Rencurel","Valentino","2018-12-12","2018-12-14")
-    #v.SPM_Comparaison(len(YA),len(YB),0.05,YA,YB,"Rencurel","Valentino","Efficacité","independant")
+    #YA, YB = d.Data_Two_Pilots("Puissance","Ragot","Pilard","2018-06-22","2018-06-21")
+    #v.SPM_Comparaison(len(YA),len(YB),0.05,YA,YB,"Ragot en Juin","Pilard en Decembre","Puissance","independant")
+
+
+
+
 
     ########### Boxplot pour comparer les meilleurs essais d'un pilote, versus ses moins bons
 
-    #v.Comparaison_Trials_Pilot(Data,"Valentino","2018-12-14")
+    #v.Comparaison_Trials_Pilot(Data,"Ragot","2018-06-22")
+    
+    
+    
+    
+    
     
     ########### Correlation Canonique pour déterminer les zones de corrélations
     
     #v.Correlation_Canonique(Data,"TpsBasDeButte","Puissance")
     
+    
+    
+    
+    
     ########### Predictions sur la base de l'explosivité avec des paramètres au "pre-depart".
     
 
-    #XTest = d.Data_New_Predictions(Data,["Valentino_2018-12-14"])
+    #XTest = d.Data_New_Predictions(Data,["Ragot_2018-06-22"])
     #Out = p.Predictions_Puissance_Explosivite(XTest[0])
-    #p.Lecture_XTest(Out,XTest[1],"Resultats_Valentino.csv")
+    #p.Lecture_XTest(Out,XTest[1],"Resultats_Ragot_Juin.csv")
+
+
+
+
+
 
     ########## Création des bases de Test pour le programme sous R, concernant la prédiction de la classe de Puissance
 
-    #r.Creation_Test_Power(path,["Valentino_2018-12-14"],"Base_Valentino_P.csv")
-    #☺r.Creation_Test_Feature(path, ["Valentino_2018-12-14","Ragot_2018-12-11","Racine_2018-06-22","Pilard_2018-06-21"], "IndiceEfficaciteTotal", "Donnees.csv")
+    #r.Creation_Test_Power(path,["Ragot_2018-06-22"],"Base_Ragot_P.csv")
+    #r.Creation_Test_Feature(path, ["Valentino_2018-12-14","Ragot_2018-12-11","Racine_2018-06-22","Pilard_2018-06-21"], "IndiceEfficaciteTotal", "Donnees.csv")
+    

@@ -5,17 +5,18 @@ Created on Thu Jul  4 11:22:04 2019
 @author: 1mduquesnoy
 """
 
-from Analyse.Module.DataManagement import *
+from Analyses.Module.DataManagement import *
 
 
 class DataCreationTestR:
 
     def Creation_Test_Feature(self, Path, Labels, Variable, Name):
         '''
-        Create of a dataset with functional power features, necessary for R programmation.
-            :param Path   : a sting with the path of the data containig all the CSV files.
-            :param Labels : a list with the labels of the pilots + date. Ex = ["Pilard_2012-12-13", ...]
-            :param Name   : the name of the files exported in output. Ex "Name.csv"
+        Create of a dataset with a functional features, necessary for R programmation.
+            :param Path     : a sting with the path of the data containig all the CSV files.
+            :param Labels   : a list with the labels of the pilots + date. Ex = ["Pilard_2012-12-13", ...]
+            :param Variable : the name of the functional variable to be analysed.
+            :param Name     : the name of the files exported in output. Ex "Name.csv"
         
         '''
 
@@ -66,7 +67,10 @@ class DataCreationTestR:
 
     def Creation_Test_Power(self, Path, Labels, Name):
         '''
-        
+        Create of a dataset with functional power features, necessary for R programmation.
+            :param Path   : a sting with the path of the data containig all the CSV files.
+            :param Labels : a list with the labels of the pilots + date. Ex = ["Pilard_2012-12-13", ...]
+            :param Name   : the name of the files exported in output. Ex "Name.csv"
         
         '''
 

@@ -116,7 +116,8 @@ class DataManagement:
         
     def Creation_Traitements_Dataset(self,data):
         """
-        
+            Compute all 'traitements' files into the directory Données/Traitements.
+                :param data : a string with the path of the folder "data" or "data_v2".
         """
         
         lst = DataManagement.get_all_files_by_num(self, data, 1)
@@ -135,7 +136,7 @@ class DataManagement:
         
     def Data_Two_Pilots(self,Variable,Pilot1,Pilot2,Date1,Date2):
         """
-            Create the 2 array of data for both groups (for 1 variable).
+            Create the 2 array of data for 2 pilots (for 1 variable).
                 :param Variable   : a string with the name of the variable 
                 :param Pilot1     : a string with the surname of the first pilot
                 :param Pilot2     : a string with the surname of the second pilot
@@ -156,13 +157,15 @@ class DataManagement:
             
 
             r=re.findall('[A-Z0-9][^A-Z0-9]*',element)
+            date = r[3] + r[4] + r[5] + r[6] + r[7] +r[8] + r[9] + r[10][0]
             
-            if (r[1] == Pilot1):
+            if (r[1] == Pilot1 and date == Date1):
                 Data = pd.read_csv(parent_directory + '\\Données\\Traitements\\'+element,sep=",",encoding='Latin',engine='python')[Variable]
                 N1.append(len(Data))
-            elif (r[1] == Pilot2):
+            elif (r[1] == Pilot2 and date == Date2):
                 Data = pd.read_csv(parent_directory + '\\Données\\Traitements\\'+element,sep=",",encoding='Latin',engine='python')[Variable]
                 N2.append(len(Data))
+                
 
         N=min(min(N1),min(N2))
         
@@ -170,11 +173,12 @@ class DataManagement:
             
             date = element.split("_")[2]
             r=re.findall('[A-Z0-9][^A-Z0-9]*',element)
+            date = r[3] + r[4] + r[5] + r[6] + r[7] +r[8] + r[9] + r[10][0]
             
-            if (r[1] == Pilot1):
+            if (r[1] == Pilot1 and date == Date1):
                 Data = pd.read_csv(parent_directory + '\\Données\\Traitements\\'+element,sep=",",encoding='Latin',engine='python')[Variable]
                 YA.append(Data[1:480])
-            elif (r[1] == Pilot2):
+            elif (r[1] == Pilot2 and date == Date2):
                 Data = pd.read_csv(parent_directory + '\\Données\\Traitements\\'+element,sep=",",encoding='Latin',engine='python')[Variable]
                 YB.append(Data[1:480])
         return(np.array(YA),np.array(YB))
