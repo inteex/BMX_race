@@ -213,6 +213,56 @@ class DataManagement:
         Beta = Beta[["Temps Reaction","Explosivite","Time2Peak","Intention","Braquet","Manivelle","Recul","Theta Depart","Theta Recul"]] 
         return(Beta,Beta.index)
 
+
+    def Creation_Efficacite_3D_2D(self,Pilot,Date,Name3D,Name2D):
+        
+        '''
+        Create the dataset of efficiency 3D and 2D for a new pilot.
+            :param Pilot      : a string with the name of the Pilot 
+            :param Date       : a string with the Date of the new trials 
+            :param Name3D     : a string with the name of the file containing the data in 3D
+            :param Name2D     : a string with the name of the file containing the data in 2D
+
+        '''
+        
+        Indices_3D = []
+        Indices_2D = []
+        new = []
+        
+        current_directory = os.path.dirname(os.path.realpath(__file__))
+        parent_directory = '\\'.join(current_directory.split('\\')[:-1])
+            
+        for element in os.listdir(parent_directory + '\\Données\\Traitements\\'):
+            
+            r=re.findall('[A-Z0-9][^A-Z0-9]*',element)
+            if (element.find(Pilot) != -1 and element.find(Date) != -1):
+                new.append(element)
+
+
+        for i in range(len(new)):
+            
+            Essais_3D = []
+            Essais_2D = []
+            Alpha = pd.read_csv(parent_directory + '\\Données\\Traitements\\'+ new[i],engine='python',encoding='Latin',sep=",")
+            
+            for i in range(len(Alpha["ForcePiedAv"])):
+                
+                Essais_3D.append(list(Alpha["ForcePiedAv.1"])[i] / np.sqrt( list(Alpha["ForcePiedAv"])[i]**2 + list(Alpha["ForcePiedAv.1"])[i]**2
+                                                                    + list(Alpha["ForcePiedAv.2"])[i]**2 ) )
+                Essais_2D.append(list(Alpha["ForcePiedAv.1"])[i] / np.sqrt( list(Alpha["ForcePiedAv"])[i]**2 + list(Alpha["ForcePiedAv.1"])[i]**2
+                                                                     ) )
+            Indices_3D.append(Essais_3D)
+            Indices_2D.append(Essais_2D)
+            
+        Indices_3D = pd.DataFrame(Indices_3D).dropna(axis=1)
+        Indices_2D = pd.DataFrame(Indices_2D).dropna(axis=1)
+        
+        #Indices_3D.to_csv(parent_directory + '\\Données\\Efficiency\\'+Name3D + ".csv",sep=";",index=False)
+        #Indices_2D.to_csv(parent_directory + '\\Données\\Efficiency\\'+Name2D + ".csv",sep=";",index=False)
+        
+        return(Indices_3D,Indices_2D)
+        
+        
 if __name__ == '__main__':
     
     os.chdir('C:\\Users\\1mduquesnoy\\Downloads\\BMX_race\\Analyses')
@@ -223,9 +273,8 @@ if __name__ == '__main__':
     #Data = d.Base_de_donnees_Perf(data)
 
     #os.chdir('C:\\Users\\1mduquesnoy\\Downloads\\BMX_race-master\\BMX_race-master\\Analyses\\')
-    YA, YB = d.Data_Two_Pilots("Puissance","Rencurel","Valentino","2018-12-12","2018-12-14")
+    #YA, YB = d.Data_Two_Pilots("Puissance","Rencurel","Valentino","2018-12-12","2018-12-14")
     #print(d.Data_New_Predictions(Data,["Mayet_2018-06-19","Racine_2018-06-22"]))
 
-    print(YA.shape)
-    print(YB.shape)
-    
+    YA, YB = d.Creation_Efficacite_3D("Valentino","2018-12-14","3D","2D")
+    print(YA)

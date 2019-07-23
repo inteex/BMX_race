@@ -94,6 +94,8 @@ Analyses/Module
 
 	- Data_Two_Pilots : fonction qui permet de créer les tableaux de données necessaires à l'utilisation de la fonction SPM_Comparaison. L'exemple dans 'Traitements_Statistiques_Users.py' illustre son utilisation.
 
+	- Creation_Efficacite_3D_2D : fonction qui permet de créer les efficacités 3D et 2D necessaires pour la comparaison via la méthode SPM.
+
 
 
 

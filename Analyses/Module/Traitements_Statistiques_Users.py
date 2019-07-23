@@ -6,8 +6,9 @@ Created on Thu Jul  4 14:31:22 2019
 """
 
 from DataViz import *
-from Analyses.Module.DataCreationTestR import *
+from DataCreationTestR import *
 from Predictions import *
+from DataManagement import *
 
 if __name__ == '__main__':
     print("Bienvenu sur votre espace d'analyses statistiques")
@@ -105,4 +106,13 @@ if __name__ == '__main__':
 
     #r.Creation_Test_Power(path,["Ragot_2018-06-22"],"Base_Ragot_P.csv")
     #r.Creation_Test_Feature(path, ["Valentino_2018-12-14","Ragot_2018-12-11","Racine_2018-06-22","Pilard_2018-06-21"], "IndiceEfficaciteTotal", "Donnees.csv")
+    
+
+
+
+
+    ######### Comparaison en temps, des efficacités 3D et 2D d'un pilote (SPM)
+    
+    #YA, YB = d.Creation_Efficacite_3D_2D("Rencurel","2018-12-12","3D","2D")
+    #v.SPM_Comparaison(len(YA),len(YB),0.05,np.array(YA),np.array(YB),"3D","2D","Efficacité","apparie")
     

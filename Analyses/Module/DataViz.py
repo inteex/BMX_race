@@ -12,7 +12,7 @@ import numpy as np
 import pandas as pd
 import os
 
-from Analyses.Module.DataManagement import *
+from DataManagement import *
 import spm1d
 import random
 from collections import Counter
