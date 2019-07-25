@@ -5,7 +5,7 @@ Created on Thu Jul  4 11:22:04 2019
 @author: 1mduquesnoy
 """
 
-from DataManagement import *
+from Analyses.Module.DataManagement import *
 
 
 class DataCreationTestR:

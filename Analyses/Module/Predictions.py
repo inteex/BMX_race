@@ -7,7 +7,7 @@ Created on Wed Jul  3 15:05:55 2019
 
 from sklearn import tree
 from sklearn.ensemble import GradientBoostingRegressor
-from DataManagement import *
+from Analyses.Module.DataManagement import *
 
 class Predictions:
     

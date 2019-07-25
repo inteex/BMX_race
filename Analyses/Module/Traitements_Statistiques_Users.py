@@ -5,10 +5,10 @@ Created on Thu Jul  4 14:31:22 2019
 @author: 1mduquesnoy
 """
 
-from DataViz import *
-from DataCreationTestR import *
-from Predictions import *
-from DataManagement import *
+from Analyses.Module.DataViz import *
+from Analyses.Module.DataCreationTestR import *
+from Analyses.Module.Predictions import *
+from Analyses.Module.DataManagement import *
 
 if __name__ == '__main__':
     print("Bienvenu sur votre espace d'analyses statistiques")
