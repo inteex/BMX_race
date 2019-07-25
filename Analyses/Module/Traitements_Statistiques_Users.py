@@ -50,7 +50,7 @@ if __name__ == '__main__':
 
     ########### Diagramme de Kiviat
 
-    #v.Kiviat(Data,"Ragot","Ragot",6,4,"2018-06-22","2018-12-11")
+    v.Kiviat(Data,"Ragot","Ragot",6,4,"2018-06-22","2018-12-11")
 
 
 
@@ -58,7 +58,7 @@ if __name__ == '__main__':
     ########### Comparaison des pilotes pour une variables
 
     #v.Comparaison_Boxplot(path,"Recul")
-    #v.Comparaison_Boxplot(path,"Explosivite")
+    v.Comparaison_Boxplot(path,"Explosivite")
 
 
 
@@ -66,8 +66,8 @@ if __name__ == '__main__':
 
     ########### Comparaison en temps, des essais de 2 pilotes, pour une variables temporelle (SPM)
 
-    #YA, YB = d.Data_Two_Pilots("Puissance","Ragot","Pilard","2018-06-22","2018-06-21")
-    #v.SPM_Comparaison(len(YA),len(YB),0.05,YA,YB,"Ragot en Juin","Pilard en Decembre","Puissance","independant")
+    YA, YB = d.Data_Two_Pilots("Puissance","Ragot","Pilard","2018-06-22","2018-06-21")
+    v.SPM_Comparaison(len(YA),len(YB),0.05,YA,YB,"Ragot en Juin","Pilard en Decembre","Puissance","independant")
 
 
 
@@ -75,7 +75,7 @@ if __name__ == '__main__':
 
     ########### Boxplot pour comparer les meilleurs essais d'un pilote, versus ses moins bons
 
-    #v.Comparaison_Trials_Pilot(Data,"Ragot","2018-06-22")
+    v.Comparaison_Trials_Pilot(Data,"Ragot","2018-06-22")
     
     
     
@@ -113,6 +113,6 @@ if __name__ == '__main__':
 
     ######### Comparaison en temps, des efficacités 3D et 2D d'un pilote (SPM)
     
-    #YA, YB = d.Creation_Efficacite_3D_2D("Rencurel","2018-12-12","3D","2D")
-    #v.SPM_Comparaison(len(YA),len(YB),0.05,np.array(YA),np.array(YB),"3D","2D","Efficacité","apparie")
+    #YA, YB = d.Creation_Efficacite_3D_2D("Pilard","2018-06-21","3D","2D")
+    #v.SPM_Comparaison(len(YA),len(YB),0.05,np.array(YA),np.array(YB),"3D","2D","Efficacité de Pilard","apparie")
     

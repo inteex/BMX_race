@@ -62,7 +62,7 @@ class DataManagement:
                                      'RateForceDeveloppement','ForceUPiedAvMax','ForceUPiedArMax',
                                      'MoyennePuissanceButteTotale','MoyennePuissancePremCassure',
                                      'PuissanceMaxPremCassure','TpsReaction','TpsPassageGrille','TpsPremCassure',
-                                     'TpsBasDeButte','TimeToPeak','VitesseBasDeButte','VMaxPremCassure','ImpulsionParCoups',"TravailParCoups",'ImpulsionParCoups_1',"TravailParCoups_1",
+                                     'TpsBasDeButte','TimeToPeak','VitesseBasDeButte','VMaxPremCassure','TpsDAlignementMin','TpsDEpauleMin','ImpulsionParCoups',"TravailParCoups",'ImpulsionParCoups_1',"TravailParCoups_1",
                                      'ImpulsionParCoups_2',"TravailParCoups_2",'ImpulsionParCoups_3',"TravailParCoups_3",
                                      'ImpulsionParCoups_4',"TravailParCoups_4","Prenom","Nom","Numero","Date","Time2Peak","Manivelle",
                                      "Theta Depart","Theta Recul","Braquet","Temps Reaction","Recul","Explosivite","Label"])
@@ -88,7 +88,7 @@ class DataManagement:
                                      'RateForceDeveloppement','ForceUPiedAvMax','ForceUPiedArMax',
                                      'MoyennePuissanceButteTotale','MoyennePuissancePremCassure',
                                      'PuissanceMaxPremCassure','TpsReaction','TpsPassageGrille','TpsPremCassure',
-                                     'TpsBasDeButte','TimeToPeak','VitesseBasDeButte','VMaxPremCassure','ImpulsionParCoups',"TravailParCoups"]]
+                                     'TpsBasDeButte','TimeToPeak','VitesseBasDeButte','VMaxPremCassure','TpsDAlignementMin','TpsDEpauleMin','ImpulsionParCoups',"TravailParCoups"]]
             
             for i in range(4):
                 X["ImpulsionParCoups_" + str(i+1)] = X["ImpulsionParCoups"].iloc[i]

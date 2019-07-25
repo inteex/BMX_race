@@ -261,17 +261,20 @@ class DataViz:
         Y = []
         N = Y.copy()
         
-        for element in os.listdir('Données\\Traitements\\'):
+        current_directory = os.path.dirname(os.path.realpath(__file__))
+        parent_directory = '\\'.join(current_directory.split('\\')[:-1])
+        
+        for element in os.listdir(parent_directory + '\\Données\\Traitements\\'):
             
-            Data = pd.read_csv('Données\\Traitements\\'+element,sep=",",encoding='Latin',engine='python')[Variable2]
+            Data = pd.read_csv(parent_directory + '\\Données\\Traitements\\'+element,sep=",",encoding='Latin',engine='python')[Variable2]
             N.append(len(Data))
          
 
         N = min(N)
 
-        for element in os.listdir('Données\\Traitements\\'):
+        for element in os.listdir(parent_directory + '\\Données\\Traitements\\'):
             
-            Data = pd.read_csv('Données\\Traitements\\'+element,sep=",",encoding='Latin',engine='python')[Variable2]
+            Data = pd.read_csv(parent_directory + '\\Données\\Traitements\\'+element,sep=",",encoding='Latin',engine='python')[Variable2]
             Data = Data.fillna(method='pad')
             Y.append(np.array(Data[0:N]).reshape((N,1)))
             
@@ -286,7 +289,7 @@ class DataViz:
         
         xx = []
         v = []
-        L = np.floor(YA.shape[1])
+        L = np.floor(Y.shape[1])
         for i in range(6):
             v.append('x=' + str(round(np.float(i*L / 5) / 300, 2)))
             xx.append(np.float(i*L / 5))
@@ -335,4 +338,5 @@ if __name__ == '__main__':
     
     #v.SPM_Comparaison(len(YA),len(YB),0.05,np.array(YA),np.array(YB),"3D","2D","Efficacité","apparie")
     
+    #v.Correlation_Canonique()
     
